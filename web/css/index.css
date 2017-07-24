@@ -1,0 +1,119 @@
+:root {
+  --grid-width: 720px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: white;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Lato', system-ui, -apple-system;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.BTD-Header {
+  color: rgba(0,0,0, .7);
+  padding: 0 20px 80px 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.BTD-Header,
+.BTD-Header::after {
+  background-image: linear-gradient(45deg, hsl(208, 100%, 61%), hsl(197, 100%, 63%));
+  background-image: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
+}
+
+.BTD-Header::after {
+  content: '';
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  display: block;
+  position: absolute;
+  filter: blur(20px) saturate(100%);
+  z-index: 0;
+}
+
+.BTD-Header-menu,
+.BTD-Header-content {
+  max-width: 100%;
+  width: var(--grid-width);
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.BTD-Header-menu {
+  text-align: right;
+  
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.BTD-Header-menu a {
+  text-decoration: none;
+  color: currentColor;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.BTD-Header-menu a:hover {
+  text-decoration: underline;
+}
+
+.BTD-Header-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BTD-Header-content > .img {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.BTD-Header-content > .img > svg {
+  width: 96px;
+  fill: currentColor;
+}
+
+.BTD-Header-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.BTD-Header-copy > h1 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.BTD-Header-copy > p {
+  font-size: 1.2rem;
+}
+
+._font-body {
+  font-family: 'Lato', sans-serif;
+}
+
+._font-heading {
+  font-family: 'PT Sans', sans-serif;
+}

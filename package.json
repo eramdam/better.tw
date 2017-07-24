@@ -4,7 +4,8 @@
   "description": "Better TweetDeck's website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server 'web' --files 'web'"
   },
   "repository": {
     "type": "git",
