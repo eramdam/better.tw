@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/eramdam/better.tw#readme",
   "dependencies": {
-    "browser-sync": "^2.18.13"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-hb": "^6.0.2",
+    "gulp-postcss": "^7.0.0",
+    "handlebars": "^4.0.10"
   }
 }
