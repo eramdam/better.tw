@@ -1,6 +1,17 @@
 :root {
   --grid-width: 960px;
   --white-overlay-btn: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .9));
+  --font-body: 'Lato', system-ui, -apple-system, sans-serif;
+  --font-heading: 'PT Sans', sans-serif;
+  --text-color: #4A4A4A;
+}
+
+._font-body {
+  font-family: var(--font-body);
+}
+
+._font-heading {
+  font-family: var(--font-heading);
 }
 
 * {
@@ -11,9 +22,10 @@
 
 body {
   background: white;
+  color: var(--text-color);
   font-size: 16px;
   line-height: 1.4;
-  font-family: 'Lato', system-ui, -apple-system;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .BTD-Header {
@@ -145,29 +157,104 @@ h6 {
   background-size: auto, 96px;
   background-position: -10% -10%;
   background-repeat: no-repeat;
-  transition: background-position 300ms ease;
+  transition: all 300ms ease;
 }
 .BTD-Button:hover {
+  will-change: all;
   background-position: -10% 10%;
 }
 .BTD-Button--chrome {
   background-image: var(--white-overlay-btn),
   url("/img/chrome-icon.png");
 }
+.BTD-Button--chrome > span {
+  background: -webkit-linear-gradient(top, #4285f4, #2962BD);
+}
 
 .BTD-Button--opera {
   background-image: var(--white-overlay-btn),
   url("/img/opera-icon.png");
 }
+.BTD-Button--opera > span {
+  background: -webkit-linear-gradient(top, #cc0f16, #980910);
+}
 
 .BTD-Button--firefox {
   background-image: var(--white-overlay-btn), url("/img/firefox-icon.png");
 }
-
-._font-body {
-  font-family: 'Lato', sans-serif;
+.BTD-Button--firefox > span {
+  background: -webkit-linear-gradient(top, #ff9500, #e66000);
 }
 
-._font-heading {
-  font-family: 'PT Sans', sans-serif;
+.BTD-Button > span {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.BTD-download-btns + .BTD-text-section {
+  padding-top: 40px;
+}
+
+.BTD-text-section {
+  width: 100%;
+  background: white;
+  position: relative;
+  padding: 32px 0;
+}
+
+.BTD-text-section:nth-of-type(even) {
+  background: #f8f8f8;
+}
+
+.BTD-text-section:nth-of-type(even) .BTD-section-copy {
+  margin-right: 0;
+  margin-left: 60px;
+  order: 2;
+}
+
+.BTD-text-section:nth-of-type(even) .BTD-section-image {
+  order: 1;
+}
+
+.BTD-text-section:nth-of-type(even) .BTD-section-image img {
+  float: left;
+}
+
+.BTD-text-section > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-content: space-around;
+  width: 100%;
+  max-width: var(--grid-width);
+  margin: 0 auto;
+}
+
+.BTD-section-copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.BTD-section-copy > h4 {
+  font-size: 19px;
+}
+
+.BTD-section-copy > h4 + p {
+  margin: 1em 0;
+}
+
+.BTD-section-copy > p {
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+.BTD-section-image {
+  float: right;
+  background: pink;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.52),
+  0 5px 15px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 4px;
 }
