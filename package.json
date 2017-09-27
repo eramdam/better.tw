@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server 'web' --files 'web'"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "gulp": "^3.9.1",
     "gulp-hb": "^6.0.2",
     "gulp-postcss": "^7.0.0",
-    "handlebars": "^4.0.10"
+    "handlebars": "^4.0.10",
+    "webpack": "^3.6.0"
   }
 }

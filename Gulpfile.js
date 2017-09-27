@@ -24,7 +24,8 @@ const files = {
   },
   static: {
     from: [
-      './src/img/**/*'
+      './src/img/**/*',
+      './src/js/**/*',
     ],
     to: destFolder()
   }
@@ -56,8 +57,10 @@ gulp.task('default', beforeServe, () => {
   })
   
   gulp.watch('./src/css/**/*.css', ['css'])
+  gulp.watch('./src/js/**/*.js', ['static'])
+  gulp.watch('./src/img/**/*', ['static'])
   gulp.watch('./src/**/*.{html,hbs}', ['html'])
-  gulp.watch('./dist/**/*.html').on('change', browserSync.reload)
+  gulp.watch('./dist/**/*.{html,js}').on('change', browserSync.reload)
 })
 
 gulp.task('build', beforeServe)
