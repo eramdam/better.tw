@@ -1,5 +1,5 @@
 :root {
-  --grid-width: 720px;
+  --grid-width: 960px;
 }
 
 * {
@@ -35,10 +35,7 @@ h6 {
 
 .BTD-Header,
 .BTD-Header::after {
-  /* background-image: linear-gradient(45deg, hsl(208, 100%, 61%), hsl(197, 100%, 63%)); */
-  /* background-image: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%); */
-  background-image: linear-gradient(-22deg, hsl(0, 0%, 35%) 47%, hsl(0, 0%, 65%) 100%);
-  background-image: linear-gradient(-22deg, hsl(0, 0%, 30%) 47%, hsl(0, 0%, 55%) 100%);
+  background-image: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
 }
 
 .BTD-Header::after {
@@ -112,6 +109,10 @@ h6 {
 
 .BTD-Header-copy > p {
   font-size: 1.2rem;
+}
+
+.BTD-Button {
+  
 }
 
 ._font-body {
