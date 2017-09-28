@@ -139,7 +139,7 @@ h6 {
 }
 
 .BTD-Button {
-  background: white;
+  background-color: white;
   padding: .9rem .8rem;
   padding-left: calc(.8rem + 48px);
   border-radius: 4px;
@@ -155,13 +155,13 @@ h6 {
 
 .BTD-Button {
   background-size: auto, 96px;
-  background-position: -10% -10%;
+  background-position: -10% 10%;
   background-repeat: no-repeat;
   transition: all 300ms ease;
 }
 .BTD-Button:hover {
   will-change: all;
-  background-position: -10% 10%;
+  background-color: #C0C0C0;
 }
 .BTD-Button--chrome {
   background-image: var(--white-overlay-btn),
