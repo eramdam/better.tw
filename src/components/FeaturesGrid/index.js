@@ -1,17 +1,19 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
-import feather from 'feather-icons';
 import styles from './index.module.css';
 
-const feathreIconHelper = (name, size, opts = {}) => feather.toSvg(name, { width: size, height: size, ...opts });
+import {
+  featherIconHelper,
+  featherIconsList,
+} from '../../utils';
 
 const FeatureBlock = ({ name, paragraph, icon }) => (
   <div className={styles.block}>
     <div
       className={styles.blockIcon}
       dangerouslySetInnerHTML={{
-        __html: feathreIconHelper(icon),
+        __html: featherIconHelper(icon),
       }}
     />
     <div className={styles.blockCopy}>
@@ -24,7 +26,7 @@ const FeatureBlock = ({ name, paragraph, icon }) => (
 FeatureBlock.propTypes = {
   name: PropTypes.string,
   paragraph: PropTypes.string,
-  icon: PropTypes.oneOf(Object.keys(feather.icons)),
+  icon: PropTypes.oneOf(featherIconsList),
 };
 
 FeatureBlock.defaultProps = {
@@ -35,7 +37,7 @@ FeatureBlock.defaultProps = {
 
 const FeaturesGrid = () => (
   <div className={styles.featuresGrid}>
-    <div>
+    <div className={styles.featuresGridWrap}>
       <h4>Features for years!</h4>
       <div className={styles.blocks}>
         <FeatureBlock
