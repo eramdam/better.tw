@@ -1,4 +1,4 @@
-@value --grid-width from "../../css/variables.css";
+@value --grid-width from "../../css/index.css";
 
 .textSection {
   width: 100%;
@@ -51,7 +51,7 @@
 
 .sectionParagraph {
   font-size: 16px;
-  composes: font-body from '../../css/variables.css';
+  composes: font-body from '../../css/index.css';
 }
 
 .sectionImage {

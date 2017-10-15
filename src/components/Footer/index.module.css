@@ -1,0 +1,28 @@
+@value --grid-width, --text-color from "../../css/index.css";
+
+.footer {
+  background: white;
+  color: --text-color;
+  display: flex;
+  justify-content: space-between;
+  max-width: --grid-width;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.menu {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.menu a {
+  color: --text-color;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.menu a:hover {
+  color: black;
+  text-decoration: underline;
+}

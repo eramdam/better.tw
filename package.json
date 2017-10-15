@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "classnames": "^2.2.5",
+    "feather-icons": "^3.3.0",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-react-helmet": "^1.0.5",
@@ -20,7 +21,8 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "plop"
   },
   "devDependencies": {
     "eslint": "^4.8.0",

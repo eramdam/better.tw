@@ -1,4 +1,4 @@
-@value --btd-gradient, --grid-width from "../../css/variables.css";
+@value --btd-gradient, --grid-width from "../../css/index.css";
 
 .header {
   color: rgb(255, 255, 255);
