@@ -1,0 +1,90 @@
+@value --btd-gradient, --grid-width from "../../css/variables.css";
+
+.header {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
+  padding: 0 20px 80px 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.header,
+.header::after {
+  background-image: --btd-gradient;
+}
+
+.header::after {
+  content: '';
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  display: block;
+  position: absolute;
+  filter: blur(20px) saturate(100%);
+  z-index: 0;
+}
+
+.header .menu,
+.content {
+  max-width: 100%;
+  width: --grid-width;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.menu {
+  text-align: right;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: currentColor;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content > .img {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.content > .img > svg {
+  width: 96px;
+  fill: currentColor;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.28))
+}
+
+.copy {
+  max-width: 450px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.copy > h1 {
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.copy > p {
+  font-size: 1.2rem;
+}
