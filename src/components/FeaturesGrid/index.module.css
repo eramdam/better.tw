@@ -1,0 +1,65 @@
+@value --grid-width from "../../css/index.css";
+
+.featuresGrid {
+  background-color: #3ca8f7;
+}
+
+.featuresGrid {
+  padding: 50px 0;
+  position: relative;
+}
+
+.featuresGrid > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: --grid-width;
+  margin: 0 auto;
+}
+
+.featuresGrid h4 {
+  font-size: 22px;
+  color: white;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.blocks {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.block {
+  flex-basis: calc(100% / 3 - 10px);
+  flex-shrink: 1;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.blockIcon {
+  flex-shrink: 0;
+  margin-right: 14px;
+}
+
+.blockIcon > svg {
+  width: 36px;
+  max-width: 36px;
+  margin: 0 7px;
+  color: white;
+}
+
+.blockCopy > h5 {
+  font-size: 17px;
+  color: white;
+}
+
+.blockParagraph {
+  font-size: 14px;
+  color: white;
+  composes: font-body from "../../css/index.css";
+}

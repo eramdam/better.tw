@@ -1,0 +1,10 @@
+.downloadBtns {
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.downloadBtns > .button {
+  margin: 0 12px;
+}
