@@ -1,11 +1,26 @@
 import React from 'react';
 import styles from './index.module.css';
+import Icon from '../Icon';
 
 export default () => (
   <header className={styles.header}>
     <nav className={styles.menu}>
-      <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
-      <a href="https://twitter.com/BetterTDeck">Twitter</a>
+      <a className={styles.menuItem} href="https://github.com/eramdam/BetterTweetDeck">
+        <Icon
+          name="github"
+          className={styles.menuItemIcon}
+          size={20}
+        />
+        Github
+      </a>
+      <a className={styles.menuItem} href="https://twitter.com/BetterTDeck">
+        <Icon
+          name="twitter"
+          className={styles.menuItemIcon}
+          size={20}
+        />
+        Twitter
+      </a>
     </nav>
     <span className={styles.content}>
       <span className={styles.img}>
