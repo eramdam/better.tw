@@ -1,18 +1,17 @@
-/* eslint react/no-danger: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
-import feather from 'feather-icons';
 import styles from './index.module.css';
+import Icon from '../Icon';
 
-const feathreIconHelper = (name, size, opts = {}) => feather.toSvg(name, { width: size, height: size, ...opts });
+import {
+  featherIconHelper,
+} from '../../utils';
 
 const FeatureBlock = ({ name, paragraph, icon }) => (
   <div className={styles.block}>
-    <div
+    <Icon
       className={styles.blockIcon}
-      dangerouslySetInnerHTML={{
-        __html: feathreIconHelper(icon),
-      }}
+      name={icon}
     />
     <div className={styles.blockCopy}>
       <h5>{name}</h5>
@@ -24,7 +23,7 @@ const FeatureBlock = ({ name, paragraph, icon }) => (
 FeatureBlock.propTypes = {
   name: PropTypes.string,
   paragraph: PropTypes.string,
-  icon: PropTypes.oneOf(Object.keys(feather.icons)),
+  icon: PropTypes.string,
 };
 
 FeatureBlock.defaultProps = {
