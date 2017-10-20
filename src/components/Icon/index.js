@@ -1,7 +1,6 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.module.css';
 import {
   featherIconHelper,
   iconsList,
@@ -11,6 +10,10 @@ const Icon = (props) => {
   const { name, size, opts, ...more } = props;
   return (
     <span
+      style={{
+        display: 'inline-block',
+        fontSize: 0,
+      }}
       {...more}
       dangerouslySetInnerHTML={{
         __html: featherIconHelper(name, size, opts)
