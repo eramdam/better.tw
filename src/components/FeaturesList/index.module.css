@@ -17,13 +17,8 @@
   flex-shrink: 0;
 }
 
-.list > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: --grid-width;
-  margin: 0 auto;
+.listGrid {
+  composes: gridBlock from "../../css/index.css";
 }
 
 .list :matches(ul, li) {

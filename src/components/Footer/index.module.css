@@ -1,13 +1,11 @@
 @value --grid-width, --text-color from "../../css/index.css";
 
 .footer {
+  justify-content: space-between;
   background: white;
   color: --text-color;
-  display: flex;
-  justify-content: space-between;
-  max-width: --grid-width;
-  margin: 0 auto;
   padding: 20px 0;
+  composes: gridBlock from "../../css/index.css";
 }
 
 .menu {

@@ -1,5 +1,3 @@
-@value --grid-width from "../../css/index.css";
-
 .featuresGrid {
   background-color: #3ca8f7;
 }
@@ -9,13 +7,8 @@
   position: relative;
 }
 
-.featuresGrid > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: --grid-width;
-  margin: 0 auto;
+.featuresGridWrap {
+  composes: gridBlock from "../../css/index.css";
 }
 
 .featuresGrid h4 {

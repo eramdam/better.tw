@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './index.module.css';
 import Icon from '../Icon';
 
-import {
-  featherIconHelper,
-} from '../../utils';
-
 const FeatureBlock = ({ name, paragraph, icon }) => (
   <div className={styles.block}>
     <Icon
@@ -34,7 +30,7 @@ FeatureBlock.defaultProps = {
 
 const FeaturesGrid = () => (
   <div className={styles.featuresGrid}>
-    <div>
+    <div className={styles.featuresGridWrap}>
       <h4>Features for years!</h4>
       <div className={styles.blocks}>
         <FeatureBlock
