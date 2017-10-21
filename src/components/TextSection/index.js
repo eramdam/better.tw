@@ -6,7 +6,7 @@ const imgPath = url => `${__PATH_PREFIX__}/img/${url}`;
 
 const TextSection = ({ title, paragraph, image }) => (
   <section className={styles.textSection}>
-    <div>
+    <div className={styles.textSectionGrid}>
       <div className={styles.sectionCopy}>
         <h4>{title}</h4>
         <p className={styles.sectionParagraph}>{paragraph}</p>

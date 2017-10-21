@@ -4,7 +4,7 @@ import styles from './index.module.css';
 
 const FeaturesList = () => (
   <section className={styles.list}>
-    <div>
+    <div className={styles.listGrid}>
       <h4>Other notable features</h4>
       <ul>
         <li>Amazing Feature 1</li>

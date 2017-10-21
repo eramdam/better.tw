@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 body {
@@ -35,4 +36,22 @@ h6 {
 
 .font-heading {
   font-family: --font-heading;
+}
+
+.gridBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: --grid-width;
+  margin: 0 auto;
+}
+
+@media (max-width: --grid-width) {
+  .gridBlock {
+    background: red;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px !important;
+  }
 }

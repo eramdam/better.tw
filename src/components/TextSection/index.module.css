@@ -21,12 +21,8 @@
   order: 1;
 }
 
-.textSection > div {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: --grid-width;
-  margin: 0 auto;
+.textSectionGrid {
+  composes: gridBlock from "../../css/index.css";
 }
 
 .textSection > div {
