@@ -49,7 +49,6 @@ h6 {
 
 @media (max-width: --grid-width) {
   .gridBlock {
-    background: red;
     max-width: 100%;
     width: 100%;
     padding: 20px !important;
