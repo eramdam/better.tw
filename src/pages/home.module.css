@@ -5,6 +5,34 @@
     transform: translateY(-50%);
 }
 
-.downloadBtns > .button {
+.downloadButton {
   margin: 0 12px;
+}
+
+.downloadZone {
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0, .7), rgba(0,0,0, .7)), url('../img/download-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.downloadZoneWrapper {
+  composes: gridBlock from "../css/index.css";
+  justify-content: center;
+  padding: 40px 0 !important;
+}
+
+.downloadZoneWrapper h2,
+.downloadZoneWrapper p {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
+  color: white;
+}
+
+.downloadZoneWrapper h2 {
+  margin-bottom: 10px;
+}
+
+.downloadZoneWrapper p {
+  margin: 1em;
+  margin-bottom: 2em;
 }

@@ -51,6 +51,6 @@ h6 {
   .gridBlock {
     max-width: 100%;
     width: 100%;
-    padding: 20px !important;
+    padding: 20px;
   }
 }
