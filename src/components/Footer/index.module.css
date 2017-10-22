@@ -4,7 +4,7 @@
   justify-content: space-between;
   background: white;
   color: --text-color;
-  padding: 20px 0;
+  padding: 20px;
   composes: gridBlock from "../../css/index.css";
 }
 
