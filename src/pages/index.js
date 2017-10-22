@@ -18,14 +18,34 @@ const IndexPage = () => (
       <DownloadButton className={homeStyles.downloadButton} browser="firefox" />
     </nav>
     <TextSection
-      title="The TweetDeck you know and 💙, even better!"
-      paragraph="Better TweetDeck aims at improving your experience on TweetDeck by providing useful features and much-needed customization options."
-      image="test-img.png"
+      title="Your TweetDeck, your rules!"
+      paragraph={() => (
+        <span>
+          One of the focus of Better TweetDeck is customization. <br />
+          Want to see only @usernames? No problem. <br />
+          Want a specific time format for tweets? Sure. <br />
+          Want to go back to square avatars? We got you. <br /> <br />
+          All of this and a lot more is possible with Better TweetDeck!
+        </span>
+      )}
+      image="custo2.png"
+      style={{
+        maxHeight: 350,
+      }}
     />
     <TextSection
-      title="The TweetDeck you know and 💙, even better!"
-      paragraph="Better TweetDeck aims at improving your experience on TweetDeck by providing useful features and much-needed customization options."
-      image="test-img.png"
+      title="Do you speak emoji? 👀"
+      paragraph={() => (
+        <span>
+          Better TweetDeck features an emoji picker so you can unleash the emoji 🔥  in no time ⚡ <br />
+          All your fave emoji are here 😍 <br /> <br />
+          You can also make emoji pop out even more in tweets by making them bigger 💪
+        </span>
+      )}
+      image="emojos.png"
+      style={{
+        maxHeight: 300,
+      }}
     />
     <FeaturesGrid />
     <FeaturesList />
