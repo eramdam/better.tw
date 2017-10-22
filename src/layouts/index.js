@@ -7,7 +7,7 @@ import '../css/index.css';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Better TweetDeck"
+      title="Better TweetDeck, supercharge your TweetDeck experience"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
