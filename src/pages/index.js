@@ -47,6 +47,19 @@ const IndexPage = () => (
         maxHeight: 300,
       }}
     />
+    <TextSection
+      title="See the big picture(s)"
+      paragraph={() => (
+        <span>
+          Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes further and adds the support of more than 30 websites. <br /> <br />
+          Ever wanted to preview content from Instagram, Vimeo, SoundCloud, Bandcamp, Spotify, Twitch or Imgur? Say no more!
+        </span>
+      )}
+      image="emojos.png"
+      style={{
+        maxHeight: 300,
+      }}
+    />
     <FeaturesGrid />
     <FeaturesList />
     <div className={homeStyles.downloadZone}>
