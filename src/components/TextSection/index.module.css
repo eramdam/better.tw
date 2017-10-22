@@ -52,7 +52,7 @@
 
 .sectionImage {
   float: right;
-  background: pink;
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.52), 0 5px 15px 0 rgba(0, 0, 0, 0.27);
   border-radius: 4px;
+  max-height: 400px;
 }
