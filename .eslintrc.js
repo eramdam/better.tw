@@ -10,6 +10,7 @@ module.exports = {
     'jsx-a11y/accessible-emoji': 0,
     'max-len': 0,
     'react/forbid-prop-types': [2, { "forbid": ['any'] }],
+    'react/no-unescaped-entities': 0,
   }
 };
 
