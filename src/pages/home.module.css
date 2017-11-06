@@ -36,3 +36,14 @@
   margin: 1em;
   margin-bottom: 2em;
 }
+
+.beforeAfter {
+  text-align: center;
+}
+
+.bigImage {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.52),
+  0 5px 15px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 4px;
+  max-height: 500px;
+}

@@ -28,9 +28,9 @@ const IndexPage = () => (
           All of this and a lot more is possible with Better TweetDeck!
         </span>
       )}
-      image="custo2.png"
+      image="before-after.png"
       style={{
-        maxHeight: 350,
+        maxHeight: 450,
       }}
     />
     <TextSection
@@ -44,18 +44,18 @@ const IndexPage = () => (
       )}
       image="emojos.png"
       style={{
-        maxHeight: 300,
+        maxHeight: 350,
       }}
     />
     <TextSection
       title="See the big picture(s)"
       paragraph={() => (
         <span>
-          Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes further and adds the support of more than 30 websites. <br /> <br />
+          Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes beyond the YouTube/Vine/Twitter limitation and adds the support of more than 30 websites. <br /> <br />
           Ever wanted to preview content from Instagram, Vimeo, SoundCloud, Bandcamp, Spotify, Twitch or Imgur? Say no more!
         </span>
       )}
-      image="emojos.png"
+      image="big-pictures.png"
       style={{
         maxHeight: 300,
       }}
@@ -66,7 +66,7 @@ const IndexPage = () => (
       <div className={homeStyles.downloadZoneWrapper}>
         <div>
           <h2>Get today for your favorite browser</h2>
-          <p>You're one click away from a super-charged TweetDeck experience. <br/> Get Better TweetDeck for Opera, Chrome or Firefox.</p>
+          <p>You're one click away from a super-charged TweetDeck experience. <br /> Get Better TweetDeck for Opera, Chrome or Firefox.</p>
         </div>
         <div>
           <DownloadButton className={homeStyles.downloadButton} browser="opera" />

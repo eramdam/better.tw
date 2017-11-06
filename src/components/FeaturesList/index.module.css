@@ -26,12 +26,11 @@
 }
 
 .list ul {
-  text-align: center;
   margin-top: 20px;
   flex: 1;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6em;
-  column-count: 4;
+  column-count: 3;
   column-gap: 2em;
 }
 

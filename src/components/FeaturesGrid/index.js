@@ -34,49 +34,49 @@ const FeaturesGrid = () => (
       <h4>Features for years!</h4>
       <div className={styles.blocks}>
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Advanced customization"
+          icon="sliders"
+          paragraph="Better TweetDeck offers countless customization options. Not enough? Paste your own custom CSS for endless possibilities."
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="I miss the old replies..."
+          icon="at-sign"
+          paragraph="Don't like Twitter's new reply display? Better TweetDeck got you covered!"
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Control (the display of) time"
+          icon="clock"
+          paragraph="Whether you're more MM/DD/YYYY or DD/MM/YYYY or something else entirely, YOU got the control!"
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Edit your tweets"
+          icon="edit-3"
+          paragraph="That's not a real edit, but Better TweetDeck allows you to quickly re-send a fixed version of your tweets."
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Advanced muting"
+          icon="mic-off"
+          paragraph="Quickly mute #hashtags, specific apps or be even more specific with Regular Expressions."
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Skip t.co redirections"
+          icon="external-link"
+          paragraph="Want to reduce tracking and/or on a slow connection? Automatically expand links in tweets."
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Stay alert"
+          icon="alert-circle"
+          paragraph="Don't want to miss a tweet or a DM? Better TweetDeck can highlight it in your browser's tab so you never miss anything."
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="Download GIFs/videos"
+          icon="download"
+          paragraph="Ever wanted to get a nice GIF or video from a Twitter account? Now it's one click away!"
         />
         <FeatureBlock
-          name="Feature 1"
-          icon="copy"
-          paragraph="This feature is so amazing dude, you have NO IDEA"
+          name="No peeking!"
+          icon="eye-off"
+          paragraph="Want to avoid ppl peeking over your DMs? Collapse your read conversations for a little bit of privacy."
         />
       </div>
     </div>
