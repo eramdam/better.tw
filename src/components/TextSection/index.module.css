@@ -25,6 +25,10 @@
   composes: gridBlock from "../../css/index.css";
 }
 
+.textSectionGrid.vertical {
+  flex-direction: column;
+}
+
 .textSection > div {
   justify-content: space-around;
 }
@@ -37,6 +41,11 @@
   margin-right: 60px;
 }
 
+.textSectionGrid.vertical .sectionCopy {
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
 .sectionCopy > h4 {
   font-size: 19px;
 }
@@ -45,14 +54,24 @@
   margin: 1em 0;
 }
 
+.sectionCopy a {
+  color: #3593e6;
+}
+
+.sectionCopy a:hover {
+  color: #20588a;
+}
+
 .sectionParagraph {
   font-size: 16px;
   composes: font-body from '../../css/index.css';
 }
 
 .sectionImage {
-  float: right;
+  /* float: right; */
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.52), 0 5px 15px 0 rgba(0, 0, 0, 0.27);
   border-radius: 4px;
-  max-height: 400px;
+  height: auto;
+  max-width: 100%;
+  background: black;
 }

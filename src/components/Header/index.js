@@ -30,7 +30,7 @@ export default () => (
       </span>
       <span className={styles.copy}>
         <h1>Better TweetDeck</h1>
-        <p>TweetDeck, but every feature is supercharged and there is a lot of them.</p>
+        <p>Push TweetDeck beyond its limits.</p>
       </span>
     </span>
   </header>

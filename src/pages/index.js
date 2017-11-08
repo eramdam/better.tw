@@ -21,13 +21,16 @@ const IndexPage = () => (
       title="Your TweetDeck, your rules!"
       paragraph={() => (
         <span>
-          One of the focus of Better TweetDeck is customization. <br />
-          Want to see only @usernames? No problem. <br />
-          Want a specific time format for tweets? Sure. <br />
-          Want to go back to square avatars? We got you. <br /> <br />
-          All of this and a lot more is possible with Better TweetDeck!
+          One of the focus of Better TweetDeck is customization: <br /><br />
+          Want to see <strong>only @usernames</strong> on tweets? No problem. <br />
+          Want an <strong>absolute time format</strong> for tweets? Sure. <br />
+          Missing the <strong>square avatars</strong>? We got you. <br />
+          Wish TweetDeck's UI was a bit more <strong>minimal</strong>? Check this out! <br />
+          Preferred when characters counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
+          All of this and a <a href="#features-list">lot more</a> is possible with Better TweetDeck!
         </span>
       )}
+      vertical
       image="before-after.png"
       style={{
         maxHeight: 450,
@@ -45,6 +48,23 @@ const IndexPage = () => (
       image="emojos.png"
       style={{
         maxHeight: 350,
+      }}
+    />
+    <TextSection
+      title="Now you're playing with power!"
+      paragraph={() => (
+        <span>
+          Better TweetDeck gives you access to powerful advanced features. <br /> <br />
+          Quickly fix your typos with the <strong>edit feature</strong>. <br />
+          Easily <strong>paste images</strong> to tweet them. <br />
+          <strong>Share any link</strong> on TweetDeck with a single click. <br />
+          Make your life easier with <strong>GIF preview and download</strong>.
+        </span>
+      )}
+      image="poster.jpg"
+      video="better-tweetdeck-power.mp4"
+      style={{
+        maxHeight: 580,
       }}
     />
     <TextSection

@@ -1,6 +1,6 @@
 @value --grid-width: 960px;
 @value --white-overlay-btn: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .9));
-@value --font-body: 'Lato', system-ui, -apple-system, sans-serif;
+@value --font-body: 'PT Sans', sans-serif;
 @value --font-heading: 'PT Sans', sans-serif;
 @value --text-color: #4A4A4A;
 @value --btd-gradient: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
@@ -16,7 +16,6 @@ body {
   background: white;
   color: --text-color;
   font-size: 16px;
-  line-height: 1.4;
   font-family: --font-body;
   -webkit-font-smoothing: antialiased;
 }
@@ -32,6 +31,16 @@ h4,
 h5,
 h6 {
   font-family: --font-heading;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.6;
 }
 
 .font-body {
