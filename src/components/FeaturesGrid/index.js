@@ -76,7 +76,7 @@ const FeaturesGrid = () => (
         <FeatureBlock
           name="No peeking!"
           icon="eye-off"
-          paragraph="Want to avoid ppl peeking over your DMs? Collapse your read conversations for a little bit of privacy."
+          paragraph="Want to avoid people peeking over your DMs? Collapse your read conversations for a little bit of privacy."
         />
       </div>
     </div>

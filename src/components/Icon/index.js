@@ -1,13 +1,17 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { icons } from 'feather-icons';
+import classnames from 'classnames';
 import {
-  featherIconHelper,
   iconsList,
+  attrsToProps,
 } from '../../utils';
 
 const Icon = (props) => {
-  const { name, size, opts, ...more } = props;
+  const {
+    name, size, ...more
+  } = props;
   return (
     <span
       style={{
@@ -15,10 +19,19 @@ const Icon = (props) => {
         fontSize: 0,
       }}
       {...more}
-      dangerouslySetInnerHTML={{
-        __html: featherIconHelper(name, size, opts)
-      }}
-    />
+    >
+      <svg
+        {...attrsToProps(icons[name].attrs)}
+        {...{
+          className: classnames(icons[name].attrs.class),
+          width: size,
+          height: size,
+        }}
+        dangerouslySetInnerHTML={{
+          __html: icons[name].contents,
+        }}
+      />
+    </span>
   );
 };
 
@@ -26,13 +39,11 @@ const Icon = (props) => {
 Icon.propTypes = {
   name: PropTypes.oneOf(iconsList),
   size: PropTypes.number,
-  opts: PropTypes.object,
-}
+};
 
 Icon.defaultProps = {
   name: 'activity',
   size: null,
-  opts: {},
-}
+};
 
 export default Icon;
