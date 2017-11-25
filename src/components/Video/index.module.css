@@ -1,0 +1,19 @@
+.videoWrapper {
+  position: relative;
+  font-size: 0; 
+}
+
+.videoOverlay {
+  content: '';
+  background: color(black a(50%));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: opacity 150ms ease;
+}
+
+.videoWrapper.playing .videoOverlay {
+  opacity: 0;
+}

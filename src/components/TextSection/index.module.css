@@ -67,6 +67,11 @@
   composes: font-body from '../../css/index.css';
 }
 
+.sectionVideoWrapper {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 .sectionImage {
   /* float: right; */
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.52), 0 5px 15px 0 rgba(0, 0, 0, 0.27);

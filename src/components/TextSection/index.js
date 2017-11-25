@@ -6,6 +6,8 @@ import {
 import classnames from 'classnames/bind';
 import styles from './index.module.css';
 
+import Video from '../Video';
+
 const cx = classnames.bind(styles);
 
 const imgPath = url => `${__PATH_PREFIX__}/img/${url}`;
@@ -25,7 +27,13 @@ const TextSection = ({
         <p className={styles.sectionParagraph}>{renderTextProp(paragraph)}</p>
       </div>
       {video ?
-        <video src={imgPath(video)} className={styles.sectionImage} poster={imgPath(image)} muted autoPlay preload {...more} />
+        <Video
+          src={imgPath(video)}
+          className={styles.sectionImage}
+          wrapperClassName={styles.sectionVideoWrapper}
+          poster={imgPath(image)}
+          {...more}
+        />
        : <img className={styles.sectionImage} src={imgPath(image)} alt="" {...more} />}
     </div>
   </section>
