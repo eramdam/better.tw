@@ -29,7 +29,7 @@ const TextSection = ({
       {video ?
         <Video
           src={imgPath(video)}
-          className={styles.sectionImage}
+          className={styles.sectionVideo}
           wrapperClassName={styles.sectionVideoWrapper}
           poster={imgPath(image)}
           {...more}

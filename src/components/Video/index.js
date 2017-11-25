@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
 import styles from './index.module.css';
+import Icon from '../Icon';
 
 const cx = classnames.bind(styles);
 
@@ -56,8 +57,13 @@ export default class Video extends React.Component {
           cursor: 'pointer',
         }}
         onClick={this.playPause}
+        onKeyDown={this.playPause}
+        role="button"
+        tabIndex="0"
       >
-        <span className={styles.videoOverlay} />
+        <span className={styles.videoOverlay}>
+          <Icon name="play-circle" size={80} />
+        </span>
         <video
           src={src}
           ref={(el) => { this.videoNode = el; }}
