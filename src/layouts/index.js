@@ -14,6 +14,19 @@ const TemplateWrapper = ({ children }) => (
       ]}
       link={[
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i' },
+        { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
+        {
+          rel: 'icon',
+          sizes: '32x32',
+          type: 'image/png',
+          href: `${__PATH_PREFIX__}/img/favicon-32x32.png`,
+        },
+        {
+          rel: 'icon',
+          sizes: '16x16',
+          type: 'image/png',
+          href: `${__PATH_PREFIX__}/img/favicon-16x16.png`,
+        },
       ]}
     />
     {children()}
