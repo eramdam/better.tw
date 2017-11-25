@@ -25,6 +25,7 @@
     "generate": "plop"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.2",
     "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.7.0",
