@@ -9,7 +9,7 @@ const Footer = () => (
     </small>
     <nav className={styles.menu}>
       <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
-      <a href="https://twitter.com/BetterTDeck">Twitter</a>
+      <a href="https://twitter.com/BetterTDeck">Follow Us</a>
     </nav>
   </footer>
 );

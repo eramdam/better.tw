@@ -19,7 +19,7 @@ export default () => (
           className={styles.menuItemIcon}
           size={20}
         />
-        Twitter
+        Follow Us
       </a>
     </nav>
     <span className={styles.content}>
