@@ -37,20 +37,6 @@ const IndexPage = () => (
       }}
     />
     <TextSection
-      title="Do you speak emoji? 👀"
-      paragraph={() => (
-        <span>
-          Better TweetDeck features an emoji picker so you can unleash the emoji 🔥  in no time ⚡ <br />
-          All your fave emoji are here 😍 <br /> <br />
-          You can also make emoji pop out even more in tweets by making them bigger 💪
-        </span>
-      )}
-      image="emojos.png"
-      style={{
-        maxHeight: 350,
-      }}
-    />
-    <TextSection
       title="Now you're playing with power!"
       paragraph={() => (
         <span>
@@ -78,6 +64,20 @@ const IndexPage = () => (
       image="big-pictures.png"
       style={{
         maxHeight: 300,
+      }}
+    />
+    <TextSection
+      title="Do you speak emoji? 👀"
+      paragraph={() => (
+        <span>
+          Better TweetDeck features an emoji picker so you can unleash the emoji 🔥  in no time ⚡ <br />
+          All your fave emoji are here 😍 <br /> <br />
+          You can also make emoji pop out even more in tweets by making them bigger 💪
+        </span>
+      )}
+      image="emojos.png"
+      style={{
+        maxHeight: 350,
       }}
     />
     <FeaturesGrid />
