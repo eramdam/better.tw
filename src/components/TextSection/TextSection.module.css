@@ -22,7 +22,7 @@
 }
 
 .textSectionGrid {
-  composes: gridBlock from "../../css/variables.css";
+  composes: gridBlock from "../../css/global.css";
 }
 
 .textSectionGrid.vertical {

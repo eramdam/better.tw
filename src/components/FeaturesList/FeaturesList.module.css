@@ -18,7 +18,7 @@
 }
 
 .listGrid {
-  composes: gridBlock from "../../css/variables.css";
+  composes: gridBlock from "../../css/global.css";
 }
 
 .list :matches(ul, li) {

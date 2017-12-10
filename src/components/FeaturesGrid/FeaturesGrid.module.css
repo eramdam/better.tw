@@ -8,7 +8,7 @@
 }
 
 .featuresGridWrap {
-  composes: gridBlock from "../../css/variables.css";
+  composes: gridBlock from "../../css/global.css";
 }
 
 .featuresGrid h4 {

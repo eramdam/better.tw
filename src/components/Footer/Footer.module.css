@@ -5,7 +5,7 @@
   background: white;
   color: text-color;
   padding: 20px;
-  composes: gridBlock from "../../css/variables.css";
+  composes: gridBlock from "../../css/global.css";
 }
 
 .menu {
