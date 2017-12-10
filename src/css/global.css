@@ -1,0 +1,66 @@
+@value smaller-than-grid, text-color, font-body, font-heading, grid-width from "./variables.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: text-color;
+  font-size: 16px;
+  font-family: font-body;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: font-heading;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.6;
+}
+
+.font-body {
+  font-family: font-body;
+}
+
+.font-heading {
+  font-family: font-heading;
+}
+
+.gridBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: grid-width;
+  margin: 0 auto;
+}
+
+@media smaller-than-grid {
+  .gridBlock {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}

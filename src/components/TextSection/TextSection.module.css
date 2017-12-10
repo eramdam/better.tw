@@ -1,4 +1,4 @@
-@value --grid-width from "../../css/index.css";
+@value smaller-than-grid from "../../css/variables.css";
 
 .textSection {
   width: 100%;
@@ -22,7 +22,7 @@
 }
 
 .textSectionGrid {
-  composes: gridBlock from "../../css/index.css";
+  composes: gridBlock from "../../css/variables.css";
 }
 
 .textSectionGrid.vertical {
@@ -64,7 +64,7 @@
 
 .sectionParagraph {
   font-size: 16px;
-  composes: font-body from '../../css/index.css';
+  composes: font-body from '../../css/global.css';
 }
 
 .sectionVideoWrapper {
@@ -87,4 +87,27 @@
   height: auto;
   max-width: 100%;
   background: black;
+}
+
+@media smaller-than-grid {
+  .textSection.textSection .sectionCopy {
+    order: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .textSection {
+    padding: 20px;
+  }
+
+  .sectionImage,
+  .sectionVideoWrapper {
+    order: 2;
+  }
+
+  .sectionVideo,
+  .sectionImage {
+    width: 100%;
+    max-height: none !important;
+  }
 }

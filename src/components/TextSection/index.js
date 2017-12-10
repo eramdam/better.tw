@@ -4,7 +4,7 @@ import {
   isFunction,
 } from 'lodash';
 import classnames from 'classnames/bind';
-import styles from './index.module.css';
+import styles from './TextSection.module.css';
 
 import Video from '../Video';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import styles from './index.module.css';
+import styles from './Video.module.css';
 import Icon from '../Icon';
 
 const cx = classnames.bind(styles);

@@ -1,4 +1,4 @@
-@value --grid-width from "../../css/index.css";
+@value grid-width from "../../css/variables.css";
 
 .list {
   background-color: #3089c9;
@@ -18,7 +18,7 @@
 }
 
 .listGrid {
-  composes: gridBlock from "../../css/index.css";
+  composes: gridBlock from "../../css/variables.css";
 }
 
 .list :matches(ul, li) {

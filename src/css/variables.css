@@ -1,0 +1,7 @@
+@value grid-width: 960px;
+@value font-body: 'PT Sans', sans-serif;
+@value font-heading: 'PT Sans', sans-serif;
+@value text-color: #4A4A4A;
+@value btd-gradient: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
+
+@value smaller-than-grid: (max-width: 960px);

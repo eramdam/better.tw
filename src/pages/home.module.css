@@ -17,7 +17,7 @@
 }
 
 .downloadZoneWrapper {
-  composes: gridBlock from "../css/index.css";
+  composes: gridBlock from "../css/variables.css";
   justify-content: center;
   padding: 40px 0 !important;
 }

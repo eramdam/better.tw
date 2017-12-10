@@ -8,7 +8,7 @@
 }
 
 .featuresGridWrap {
-  composes: gridBlock from "../../css/index.css";
+  composes: gridBlock from "../../css/variables.css";
 }
 
 .featuresGrid h4 {
@@ -54,5 +54,5 @@
 .blockParagraph {
   font-size: 14px;
   color: white;
-  composes: font-body from "../../css/index.css";
+  composes: font-body from "../../css/variables.css";
 }

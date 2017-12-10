@@ -1,11 +1,11 @@
-@value --grid-width, --text-color from "../../css/index.css";
+@value text-color from "../../css/variables.css";
 
 .footer {
   justify-content: space-between;
   background: white;
-  color: --text-color;
+  color: text-color;
   padding: 20px;
-  composes: gridBlock from "../../css/index.css";
+  composes: gridBlock from "../../css/variables.css";
 }
 
 .menu {
@@ -15,7 +15,7 @@
 }
 
 .menu a {
-  color: --text-color;
+  color: text-color;
   text-decoration: none;
   margin-left: 20px;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 // import 'normalize.css';
-import '../css/index.css';
+import '../css/global.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>

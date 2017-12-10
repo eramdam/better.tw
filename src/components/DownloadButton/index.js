@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames/bind';
-import styles from './index.module.css';
+import styles from './DownloadButton.module.css';
 
 const cx = classnames.bind(styles);
 
@@ -25,11 +25,11 @@ DownloadButton.propTypes = {
   browser: PropTypes.oneOf(['opera', 'chrome', 'firefox']).isRequired,
   url: PropTypes.string,
   className: PropTypes.string,
-}
+};
 
 DownloadButton.defaultProps = {
   url: '',
   className: '',
-}
+};
 
 export default DownloadButton;

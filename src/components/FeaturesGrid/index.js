@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.module.css';
+import styles from './FeaturesGrid.module.css';
 import Icon from '../Icon';
 
 const FeatureBlock = ({ name, paragraph, icon }) => (

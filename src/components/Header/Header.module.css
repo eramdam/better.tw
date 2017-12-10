@@ -1,4 +1,4 @@
-@value --btd-gradient, --grid-width from "../../css/index.css";
+@value btd-gradient, grid-width from "../../css/variables.css";
 
 .header {
   color: rgb(255, 255, 255);
@@ -10,7 +10,7 @@
 
 .header,
 .header::after {
-  background-image: --btd-gradient;
+  background-image: btd-gradient;
 }
 
 .header::after {
@@ -28,7 +28,7 @@
 .header .menu,
 .content {
   max-width: 100%;
-  width: --grid-width;
+  width: grid-width;
   margin: 0 auto;
   z-index: 1;
   position: relative;
