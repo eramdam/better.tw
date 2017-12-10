@@ -4,8 +4,8 @@
 
 .button {
   background-color: white;
-  padding: .9rem .8rem;
-  padding-left: calc(.8rem + 48px);
+  padding: .9em .8em;
+  padding-left: calc(.8em + 48px);
   border-radius: 4px;
   font-size: 16px;
   box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -46,6 +46,14 @@
 
 .firefox > span {
   background: -webkit-linear-gradient(top, #ff9500, #e66000);
+}
+
+.btd {
+  background-image: var(--white-overlay-btn), url("../../img/btd-icon.png");
+}
+
+.btd > span {
+  background: -webkit-linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
 }
 
 .button > span {

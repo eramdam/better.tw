@@ -1,4 +1,4 @@
-@value btd-gradient, grid-width from "../../css/variables.css";
+@value btd-gradient, grid-width, smaller-than-grid from "../../css/variables.css";
 
 .header {
   color: rgb(255, 255, 255);
@@ -95,4 +95,12 @@
 
 .copy > p {
   font-size: 1.2rem;
+}
+
+@media smaller-than-grid {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

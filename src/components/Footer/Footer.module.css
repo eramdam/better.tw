@@ -1,4 +1,4 @@
-@value text-color from "../../css/variables.css";
+@value text-color, mobile from "../../css/variables.css";
 
 .footer {
   justify-content: space-between;
@@ -23,4 +23,19 @@
 .menu a:hover {
   color: black;
   text-decoration: underline;
+}
+
+@media mobile {
+  small {
+    text-align: left;
+  }
+  .menu {
+    text-align: left;
+    margin: 20px 0;
+  }
+
+  .menu a {
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }

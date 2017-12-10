@@ -1,4 +1,4 @@
-@value grid-width from "../../css/variables.css";
+@value grid-width, mobile from "../../css/variables.css";
 
 .list {
   background-color: #3089c9;
@@ -37,4 +37,11 @@
 .list ul li {
   list-style-type: disc;
   list-style-position: inside;
+}
+
+@media mobile {
+  .list ul {
+    column-count: 1;
+    font-size: 14px;
+  }
 }

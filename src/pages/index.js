@@ -16,6 +16,7 @@ const IndexPage = () => (
       <DownloadButton className={homeStyles.downloadButton} browser="opera" />
       <DownloadButton className={homeStyles.downloadButton} browser="chrome" />
       <DownloadButton className={homeStyles.downloadButton} browser="firefox" />
+      <DownloadButton className={`${homeStyles.downloadButton} ${homeStyles.showMobile}`} browser="btd" text="Download now" />
     </nav>
     <TextSection
       title="Your TweetDeck, your rules!"
@@ -82,16 +83,16 @@ const IndexPage = () => (
     />
     <FeaturesGrid />
     <FeaturesList />
-    <div className={homeStyles.downloadZone}>
+    <div className={homeStyles.downloadZone} id="download-btns">
       <div className={homeStyles.downloadZoneWrapper}>
         <div>
           <h2>Get today for your favorite browser</h2>
           <p>You're one click away from a super-charged TweetDeck experience. <br /> Get Better TweetDeck for Opera, Chrome or Firefox.</p>
         </div>
-        <div>
-          <DownloadButton className={homeStyles.downloadButton} browser="opera" />
-          <DownloadButton className={homeStyles.downloadButton} browser="chrome" />
-          <DownloadButton className={homeStyles.downloadButton} browser="firefox" />
+        <div className={homeStyles.downloadZoneBtns}>
+          <DownloadButton className={homeStyles.downloadZoneButton} browser="opera" />
+          <DownloadButton className={homeStyles.downloadZoneButton} browser="chrome" />
+          <DownloadButton className={homeStyles.downloadZoneButton} browser="firefox" />
         </div>
       </div>
     </div>

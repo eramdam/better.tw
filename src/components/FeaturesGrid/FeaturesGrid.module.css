@@ -1,3 +1,5 @@
+@value mobile from "../../css/variables.css";
+
 .featuresGrid {
   background-color: #3ca8f7;
 }
@@ -55,4 +57,10 @@
   font-size: 14px;
   color: white;
   composes: font-body from "../../css/variables.css";
+}
+
+@media mobile {
+  .block {
+    flex-basis: 100%;
+  }
 }

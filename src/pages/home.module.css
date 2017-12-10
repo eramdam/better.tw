@@ -1,3 +1,5 @@
+@value smaller-than-grid, mobile from "../css/variables.css";
+
 .downloadBtns {
     position: relative;
     z-index: 9;
@@ -5,7 +7,8 @@
     transform: translateY(-50%);
 }
 
-.downloadButton {
+.downloadButton,
+.downloadZoneButton {
   margin: 0 12px;
 }
 
@@ -46,4 +49,29 @@
   0 5px 15px 0 rgba(0, 0, 0, 0.27);
   border-radius: 4px;
   max-height: 500px;
+}
+
+.showMobile {
+  display: none;
+}
+
+@media mobile {
+  .downloadButton:not(.showMobile) {
+    display: none;
+  }
+
+  .showMobile {
+    display: inline-block;
+  }
+
+  .downloadZoneBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .downloadZoneButton {
+    width: 200px;
+    margin: 12px 0;
+  }
 }
