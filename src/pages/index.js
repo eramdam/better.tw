@@ -68,17 +68,17 @@ const IndexPage = () => (
       }}
     />
     <TextSection
-      title="Do you speak emoji? 👀"
+      title="Emoji & GIFs, at your fingertips"
       paragraph={() => (
         <span>
-          Better TweetDeck features an emoji picker so you can unleash the emoji 🔥  in no time ⚡ <br />
-          All your fave emoji are here 😍 <br /> <br />
-          You can also make emoji pop out even more in tweets by making them bigger 💪
+          Better TweetDeck lets you add emoji through an integrated picker or by using <code>:shortcodes:</code> 😎 🔥 👍 <br /> <br />
+          Find the perfect GIF for any occasion thanks to the Giphy/Tenor integration!
         </span>
       )}
-      image="emojos.png"
+      image="poster-emoji.jpg"
+      video="emojos-gifs.mp4"
       style={{
-        maxHeight: 350,
+        maxHeight: 500,
       }}
     />
     <FeaturesGrid />

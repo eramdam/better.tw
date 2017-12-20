@@ -7,6 +7,8 @@ const FeaturesList = () => (
     <div className={styles.listGrid}>
       <h4 id="features-list">Complete features list</h4>
       <ul>
+        <li>Add GIFs from Giphy & Tenor</li>
+        <li> Add emoji using <code>:shortcodes:</code></li >
         <li>Show tweets on <a href="https://favstar.fm">favstar.fm</a></li>
         <li>Mute source from tweets' menu</li>
         <li>Mute #hashtags from tweets' menu</li>
