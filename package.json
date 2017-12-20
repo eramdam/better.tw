@@ -13,7 +13,8 @@
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "lodash": "^4.17.4",
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "style-loader": "^0.19.1"
   },
   "license": "MIT",
   "main": "n/a",

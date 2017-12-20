@@ -1,17 +1,14 @@
 import React from 'react';
 // import Link from 'gatsby-link';
 
-import Header from '../components/Header';
 import DownloadButton from '../components/DownloadButton';
 import TextSection from '../components/TextSection';
 import FeaturesGrid from '../components/FeaturesGrid';
 import FeaturesList from '../components/FeaturesList';
-import Footer from '../components/Footer';
 import homeStyles from './home.module.css';
 
 const IndexPage = () => (
   <div>
-    <Header />
     <nav className={homeStyles.downloadBtns}>
       <DownloadButton className={homeStyles.downloadButton} browser="opera" />
       <DownloadButton className={homeStyles.downloadButton} browser="chrome" />
@@ -96,7 +93,6 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 );
 
