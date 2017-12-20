@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 // import PropTypes from 'prop-types';
 import styles from './Footer.module.css';
 
@@ -8,6 +9,7 @@ const Footer = () => (
       Better TweetDeck is not affiliated with Twitter or TweetDeck.
     </small>
     <nav className={styles.menu}>
+      <Link to="/changelog">Changelog</Link>
       <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
       <a href="https://twitter.com/BetterTDeck">Follow Us</a>
     </nav>
