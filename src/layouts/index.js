@@ -11,8 +11,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Better TweetDeck, supercharge your TweetDeck experience"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Emojis, thumbnails and advanced features for https://tweetdeck.twitter.com' },
+        { name: 'keywords', content: 'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji' },
       ]}
       link={[
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i' },
