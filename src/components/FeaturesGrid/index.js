@@ -34,9 +34,9 @@ const FeaturesGrid = () => (
       <h4>Features for years!</h4>
       <div className={styles.blocks}>
         <FeatureBlock
-          name="Advanced customization"
-          icon="sliders"
-          paragraph="Better TweetDeck offers countless customization options. Not enough? Paste your own custom CSS for endless possibilities."
+          name="Quick sharing"
+          icon="share"
+          paragraph="Share a link or a piece of text on TweetDeck in a single right-click! No copy/pasting, only more sharing!"
         />
         <FeatureBlock
           name="I miss the old replies..."
