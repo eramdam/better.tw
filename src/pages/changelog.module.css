@@ -1,0 +1,9 @@
+
+.changelog {
+  composes: gridBlock from "../css/global.css";
+}
+
+.changelog h1 {
+  background: red;
+  width: 100%;
+}
