@@ -9,10 +9,13 @@ const ChangelogPage = ({ data }) => {
   return (
     <div
       className={styles.changelog}
-      dangerouslySetInnerHTML={{
-        __html: html,
-      }}
-    />
+    >
+      <div
+        dangerouslySetInnerHTML={{
+          __html: html,
+        }}
+      />
+    </div>
   );
 };
 
