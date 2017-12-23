@@ -5,4 +5,4 @@
 @value btd-gradient: linear-gradient(-45deg, #00A0FB 47%, #00CBFC 100%);
 
 @value smaller-than-grid: (max-width: 960px);
-@value mobile: (max-width: 640px);
+@value mobile: (max-width: 660px);
