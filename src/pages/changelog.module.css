@@ -19,7 +19,7 @@
   line-height: 1.8;
 }
 
-.changelog > ul {
+.changelog > div > ul {
   list-style-type: none;
 }
 
