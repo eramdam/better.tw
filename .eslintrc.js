@@ -3,6 +3,7 @@ module.exports = {
   parser: 'babel-eslint',
   globals: {
     '__PATH_PREFIX__': true,
+    'graphql': true,
   },
   rules: {
     'import/no-extraneous-dependencies': 0,
