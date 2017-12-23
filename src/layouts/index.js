@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import DownloadButton from '../components/DownloadButton';
+import homeStyles from '../pages/home.module.css';
 // import 'normalize.css';
 import '../css/global.css';
 
@@ -32,6 +34,12 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
+    <nav className={homeStyles.downloadBtns}>
+      <DownloadButton className={homeStyles.downloadButton} browser="opera" />
+      <DownloadButton className={homeStyles.downloadButton} browser="chrome" />
+      <DownloadButton className={homeStyles.downloadButton} browser="firefox" />
+      <DownloadButton className={`${homeStyles.downloadButton} ${homeStyles.showMobile}`} browser="btd" text="Download now" />
+    </nav>
     {children()}
     <Footer />
   </div>

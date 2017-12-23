@@ -9,12 +9,6 @@ import homeStyles from './home.module.css';
 
 const IndexPage = () => (
   <div>
-    <nav className={homeStyles.downloadBtns}>
-      <DownloadButton className={homeStyles.downloadButton} browser="opera" />
-      <DownloadButton className={homeStyles.downloadButton} browser="chrome" />
-      <DownloadButton className={homeStyles.downloadButton} browser="firefox" />
-      <DownloadButton className={`${homeStyles.downloadButton} ${homeStyles.showMobile}`} browser="btd" text="Download now" />
-    </nav>
     <TextSection
       title="Your TweetDeck, your rules!"
       paragraph={() => (
