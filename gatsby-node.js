@@ -7,10 +7,12 @@ const Emoji = new jsEmoji.EmojiConvertor();
 Emoji.replace_mode = 'unified';
 const labels = ['Feature', 'Bugfix', 'Improvement', 'Meta'];
 
+const COMMIT = '1ce4a722e23db2a4aba36339ad342fe0c71cc7c9';
+
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
-  const md = await axios.get('https://raw.githubusercontent.com/eramdam/BetterTweetDeck/master/CHANGELOG.md')
+  const md = await axios.get(`https://raw.githubusercontent.com/eramdam/BetterTweetDeck/${COMMIT}/CHANGELOG.md`)
     .then(response => response.data);
 
   createNode({
