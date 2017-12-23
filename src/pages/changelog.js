@@ -1,4 +1,6 @@
+/* eslint react/no-danger: 0 */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './changelog.module.css';
 
 const ChangelogPage = ({ data }) => {
@@ -12,6 +14,10 @@ const ChangelogPage = ({ data }) => {
       }}
     />
   );
+};
+
+ChangelogPage.propTypes = {
+  data: PropTypes.object.isRequired,
 };
 
 export default ChangelogPage;

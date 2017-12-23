@@ -1,9 +1,28 @@
 
 .changelog {
   composes: gridBlock from "../css/global.css";
+  padding: 40px 0;
 }
 
 .changelog h1 {
-  background: red;
   width: 100%;
+  margin-top: 0.8em;
+  line-height: 1;
+  margin-bottom: 0.6em;
+}
+
+.changelog ul ul {
+  padding-left: 1em;
+}
+
+.changelog li {
+  line-height: 1.8;
+}
+
+.changelog > ul {
+  list-style-type: none;
+}
+
+.changelog ul {
+  font-size: 16px;
 }
