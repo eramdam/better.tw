@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
-import styles from './changelog.module.css';
+import Helmet from 'react-helmet';
+import styles from './index.module.css';
 
 const ChangelogPage = ({ data }) => {
   const releases = data.allGithubRelease.edges.map(e => e.node);
@@ -11,6 +12,10 @@ const ChangelogPage = ({ data }) => {
     <div
       className={styles.changelog}
     >
+      <Helmet
+        title="Better TweetDeck | Release notes"
+      />
+      <h1>Release notes</h1>
       {releases.map((release) => {
         const formattedDate = format(release.date, 'MM/DD/YYYY');
 

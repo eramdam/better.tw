@@ -9,7 +9,7 @@ const Footer = () => (
       Better TweetDeck is not affiliated with Twitter or TweetDeck.
     </small>
     <nav className={styles.menu}>
-      <Link to="/changelog">Changelog</Link>
+      <Link to="/changelog">Release notes</Link>
       <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
       <a href="https://twitter.com/BetterTDeck">Follow Us</a>
     </nav>

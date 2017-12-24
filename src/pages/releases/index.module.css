@@ -1,7 +1,7 @@
 
 .changelog {
   padding: 40px;
-  composes: gridBlock from "../css/global.css";
+  composes: gridBlock from "../../css/global.css";
 }
 
 .singleRelease {

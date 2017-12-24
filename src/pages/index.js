@@ -1,5 +1,4 @@
 import React from 'react';
-// import Link from 'gatsby-link';
 
 import DownloadButton from '../components/DownloadButton';
 import TextSection from '../components/TextSection';
@@ -19,7 +18,7 @@ const IndexPage = () => (
           Missing the <strong>square avatars</strong>? We got you. <br />
           Wish TweetDeck's UI was a bit more <strong>minimal</strong>? Check this out! <br />
           Preferred when characters counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
-          All of this and a <a href="#features-list">lot more</a> is possible with Better TweetDeck!
+          All of this and a lot more is possible with Better TweetDeck!
         </span>
       )}
       vertical
