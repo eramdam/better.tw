@@ -1,10 +1,13 @@
 @value smaller-than-grid, text-color, font-body, font-heading, grid-width from "./variables.css";
 
 * {
-  padding: 0;
   margin: 0;
   background-repeat: no-repeat;
   box-sizing: border-box;
+}
+
+*:not(ul, ol) {
+  padding: 0;
 }
 
 body {

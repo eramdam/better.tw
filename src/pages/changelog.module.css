@@ -1,28 +1,61 @@
 
 .changelog {
-  composes: gridBlock from "../css/global.css";
   padding: 40px;
+  composes: gridBlock from "../css/global.css";
 }
 
-.changelog h1 {
+.singleRelease {
   width: 100%;
-  margin-top: 0.8em;
-  line-height: 1;
-  margin-bottom: 0.6em;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 20px;
+  padding-top: 10px;
+  padding-right: 30px;
+  background-image: 
+    radial-gradient(190px 200px at 0 0, #00CBFC 0%, rgba(0, 203, 252, 0) 114%),
+    linear-gradient(-180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0) 100%)
+  ;
+  background-repeat: no-repeat;
+  background-color: #00A0FB;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .28);
+  box-shadow:
+  0 4px 30px rgba(0, 159, 251, 0.514);
+
+  & > hr {
+    border: 0;
+    border-bottom: 1px dashed color(white alpha(30%));
+    border-top: 1px dashed color(black alpha(30%));
+    margin: 10px 0;
+  }
+
+  & > h1 {
+    margin: 0;
+  }
 }
 
-.changelog ul ul {
-  padding-left: 1em;
+.releaseFooter {
+  display: flex;
+  justify-content: space-between
 }
 
-.changelog li {
-  line-height: 1.8;
+.releaseExternalLink {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.changelog > div > ul {
-  list-style-type: none;
+.releaseDate {
+  font-size: 14px;
+  display: inline-block;
 }
 
-.changelog ul {
-  font-size: 16px;
+.releaseDescription {
+  font-size: 17px;
+  line-height: 1.55;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
