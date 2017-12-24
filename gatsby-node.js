@@ -14,6 +14,7 @@ query BTDReleases {
         edges {
           node {
             id
+            isDraft
             name
             createdAt
             description
@@ -59,9 +60,9 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
   const releases = await githubApolloFetch({ query: GITHUB_RELEASES_QUERY })
-    .then(({ data }) => data.viewer.repository.releases.edges.map(i => ({
-      ...i.node,
-      name: i.node.name || i.node.tag.name,
+    .then(({ data }) => data.viewer.repository.releases.edges.filter(r => !r.node.isDraft).map(r => ({
+      ...r.node,
+      name: r.node.name || r.node.tag.name,
       tag: undefined,
     })));
 
