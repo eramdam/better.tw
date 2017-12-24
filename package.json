@@ -5,36 +5,28 @@
   "author": "Damien Erambert <damien.erambert@me.com>",
   "dependencies": {
     "apollo-fetch": "^0.7.0",
-    "axios": "^0.17.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "change-case": "^3.0.1",
     "classnames": "^2.2.5",
     "config": "^1.28.1",
     "date-fns": "^1.29.0",
-    "emoji-js": "^3.4.0",
     "feather-icons": "^4.0.1",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-remark-autolink-headers": "^1.4.11",
-    "gatsby-remark-emoji": "0.0.1",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.26",
     "lodash": "^4.17.4",
     "marked": "^0.3.7",
-    "normalize.css": "^7.0.0",
     "style-loader": "^0.19.1"
   },
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "plop"
+    "start": "gatsby develop"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
@@ -44,8 +36,6 @@
     "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "plop": "^1.9.0",
-    "prettier": "^1.7.4"
+    "eslint-plugin-react": "^7.4.0"
   }
 }

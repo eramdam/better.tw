@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DownloadButton from '../components/DownloadButton';
 import homeStyles from '../pages/home.module.css';
-// import 'normalize.css';
 import '../css/global.css';
 
 const TemplateWrapper = ({ children }) => (
