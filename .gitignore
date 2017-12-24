@@ -60,3 +60,6 @@ typings/
 dist/*
 .cache/
 public/*
+config/*.js
+config/*.json
+!config/default.js

@@ -1,36 +1,70 @@
-const axios = require('axios');
+/* eslint no-param-reassign:0 */
+const { createApolloFetch } = require('apollo-fetch');
+const config = require('config');
 const crypto = require('crypto');
 const marked = require('marked');
-const jsEmoji = require('emoji-js');
 
-const Emoji = new jsEmoji.EmojiConvertor();
-Emoji.replace_mode = 'unified';
-const labels = ['Feature', 'Bugfix', 'Improvement', 'Meta'];
+const GITHUB_URI = 'https://api.github.com/graphql';
+const GITHUB_RELEASES_QUERY = `
+query BTDReleases {
+  viewer {
+    repository(name: "BetterTweetDeck") {
+      id
+      releases(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+        edges {
+          node {
+            id
+            name
+            createdAt
+            description
+            url
+            tag {
+              name
+            }
+          }
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
+        }
+      }
+    }
+  }
+}`;
+const githubApolloFetch = createApolloFetch({ uri: GITHUB_URI });
+githubApolloFetch.use(({ options }, next) => {
+  if (!options.headers) {
+    options.headers = {}; // Create the headers object if needed.
+  }
+  options.headers.authorization = `bearer ${config.github_token}`;
 
-const COMMIT = '1ce4a722e23db2a4aba36339ad342fe0c71cc7c9';
+  next();
+});
+
+const processRelease = release => ({
+  id: release.id,
+  parent: null,
+  title: release.name,
+  url: release.url,
+  children: [],
+  description: marked(release.description),
+  date: release.createdAt,
+  internal: {
+    type: 'GithubRelease',
+    contentDigest: crypto.createHash('md5').update(release.description).digest('hex'),
+  },
+});
 
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
-  const md = await axios.get(`https://raw.githubusercontent.com/eramdam/BetterTweetDeck/${COMMIT}/CHANGELOG.md`)
-    .then(response => response.data);
+  const releases = await githubApolloFetch({ query: GITHUB_RELEASES_QUERY })
+    .then(({ data }) => data.viewer.repository.releases.edges.map(i => ({
+      ...i.node,
+      name: i.node.name || i.node.tag.name,
+      tag: undefined,
+    })));
 
-  createNode({
-    // Required fields.
-    id: 'BTDChangelog',
-    parent: null, // or null if it's a source node without a parent
-    children: [],
-    markdown: md,
-    html: Emoji.replace_colons(marked(md).replace(new RegExp(`(\\[(${labels.join('|')})\\])`, 'gi'), (match, p1, p2) => `
-        <span class="token -${p2.toLowerCase()}">${p2}</span>
-      `)),
-    internal: {
-      type: 'GithubChangelog',
-      contentDigest: crypto
-        .createHash('md5')
-        .update(JSON.stringify(md))
-        .digest('hex'),
-      mediaType: 'text/markdown',
-    },
-  });
+  releases.forEach(release => createNode(processRelease(release)));
 };
+
