@@ -77,12 +77,12 @@ const IndexPage = () => (
       <div className={homeStyles.downloadZoneWrapper}>
         <div>
           <h2>Get today for your favorite browser</h2>
-          <p>You're one click away from a super-charged TweetDeck experience. <br /> Get Better TweetDeck for Opera, Chrome or Firefox.</p>
+          <p>You're one click away from a super-charged TweetDeck experience. <br /> Get Better TweetDeck for Chrome, Firefox or Opera.</p>
         </div>
         <div className={homeStyles.downloadZoneBtns}>
-          <DownloadButton className={homeStyles.downloadZoneButton} browser="opera" />
           <DownloadButton className={homeStyles.downloadZoneButton} browser="chrome" />
           <DownloadButton className={homeStyles.downloadZoneButton} browser="firefox" />
+          <DownloadButton className={homeStyles.downloadZoneButton} browser="opera" />
         </div>
       </div>
     </div>
