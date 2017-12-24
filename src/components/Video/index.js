@@ -70,7 +70,7 @@ export default class Video extends React.Component {
           className={className}
           poster={poster}
           muted
-          preload
+          preload="metadata"
           {...more}
         />
       </div>
