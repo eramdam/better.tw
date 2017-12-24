@@ -1,5 +1,5 @@
 :root {
-  --white-overlay-btn: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .9));
+  --white-overlay-btn: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75));
 }
 
 .button {
