@@ -77,9 +77,6 @@
 }
 
 .copy {
-  max-width: 450px;
-  width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,6 +95,11 @@
 }
 
 @media smaller-than-grid {
+  .copy {
+    max-width: 450px;
+    width: 100%;
+    flex: 1;
+  }
   .content {
     flex-direction: column;
     align-items: center;
