@@ -1,5 +1,5 @@
 .about {
-  composes: gridBlock from "../css/global.css";
+  composes: gridBlock from "../../css/global.css";
   padding: 20px;
 }
 

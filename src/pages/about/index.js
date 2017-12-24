@@ -24,7 +24,7 @@ export const query = graphql`
 query FAQPage {
   allMarkdownRemark(
     filter: {
-      fileAbsolutePath: {regex: "/faq.md/"}
+      fileAbsolutePath: {regex: "/about.md/"}
    }
   ) {
     edges {
