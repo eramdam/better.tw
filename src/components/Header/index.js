@@ -6,7 +6,7 @@ import Icon from '../Icon';
 export default () => (
   <header className={styles.header}>
     <nav className={styles.menu}>
-      <Link
+      {/* <Link
         to="/about"
         className={styles.menuItem}
         style={{
@@ -19,7 +19,7 @@ export default () => (
           size={20}
         />
         About
-      </Link>
+      </Link> */}
       <a className={styles.menuItem} href="https://github.com/eramdam/BetterTweetDeck">
         <Icon
           name="github"
