@@ -12,12 +12,13 @@ const IndexPage = () => (
       title="Your TweetDeck, your rules!"
       paragraph={() => (
         <span>
-          One of the focus of Better TweetDeck is customization: <br /><br />
+          One of the focuses of Better TweetDeck is customization: <br /><br />
           Want to see <strong>only @usernames</strong> on tweets? No problem. <br />
           Want an <strong>absolute time format</strong> for tweets? Sure. <br />
-          Missing the <strong>square avatars</strong>? We got you. <br />
+          Missing the <strong>square avatars</strong>? We 
+  you. <br />
           Wish TweetDeck's UI was a bit more <strong>minimal</strong>? Check this out! <br />
-          Preferred when characters counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
+          Preferred when characters were counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
           All of this and a lot more is possible with Better TweetDeck!
         </span>
       )}
@@ -48,7 +49,7 @@ const IndexPage = () => (
       title="See the big picture(s)"
       paragraph={() => (
         <span>
-          Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes beyond the YouTube/Vine/Twitter limitation and adds the support of more than 30 websites. <br /> <br />
+          Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes beyond the YouTube/Vine/Twitter limitation and adds support for more than 30 websites. <br /> <br />
           Ever wanted to preview content from Instagram, Vimeo, SoundCloud, Bandcamp, Spotify, Twitch or Imgur? Say no more!
         </span>
       )}
