@@ -46,7 +46,7 @@ const FeaturesGrid = () => (
         <FeatureBlock
           name="Control (the display of) time"
           icon="clock"
-          paragraph="Whether you're more MM/DD/YYYY or DD/MM/YYYY or something else entirely, YOU got the control!"
+          paragraph="Whether you're more MM/DD/YYYY or DD/MM/YYYY or something else entirely, YOU have the control!"
         />
         <FeatureBlock
           name="Edit your tweets"
