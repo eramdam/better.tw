@@ -15,8 +15,7 @@ const IndexPage = () => (
           One of the focuses of Better TweetDeck is customization: <br /><br />
           Want to see <strong>only @usernames</strong> on tweets? No problem. <br />
           Want an <strong>absolute time format</strong> for tweets? Sure. <br />
-          Missing the <strong>square avatars</strong>? We 
-  you. <br />
+          Missing the <strong>square avatars</strong>? We got you. <br />
           Wish TweetDeck's UI was a bit more <strong>minimal</strong>? Check this out! <br />
           Preferred when characters were counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
           All of this and a lot more is possible with Better TweetDeck!
