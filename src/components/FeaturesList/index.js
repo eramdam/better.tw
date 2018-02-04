@@ -7,6 +7,10 @@ const FeaturesList = () => (
     <div className={styles.listGrid}>
       <h4 id="features-list">Complete features list</h4>
       <ul>
+        <li>Mute tweets by keywords from a specific user</li>
+        <li>Mute tweets based on keywords in users' biography</li>
+        <li>Mute users with default profile picture</li>
+        <li>Mute users with less than a given number of followers</li>
         <li>Add GIFs from Giphy & Tenor</li>
         <li> Add emoji using <code>:shortcodes:</code></li >
         <li>Show tweets on <a href="https://favstar.fm">favstar.fm</a></li>

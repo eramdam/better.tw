@@ -17,6 +17,7 @@ const IndexPage = () => (
           Want an <strong>absolute time format</strong> for tweets? Sure. <br />
           Missing the <strong>square avatars</strong>? We got you. <br />
           Wish TweetDeck's UI was a bit more <strong>minimal</strong>? Check this out! <br />
+          Miss the old dark theme? You're in luck! <br />
           Preferred when characters were counted with <strong>actual numbers</strong>? We hear you. <br /> <br />
           All of this and a lot more is possible with Better TweetDeck!
         </span>
@@ -69,6 +70,26 @@ const IndexPage = () => (
       video="emojos-gifs.mp4"
       style={{
         maxHeight: 500,
+      }}
+    />
+    <TextSection
+      title="Advanced Muting capabilities"
+      paragraph={() => (
+        <span>
+          TweetDeck features already useful filters to mute users, hashtags and tweet sources. <br /> <br />
+          Better TweetDeck goes the extra mile and lets you:
+          <ul>
+            <li>Mute tweets from a specific user if they contain specific keywords.</li>
+            <li>Mute tweets by using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript Regular Expressions</a>.</li>
+            <li>Mute users if their biography contains a specific keyword.</li>
+            <li>Mute users with the default avatar.</li>
+            <li>Mute users with less than a given number of followers.</li>
+          </ul>
+        </span>
+      )}
+      image="advanced-muting.png"
+      style={{
+        maxHeight: 390,
       }}
     />
     <FeaturesGrid />
