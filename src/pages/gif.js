@@ -30,7 +30,7 @@ const dataURItoBlob = (dataURI) => {
 
 const msgToParent = msg => window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
 
-class IndexPage extends React.Component {
+class GifPage extends React.Component {
   componentDidMount() {
     const neededKeys = [
       'gifHeight',
@@ -45,8 +45,8 @@ class IndexPage extends React.Component {
     const parsed = qs.parse(window.location.search);
     const hasAllKeys = neededKeys.every(k => parsed[k]);
 
+    // If we don't have all the right keys or we're not in an iframe, we stop everything
     if (!hasAllKeys || window.top === window.self) {
-      console.log('stop');
       return;
     }
 
@@ -54,10 +54,12 @@ class IndexPage extends React.Component {
       ...parsed,
       progressCallback: (progress) => {
         if (window.parent) {
+          // Report progress to the parent (Better TweetDeck)
           msgToParent({ message: 'progress_gif', progress });
         }
       },
     }, (obj) => {
+      // Report end to BTD
       msgToParent({ message: 'complete_gif' });
       const blob = dataURItoBlob(obj.image);
       FileSaver.saveAs(blob, parsed.name);
@@ -79,4 +81,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage;
+export default GifPage;
