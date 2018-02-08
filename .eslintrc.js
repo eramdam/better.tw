@@ -5,6 +5,10 @@ module.exports = {
     '__PATH_PREFIX__': true,
     'graphql': true,
   },
+  env: {
+    node: true,
+    browser: true
+  },
   rules: {
     'import/no-extraneous-dependencies': 0,
     'react/jsx-filename-extension': 0,
