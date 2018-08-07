@@ -51,7 +51,7 @@ const FeaturesGrid = () => (
         <FeatureBlock
           name="Edit your tweets"
           icon="edit-3"
-          paragraph="That's not a real edit, but Better TweetDeck allows you to quickly re-send a fixed version of your tweets."
+          paragraph="That's not a real edit, but Better TweetDeck allows you to quickly re-send a fixed version of your tweets. <a href="http://buzzfeednews.com/article/janelytvynenko/twitter-is-not-testing-an-edit-button">As seen on BuzzFeed!</a>"
         />
         <FeatureBlock
           name="Advanced muting"
