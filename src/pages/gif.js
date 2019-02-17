@@ -4,8 +4,7 @@ import React from 'react';
 
 import { TemplateWrapper } from '../components/templateWrapper';
 
-const msgToParent = msg => window.parent
-  && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
+const msgToParent = msg => window.parent && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
 
 class GifPage extends React.Component {
   componentDidMount() {

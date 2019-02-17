@@ -26,8 +26,7 @@ const StyledTemplateWrapperDiv = styled.div`
 
   .downloadZone {
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url(${downloadBg});
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${downloadBg});
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -96,20 +95,17 @@ export const TemplateWrapper = ({ children }) => (
       meta={[
         {
           name: 'description',
-          content:
-            'Emojis, thumbnails and advanced features for https://tweetdeck.twitter.com',
+          content: 'Emojis, thumbnails and advanced features for https://tweetdeck.twitter.com',
         },
         {
           name: 'keywords',
-          content:
-            'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji',
+          content: 'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji',
         },
       ]}
       link={[
         {
           rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i',
+          href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i',
         },
         { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
         {
@@ -131,11 +127,7 @@ export const TemplateWrapper = ({ children }) => (
       <DownloadButton className="downloadButton" browser="chrome" />
       <DownloadButton className="downloadButton" browser="firefox" />
       <DownloadButton className="downloadButton" browser="opera" />
-      <DownloadButton
-        className="downloadButton showMobile"
-        browser="btd"
-        text="Download now"
-      />
+      <DownloadButton className="downloadButton showMobile" browser="btd" text="Download now" />
     </nav>
     {children}
     <Footer />

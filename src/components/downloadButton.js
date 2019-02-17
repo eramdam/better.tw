@@ -43,11 +43,7 @@ function addBrowserStyles({ browser }) {
         background-image: ${whiteOverlayBtn}, url(${btdLogo});
 
         & > span {
-          background-image: -webkit-linear-gradient(
-            -45deg,
-            #00a0fb 47%,
-            #00cbfc 100%
-          );
+          background-image: -webkit-linear-gradient(-45deg, #00a0fb 47%, #00cbfc 100%);
         }
       `;
 
@@ -62,8 +58,7 @@ const StyledDownloadButton = styled.a`
   padding-left: calc(0.8em + 48px);
   border-radius: 4px;
   font-size: 16px;
-  box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2),
-    0 2px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -90,8 +85,7 @@ const EXTENSION_URLS = {
   chrome:
     'https://chrome.google.com/webstore/detail/bettertweetdeck-3/micblkellenpbfapmcpcfhcoeohhnpob',
   opera: 'https://addons.opera.com/en/extensions/details/bettertweetdeck/',
-  firefox:
-    'https://addons.mozilla.org/en-US/firefox/addon/better-tweetdeck-17/',
+  firefox: 'https://addons.mozilla.org/en-US/firefox/addon/better-tweetdeck-17/',
   btd: '#download-btns',
 };
 

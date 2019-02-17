@@ -116,12 +116,7 @@ const StyledTextSection = styled.section`
 `;
 
 export const TextSection = ({
-  title,
-  paragraph,
-  image,
-  video,
-  vertical,
-  ...more
+  title, paragraph, image, video, vertical, ...more
 }) => (
   <StyledTextSection>
     <GridBlock className={vertical}>

@@ -1,10 +1,11 @@
-import styled, { createGlobalStyle, css } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
 import {
-  textColor,
   fontBody,
   fontHeading,
   gridWidth,
   smallerThanGridQuery,
+  textColor,
 } from './styleVariables';
 
 export const GlobalStyles = createGlobalStyle`

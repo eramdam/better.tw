@@ -40,8 +40,7 @@ for tweets? Sure.
             Wish TweetDeck's UI was a bit more
             {' '}
             <strong>minimal</strong>
-? Check
-            this out!
+? Check this out!
             {' '}
             <br />
             Miss the
@@ -91,12 +90,11 @@ to tweet them.
             <strong>Share any link</strong>
             {' '}
 on TweetDeck with a single click.
-            {' '}
             <br />
             Make your life easier with
             {' '}
             <strong>GIF preview and download</strong>
-            .
+.
           </span>
         )}
         image="poster.jpg"
@@ -109,15 +107,14 @@ on TweetDeck with a single click.
         title="See the big picture(s)"
         paragraph={() => (
           <span>
-            Thumbnails are a huge part of TweetDeck&apos;s experience. Better
-            TweetDeck goes beyond the YouTube/Vine/Twitter limitation and adds
-            support for more than 30 websites.
+            Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes beyond
+            the YouTube/Vine/Twitter limitation and adds support for more than 30 websites.
             {' '}
             <br />
             {' '}
             <br />
-            Ever wanted to preview content from Instagram, Vimeo, SoundCloud,
-            Bandcamp, Spotify, Twitch or Imgur? Say no more!
+            Ever wanted to preview content from Instagram, Vimeo, SoundCloud, Bandcamp, Spotify,
+            Twitch or Imgur? Say no more!
           </span>
         )}
         image="big-pictures.png"
@@ -129,18 +126,15 @@ on TweetDeck with a single click.
         title="Emoji & GIFs, at your fingertips"
         paragraph={() => (
           <span>
-            Better TweetDeck lets you add emoji through an integrated picker or
-            by using
+            Better TweetDeck lets you add emoji through an integrated picker or by using
             {' '}
             <code>:shortcodes:</code>
             {' '}
 😎 🔥 👍
-            {' '}
             <br />
             {' '}
             <br />
-            Find the perfect GIF for any occasion thanks to the Giphy/Tenor
-            integration!
+            Find the perfect GIF for any occasion thanks to the Giphy/Tenor integration!
           </span>
         )}
         image="poster-emoji.jpg"
@@ -153,18 +147,14 @@ on TweetDeck with a single click.
         title="Advanced Muting capabilities"
         paragraph={() => (
           <span>
-            TweetDeck features already useful filters to mute users, hashtags
-            and tweet sources.
+            TweetDeck features already useful filters to mute users, hashtags and tweet sources.
             {' '}
             <br />
             {' '}
             <br />
             Better TweetDeck goes the extra mile and lets you:
             <ul>
-              <li>
-                Mute tweets from a specific user if they contain specific
-                keywords.
-              </li>
+              <li>Mute tweets from a specific user if they contain specific keywords.</li>
               <li>
                 Mute tweets by using
                 {' '}
@@ -173,9 +163,7 @@ on TweetDeck with a single click.
                 </a>
                 .
               </li>
-              <li>
-                Mute users if their biography contains a specific keyword.
-              </li>
+              <li>Mute users if their biography contains a specific keyword.</li>
               <li>Mute users with the default avatar.</li>
               <li>Mute users with less than a given number of followers.</li>
             </ul>
@@ -197,7 +185,8 @@ on TweetDeck with a single click.
               {' '}
               <br />
               {' '}
-Get Better TweetDeck for Chrome, Firefox or Opera.
+Get Better
+              TweetDeck for Chrome, Firefox or Opera.
             </p>
           </div>
           <div className="downloadZoneBtns">

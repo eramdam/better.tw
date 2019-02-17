@@ -18,16 +18,8 @@ const StyledReleasesDiv = styled(GridBlock)`
     padding: 20px;
     padding-top: 10px;
     padding-right: 30px;
-    background-image: radial-gradient(
-        190px 200px at 0 0,
-        #00cbfc 0%,
-        rgba(0, 203, 252, 0) 114%
-      ),
-      linear-gradient(
-        -180deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+    background-image: radial-gradient(190px 200px at 0 0, #00cbfc 0%, rgba(0, 203, 252, 0) 114%),
+      linear-gradient(-180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     background-repeat: no-repeat;
     background-color: #00a0fb;
     border-radius: 10px;
