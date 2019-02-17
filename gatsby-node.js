@@ -59,8 +59,8 @@ const processRelease = release => ({
   },
 });
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators;
+exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions;
 
   const releases = await githubApolloFetch({
     query: GITHUB_RELEASES_QUERY,
