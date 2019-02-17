@@ -2,7 +2,11 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-import { btdGradient, gridWidth, smallerThanGridQuery } from '../styles/styleVariables';
+import {
+  btdGradient,
+  gridWidth,
+  smallerThanGridQuery,
+} from '../styles/styleVariables';
 import { Icon } from './icon';
 
 const StyledHeader = styled.header`

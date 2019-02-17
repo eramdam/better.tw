@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Better TweetDeck'
+    title: 'Better TweetDeck',
   },
   plugins: [
     'gatsby-plugin-styled-components',
@@ -8,15 +8,15 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: ['gatsby-remark-autolink-headers']
-      }
+        plugins: ['gatsby-remark-autolink-headers'],
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
-    }
-  ]
+        name: 'pages',
+      },
+    },
+  ],
 };

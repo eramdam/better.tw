@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import {GridBlock} from '../styles/globalStyles';
-import {mobileQuery} from '../styles/styleVariables';
+import { GridBlock } from '../styles/globalStyles';
+import { mobileQuery } from '../styles/styleVariables';
 
 const StyledSection = styled.section`
   background-color: #3089c9;

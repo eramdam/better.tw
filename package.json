@@ -41,7 +41,8 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "fix": "prettier-eslint --list-different --write '**/*.{js,jsx,ts,tsx}'"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

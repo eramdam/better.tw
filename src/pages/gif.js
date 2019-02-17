@@ -33,7 +33,11 @@ class GifPage extends React.Component {
         progressCallback: (progress) => {
           if (window.parent) {
             // Report progress to the parent (Better TweetDeck)
-            msgToParent({ message: 'progress_gif', progress, name: parsed.name });
+            msgToParent({
+              message: 'progress_gif',
+              progress,
+              name: parsed.name,
+            });
           }
         },
       },
