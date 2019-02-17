@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 // import PropTypes from 'prop-types';
 import styles from './Footer.module.css';
 

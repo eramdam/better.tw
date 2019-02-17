@@ -2,6 +2,7 @@
 import React from 'react';
 import gifshot from 'gifshot';
 import qs from 'query-string';
+import { TemplateWrapper } from '../layouts';
 
 const msgToParent = msg => window.parent && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
 
@@ -41,15 +42,17 @@ class GifPage extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          padding: 40,
-          margin: '0 auto',
-          textAlign: 'center',
-        }}
-      >
+      <TemplateWrapper>
+        <div
+          style={{
+            padding: 40,
+            margin: '0 auto',
+            textAlign: 'center',
+          }}
+        >
         👀
-      </div>
+        </div>
+      </TemplateWrapper>
     );
   }
 }

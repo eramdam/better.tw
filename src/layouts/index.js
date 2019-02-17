@@ -7,7 +7,7 @@ import DownloadButton from '../components/DownloadButton';
 import homeStyles from '../pages/home.module.css';
 import '../css/global.css';
 
-const TemplateWrapper = ({ children }) => (
+export const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Better TweetDeck, supercharge your TweetDeck experience"
@@ -39,7 +39,7 @@ const TemplateWrapper = ({ children }) => (
       <DownloadButton className={homeStyles.downloadButton} browser="opera" />
       <DownloadButton className={`${homeStyles.downloadButton} ${homeStyles.showMobile}`} browser="btd" text="Download now" />
     </nav>
-    {children()}
+    {children}
     <Footer />
   </div>
 );
@@ -52,4 +52,3 @@ TemplateWrapper.defaultProps = {
   children: () => null,
 };
 
-export default TemplateWrapper;
