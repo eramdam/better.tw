@@ -1,6 +1,7 @@
 /* eslint react/no-danger: 0 */
 import { format } from 'date-fns';
 import { graphql, StaticQuery } from 'gatsby';
+import { rgba } from 'polished';
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
@@ -29,8 +30,8 @@ const StyledReleasesDiv = styled(GridBlock)`
 
     & > hr {
       border: 0;
-      border-bottom: 1px dashed color(white alpha(30%));
-      border-top: 1px dashed color(black alpha(30%));
+      border-bottom: 1px dashed ${rgba('white', 0.4)};
+      border-top: 1px dashed ${rgba('black', 0.3)};
       margin: 10px 0;
     }
 

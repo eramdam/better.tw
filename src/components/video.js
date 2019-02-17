@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { rgba } from 'polished';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -14,7 +15,7 @@ const StyledVideoWrapperDiv = styled.div`
   }
 
   .videoOverlay {
-    background: color(black a(50%));
+    background: ${rgba('black', 0.5)};
     position: absolute;
     width: 100%;
     height: 100%;
@@ -23,7 +24,7 @@ const StyledVideoWrapperDiv = styled.div`
     transition: all 300ms ease;
     z-index: 1;
 
-    color: color(white a(40%));
+    color: ${rgba('white', 0.4)};
 
     display: flex;
     flex-direction: column;
@@ -32,7 +33,7 @@ const StyledVideoWrapperDiv = styled.div`
   }
 
   .videoOverlay:hover {
-    color: color(white a(80%));
+    color: ${rgba('white', 0.8)};
   }
 
   .videoWrapper.playing .videoOverlay {

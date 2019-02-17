@@ -1,3 +1,4 @@
+import { rgba } from 'polished';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import {
@@ -7,6 +8,7 @@ import {
   smallerThanGridQuery,
   textColor,
 } from './styleVariables';
+
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -66,9 +68,9 @@ export const GlobalStyles = createGlobalStyle`
     text-transform: uppercase;
     font-family: system-ui;
     font-weight: 500;
-    text-shadow: 0 1px 1px color(black a(0.6));
+    text-shadow: 0 1px 1px ${rgba('black', 0.6)};
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(transparent, color(black a(0.2)));
+    background-image: linear-gradient(transparent, ${rgba('black', 0.2)});
   }
 
   span.token.-meta {
