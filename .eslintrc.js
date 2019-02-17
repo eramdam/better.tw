@@ -16,9 +16,10 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/accessible-emoji': 0,
     'max-len': 0,
-    'react/forbid-prop-types': [2, {forbid: ['any']}],
+    'react/forbid-prop-types': [2, { forbid: ['any'] }],
     'react/no-unescaped-entities': 0,
     'jsx-a11y/media-has-caption': 0,
-    'import/prefer-default-export': 0
+    'import/prefer-default-export': 0,
+    'max-len': [2, { code: 100 }]
   }
 };
