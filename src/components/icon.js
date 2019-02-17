@@ -1,17 +1,13 @@
 /* eslint react/no-danger: 0 */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { icons } from 'feather-icons';
 import classnames from 'classnames';
-import {
-  iconsList,
-  attrsToProps,
-} from '../../utils';
+import { icons } from 'feather-icons';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const Icon = (props) => {
-  const {
-    name, size, ...more
-  } = props;
+import { attrsToProps, iconsList } from '../utils';
+
+export const Icon = (props) => {
+  const { name, size, ...more } = props;
   return (
     <span
       style={{
@@ -35,7 +31,6 @@ const Icon = (props) => {
   );
 };
 
-
 Icon.propTypes = {
   name: PropTypes.oneOf(iconsList),
   size: PropTypes.number,
@@ -45,5 +40,3 @@ Icon.defaultProps = {
   name: 'activity',
   size: null,
 };
-
-export default Icon;

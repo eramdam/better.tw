@@ -52,15 +52,21 @@ const processRelease = release => ({
   date: release.createdAt,
   internal: {
     type: 'GithubRelease',
-    contentDigest: crypto.createHash('md5').update(release.description).digest('hex'),
+    contentDigest: crypto
+      .createHash('md5')
+      .update(release.description)
+      .digest('hex'),
   },
 });
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators;
+exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions;
 
-  const releases = await githubApolloFetch({ query: GITHUB_RELEASES_QUERY })
-    .then(({ data }) => data.viewer.repository.releases.edges.filter(r => !r.node.isDraft).map(r => ({
+  const releases = await githubApolloFetch({
+    query: GITHUB_RELEASES_QUERY,
+  }).then(({ data }) => data.viewer.repository.releases.edges
+    .filter(r => !r.node.isDraft)
+    .map(r => ({
       ...r.node,
       name: r.node.name || r.node.tag.name,
       tag: undefined,
@@ -68,4 +74,3 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
 
   releases.forEach(release => createNode(processRelease(release)));
 };
-

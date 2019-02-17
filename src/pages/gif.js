@@ -1,9 +1,11 @@
-
-import React from 'react';
 import gifshot from 'gifshot';
 import qs from 'query-string';
+import React from 'react';
 
-const msgToParent = msg => window.parent && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
+import { TemplateWrapper } from '../components/templateWrapper';
+
+const msgToParent = msg => window.parent
+  && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
 
 class GifPage extends React.Component {
   componentDidMount() {
@@ -25,31 +27,44 @@ class GifPage extends React.Component {
       return;
     }
 
-    gifshot.createGIF({
-      ...parsed,
-      progressCallback: (progress) => {
-        if (window.parent) {
-          // Report progress to the parent (Better TweetDeck)
-          msgToParent({ message: 'progress_gif', progress, name: parsed.name });
-        }
+    gifshot.createGIF(
+      {
+        ...parsed,
+        progressCallback: (progress) => {
+          if (window.parent) {
+            // Report progress to the parent (Better TweetDeck)
+            msgToParent({
+              message: 'progress_gif',
+              progress,
+              name: parsed.name,
+            });
+          }
+        },
       },
-    }, (obj) => {
-      // Pass final image to BTD
-      msgToParent({ message: 'complete_gif', img: obj.image, name: parsed.name });
-    });
+      (obj) => {
+        // Pass final image to BTD
+        msgToParent({
+          message: 'complete_gif',
+          img: obj.image,
+          name: parsed.name,
+        });
+      },
+    );
   }
 
   render() {
     return (
-      <div
-        style={{
-          padding: 40,
-          margin: '0 auto',
-          textAlign: 'center',
-        }}
-      >
-        👀
-      </div>
+      <TemplateWrapper>
+        <div
+          style={{
+            padding: 40,
+            margin: '0 auto',
+            textAlign: 'center',
+          }}
+        >
+          👀
+        </div>
+      </TemplateWrapper>
     );
   }
 }
