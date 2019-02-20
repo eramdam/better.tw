@@ -6,8 +6,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import { TemplateWrapper } from '../../components/templateWrapper';
-import { GridBlock } from '../../styles/globalStyles';
+import { TemplateWrapper } from '../components/templateWrapper';
+import { GridBlock } from '../styles/globalStyles';
 
 const StyledReleasesDiv = styled(GridBlock)`
   padding: 40px;
