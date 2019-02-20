@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -17,6 +18,11 @@ const StyledTemplateWrapperDiv = styled.div`
     z-index: 9;
     text-align: center;
     transform: translateY(-50%);
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   .downloadButton,
@@ -87,7 +93,7 @@ const StyledTemplateWrapperDiv = styled.div`
   }
 `;
 
-export const TemplateWrapper = ({ children }) => (
+export const TemplateWrapper = ({ children, showDownloads }) => (
   <StyledTemplateWrapperDiv>
     <GlobalStyles />
     <Helmet
@@ -123,7 +129,7 @@ export const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <nav className="downloadBtns">
+    <nav className={classnames('downloadBtns', { hidden: !showDownloads })}>
       <DownloadButton className="downloadButton" browser="chrome" />
       <DownloadButton className="downloadButton" browser="firefox" />
       <DownloadButton className="downloadButton" browser="opera" />
@@ -136,8 +142,10 @@ export const TemplateWrapper = ({ children }) => (
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
+  showDownloads: PropTypes.bool,
 };
 
 TemplateWrapper.defaultProps = {
   children: () => null,
+  showDownloads: true,
 };

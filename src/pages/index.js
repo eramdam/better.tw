@@ -14,7 +14,6 @@ const IndexPage = () => (
         paragraph={() => (
           <span>
             One of the focuses of Better TweetDeck is customization:
-            {' '}
             <br />
             <br />
             Want to see
@@ -22,39 +21,29 @@ const IndexPage = () => (
             <strong>only @usernames</strong>
             {' '}
 on tweets? No problem.
-            {' '}
             <br />
             Want an
-            {' '}
             <strong>absolute time format</strong>
             {' '}
 for tweets? Sure.
-            {' '}
             <br />
             Missing the
-            {' '}
             <strong>square avatars</strong>
-? We got you.
             {' '}
+? We got you.
             <br />
             Wish TweetDeck's UI was a bit more
-            {' '}
             <strong>minimal</strong>
-? Check this out!
-            {' '}
+            ? Check this out!
             <br />
             Miss the
-            {' '}
             <strong>old dark theme</strong>
-? You're in luck!
-            {' '}
+            ? You're in luck!
             <br />
             Preferred when characters were counted with
-            {' '}
             <strong>actual numbers</strong>
             ? We hear you.
             <br />
-            {' '}
             <br />
             All of this and a lot more is possible with Better TweetDeck!
           </span>
