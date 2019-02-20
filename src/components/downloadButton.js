@@ -82,10 +82,9 @@ const StyledDownloadButton = styled.a`
 `;
 
 const EXTENSION_URLS = {
-  chrome:
-    'https://chrome.google.com/webstore/detail/bettertweetdeck-3/micblkellenpbfapmcpcfhcoeohhnpob',
-  opera: 'https://addons.opera.com/en/extensions/details/bettertweetdeck/',
-  firefox: 'https://addons.mozilla.org/en-US/firefox/addon/better-tweetdeck-17/',
+  chrome: '/chrome',
+  opera: '/opera',
+  firefox: '/firefox',
   btd: '#download-btns',
 };
 
