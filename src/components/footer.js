@@ -48,6 +48,7 @@ export const Footer = () => (
   <StyledFooter>
     <small className="copy">Better TweetDeck is not affiliated with Twitter or TweetDeck.</small>
     <nav className="menu">
+      <Link to="/donate">Donate</Link>
       <Link to="/releases">Release notes</Link>
       <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
       <a href="https://twitter.com/BetterTDeck">Follow Us</a>
