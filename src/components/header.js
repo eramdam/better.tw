@@ -115,6 +115,10 @@ const StyledHeader = styled.header`
 export const Header = () => (
   <StyledHeader>
     <nav className="menu">
+      <Link to="/donate" className="menuItem">
+        <Icon name="heart" className="menuItemIcon" size={20} />
+        Donate
+      </Link>
       <a className="menuItem" href="https://github.com/eramdam/BetterTweetDeck">
         <Icon name="github" className="menuItemIcon" size={20} />
         GitHub

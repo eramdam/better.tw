@@ -1,5 +1,6 @@
 /* eslint no-param-reassign:0 */
 const { createApolloFetch } = require('apollo-fetch');
+const path = require('path');
 const config = require('config');
 const crypto = require('crypto');
 const marked = require('marked');
@@ -73,4 +74,37 @@ exports.sourceNodes = async ({ actions }) => {
     })));
 
   releases.forEach(release => createNode(processRelease(release)));
+};
+
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const blogPostTemplate = path.resolve('src/components/pageTemplate.js');
+
+  return graphql(`
+    {
+      allMarkdownRemark(limit: 1000) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      Promise.reject(result.errors);
+      return;
+    }
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      });
+    });
+  });
 };
