@@ -93,11 +93,11 @@ const StyledTemplateWrapperDiv = styled.div`
   }
 `;
 
-export const TemplateWrapper = ({ children, showDownloads }) => (
+export const TemplateWrapper = ({ children, showDownloads, title }) => (
   <StyledTemplateWrapperDiv>
     <GlobalStyles />
     <Helmet
-      title="Better TweetDeck, supercharge your TweetDeck experience"
+      title={title || 'Better TweetDeck, supercharge your TweetDeck experience'}
       meta={[
         {
           name: 'description',
@@ -141,11 +141,11 @@ export const TemplateWrapper = ({ children, showDownloads }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
   showDownloads: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 TemplateWrapper.defaultProps = {
-  children: () => null,
   showDownloads: true,
+  title: '',
 };
