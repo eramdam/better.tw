@@ -1,25 +1,60 @@
-import React from 'react';
+import cx from 'classnames';
+import { rgba } from 'polished';
 import PropTypes from 'prop-types';
-import classnames from 'classnames/bind';
-import styles from './Video.module.css';
-import Icon from '../Icon';
+import React from 'react';
+import styled from 'styled-components';
 
-const cx = classnames.bind(styles);
+import { Icon } from './icon';
 
-export default class Video extends React.Component {
+const StyledVideoWrapperDiv = styled.div`
+  position: relative;
+  font-size: 0;
+
+  &:focus {
+    outline: 0;
+  }
+
+  .videoOverlay {
+    background: ${rgba('black', 0.5)};
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 300ms ease;
+    z-index: 1;
+
+    color: ${rgba('white', 0.4)};
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .videoOverlay:hover {
+    color: ${rgba('white', 0.8)};
+  }
+
+  .videoWrapper.playing .videoOverlay {
+    opacity: 0;
+  }
+`;
+
+export class Video extends React.Component {
   static propTypes = {
     src: PropTypes.string,
     className: PropTypes.string,
     wrapperClassName: PropTypes.string,
     poster: PropTypes.string,
-  }
+  };
 
   static defaultProps = {
     src: '',
     className: '',
     wrapperClassName: '',
     poster: '',
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -41,7 +76,7 @@ export default class Video extends React.Component {
     this.setState({
       videoPaused: video.paused,
     });
-  }
+  };
 
   render() {
     const {
@@ -49,8 +84,8 @@ export default class Video extends React.Component {
     } = this.props;
 
     return (
-      <div
-        className={cx('videoWrapper', wrapperClassName, {
+      <StyledVideoWrapperDiv
+        className={cx(wrapperClassName, {
           playing: !this.state.videoPaused,
         })}
         style={{
@@ -61,19 +96,21 @@ export default class Video extends React.Component {
         role="button"
         tabIndex="0"
       >
-        <span className={styles.videoOverlay}>
+        <span className="videoOverlay">
           <Icon name="play-circle" size={80} />
         </span>
         <video
           src={src}
-          ref={(el) => { this.videoNode = el; }}
+          ref={(el) => {
+            this.videoNode = el;
+          }}
           className={className}
           poster={poster}
           muted
-          preload
+          playsInline
           {...more}
         />
-      </div>
+      </StyledVideoWrapperDiv>
     );
   }
 }

@@ -1,19 +1,53 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './FeaturesGrid.module.css';
-import Icon from '../Icon';
+import React from 'react';
+import styled from 'styled-components';
+
+import { GridBlock } from '../styles/globalStyles';
+import { fontBody, mobileQuery } from '../styles/styleVariables';
+import { Icon } from './icon';
+
+const StyledFeatureBlock = styled.div`
+  flex-basis: calc(100% / 3 - 10px);
+  flex-shrink: 1;
+  display: flex;
+  margin-bottom: 40px;
+
+  @media ${mobileQuery} {
+    flex-basis: 100%;
+  }
+
+  .blockCopy > h5 {
+    font-size: 17px;
+    color: white;
+  }
+
+  .blockParagraph {
+    font-size: 14px;
+    color: white;
+    font-family: ${fontBody};
+  }
+`;
+
+const StyledIcon = styled(Icon)`
+  flex-shrink: 0;
+  margin-right: 14px;
+
+  > svg {
+    width: 36px;
+    max-width: 36px;
+    margin: 0 7px;
+    color: white;
+  }
+`;
 
 const FeatureBlock = ({ name, paragraph, icon }) => (
-  <div className={styles.block}>
-    <Icon
-      className={styles.blockIcon}
-      name={icon}
-    />
-    <div className={styles.blockCopy}>
+  <StyledFeatureBlock>
+    <StyledIcon name={icon} />
+    <div className="blockCopy">
       <h5>{name}</h5>
-      <p className={styles.blockParagraph}>{paragraph}</p>
+      <p className="blockParagraph">{paragraph}</p>
     </div>
-  </div>
+  </StyledFeatureBlock>
 );
 
 FeatureBlock.propTypes = {
@@ -24,15 +58,38 @@ FeatureBlock.propTypes = {
 
 FeatureBlock.defaultProps = {
   name: 'Lorem ipsum',
-  paragraph: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, magni assumenda delectus eos cumque quaerat sequi consectetur molestias nesciunt voluptate veritatis aliquam quos. Repellat quae non sit quod tenetur ipsam?',
+  paragraph:
+    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, magni assumenda delectus eos cumque quaerat sequi consectetur molestias nesciunt voluptate veritatis aliquam quos. Repellat quae non sit quod tenetur ipsam?',
   icon: 'activity',
 };
 
-const FeaturesGrid = () => (
-  <div className={styles.featuresGrid}>
-    <div className={styles.featuresGridWrap}>
+const StyledFeaturesGridDiv = styled.div`
+  padding: 50px 0;
+  position: relative;
+  background-color: #3ca8f7;
+
+  h4 {
+    font-size: 22px;
+    color: white;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .blocks {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+`;
+
+export const FeaturesGrid = () => (
+  <StyledFeaturesGridDiv>
+    <GridBlock>
       <h4>Features for years!</h4>
-      <div className={styles.blocks}>
+      <div className="blocks">
         <FeatureBlock
           name="Quick sharing"
           icon="share"
@@ -46,7 +103,7 @@ const FeaturesGrid = () => (
         <FeatureBlock
           name="Control (the display of) time"
           icon="clock"
-          paragraph="Whether you're more MM/DD/YYYY or DD/MM/YYYY or something else entirely, YOU got the control!"
+          paragraph="Whether you're more MM/DD/YYYY or DD/MM/YYYY or something else entirely, YOU have the control!"
         />
         <FeatureBlock
           name="Edit your tweets"
@@ -79,8 +136,6 @@ const FeaturesGrid = () => (
           paragraph="Want to avoid people peeking over your DMs? Collapse your read conversations for a little bit of privacy."
         />
       </div>
-    </div>
-  </div>
+    </GridBlock>
+  </StyledFeaturesGridDiv>
 );
-
-export default FeaturesGrid;

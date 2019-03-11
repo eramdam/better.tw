@@ -1,5 +1,6 @@
 /* eslint no-param-reassign:0 */
 const { createApolloFetch } = require('apollo-fetch');
+const path = require('path');
 const config = require('config');
 const crypto = require('crypto');
 const marked = require('marked');
@@ -14,6 +15,7 @@ query BTDReleases {
         edges {
           node {
             id
+            isDraft
             name
             createdAt
             description
@@ -51,20 +53,58 @@ const processRelease = release => ({
   date: release.createdAt,
   internal: {
     type: 'GithubRelease',
-    contentDigest: crypto.createHash('md5').update(release.description).digest('hex'),
+    contentDigest: crypto
+      .createHash('md5')
+      .update(release.description)
+      .digest('hex'),
   },
 });
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators;
+exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions;
 
-  const releases = await githubApolloFetch({ query: GITHUB_RELEASES_QUERY })
-    .then(({ data }) => data.viewer.repository.releases.edges.map(i => ({
-      ...i.node,
-      name: i.node.name || i.node.tag.name,
+  const releases = await githubApolloFetch({
+    query: GITHUB_RELEASES_QUERY,
+  }).then(({ data }) => data.viewer.repository.releases.edges
+    .filter(r => !r.node.isDraft)
+    .map(r => ({
+      ...r.node,
+      name: r.node.name || r.node.tag.name,
       tag: undefined,
     })));
 
   releases.forEach(release => createNode(processRelease(release)));
 };
 
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const blogPostTemplate = path.resolve('src/components/pageTemplate.js');
+
+  return graphql(`
+    {
+      allMarkdownRemark(limit: 1000) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if (result.errors) {
+      Promise.reject(result.errors);
+      return;
+    }
+
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: blogPostTemplate,
+        context: {}, // additional data can be passed via context
+      });
+    });
+  });
+};

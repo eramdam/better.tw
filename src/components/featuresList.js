@@ -1,15 +1,63 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import styles from './FeaturesList.module.css';
+import styled from 'styled-components';
 
-const FeaturesList = () => (
-  <section className={styles.list}>
-    <div className={styles.listGrid}>
+import { GridBlock } from '../styles/globalStyles';
+import { mobileQuery } from '../styles/styleVariables';
+
+const StyledSection = styled.section`
+  background-color: #3089c9;
+  color: white;
+  padding: 50px 0;
+  position: relative;
+
+  h4 {
+    font-size: 22px;
+    color: white;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  :matches(ul, li) {
+    list-style: none;
+  }
+
+  ul {
+    margin-top: 20px;
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.6em;
+    column-count: 3;
+    column-gap: 2em;
+  }
+
+  ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  @media ${mobileQuery} {
+    ul {
+      column-count: 1;
+      font-size: 14px;
+    }
+  }
+`;
+
+export const FeaturesList = () => (
+  <StyledSection>
+    <GridBlock>
       <h4 id="features-list">Complete features list</h4>
       <ul>
+        <li>Mute tweets by keywords from a specific user</li>
+        <li>Mute tweets based on keywords in users' biography</li>
+        <li>Mute users with default profile picture</li>
+        <li>Mute users with less than a given number of followers</li>
         <li>Add GIFs from Giphy & Tenor</li>
-        <li> Add emoji using <code>:shortcodes:</code></li >
-        <li>Show tweets on <a href="https://favstar.fm">favstar.fm</a></li>
+        <li>
+          {' '}
+          Add emoji using
+          {' '}
+          <code>:shortcodes:</code>
+        </li>
         <li>Mute source from tweets' menu</li>
         <li>Mute #hashtags from tweets' menu</li>
         <li>Mute tweets based on regular expressions (regex)</li>
@@ -42,8 +90,6 @@ const FeaturesList = () => (
         <li>Collapse DMs when read</li>
         <li>Prevent columns from scrolling on hover</li>
       </ul>
-    </div>
-  </section>
+    </GridBlock>
+  </StyledSection>
 );
-
-export default FeaturesList;
