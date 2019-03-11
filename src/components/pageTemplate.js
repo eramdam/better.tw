@@ -15,7 +15,7 @@ const StyledBlock = styled(GridBlock)`
   h5,
   h6 {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.4em;
     line-height: 1.8;
   }
 
