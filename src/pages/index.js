@@ -23,24 +23,29 @@ const IndexPage = () => (
 on tweets? No problem.
             <br />
             Want an
+            {' '}
             <strong>absolute time format</strong>
             {' '}
 for tweets? Sure.
             <br />
             Missing the
+            {' '}
             <strong>square avatars</strong>
             {' '}
 ? We got you.
             <br />
             Wish TweetDeck's UI was a bit more
+            {' '}
             <strong>minimal</strong>
             ? Check this out!
             <br />
             Miss the
+            {' '}
             <strong>old dark theme</strong>
             ? You're in luck!
             <br />
             Preferred when characters were counted with
+            {' '}
             <strong>actual numbers</strong>
             ? We hear you.
             <br />
