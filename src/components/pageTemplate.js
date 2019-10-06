@@ -61,7 +61,7 @@ export const PageTemplate = (props) => {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <TemplateWrapper>
+    <TemplateWrapper title={frontmatter.title}>
       <StyledBlock>
         <h1>{frontmatter.title}</h1>
 
