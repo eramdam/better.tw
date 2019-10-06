@@ -61,7 +61,7 @@ export const PageTemplate = (props) => {
   const { frontmatter, html } = markdownRemark;
 
   return (
-    <TemplateWrapper>
+    <TemplateWrapper title={frontmatter.title} showDownloads={!frontmatter.hideDownloads}>
       <StyledBlock>
         <h1>{frontmatter.title}</h1>
 
@@ -78,6 +78,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        hideDownloads
       }
     }
   }
