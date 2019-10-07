@@ -23,7 +23,7 @@ Thankfully, Twitter removed that version of the composer in early September, pro
 I know this might come as a surprise because the general sentiment around anything coming from Twitter is that it gets worse and worse over time. As someone who saw the software and platform evolved for the past five years, I can assure you it’s not worse than before.
 <br/><br/>
 Sure, things changed and randomly broke, but at least we are getting semi-regular updates, now! Back in ~2015, updates were sporadic.
-It seems that the TweetDeck team (who is composed than less than ~30 people if I’m not wrong) manages to ship bug fixes and features again, and that’s great!
+It seems that the TweetDeck team (who is composed of less than ~30 people if I’m not wrong) manages to ship bug fixes and features again, and that’s great!
 <br/><br/>
 Regular updates also mean that I don’t need to jump on adding a missing feature as much as I needed to since I can expect the TweetDeck team to implement in a reasonable time manner if it makes sense for them to do it.
 
