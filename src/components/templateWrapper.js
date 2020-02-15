@@ -101,37 +101,38 @@ export const TemplateWrapper = ({ children, showDownloads, title }) => (
       meta={[
         {
           name: 'description',
-          content: 'Emojis, thumbnails and advanced features for https://tweetdeck.twitter.com',
+          content: 'Emojis, thumbnails and advanced features for https://tweetdeck.twitter.com'
         },
         {
           name: 'keywords',
-          content: 'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji',
-        },
+          content: 'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji'
+        }
       ]}
       link={[
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i',
+          href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i'
         },
         { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
         {
           rel: 'icon',
           sizes: '32x32',
           type: 'image/png',
-          href: `${__PATH_PREFIX__}/img/favicon-32x32.png`,
+          href: `${__PATH_PREFIX__}/img/favicon-32x32.png`
         },
         {
           rel: 'icon',
           sizes: '16x16',
           type: 'image/png',
-          href: `${__PATH_PREFIX__}/img/favicon-16x16.png`,
-        },
+          href: `${__PATH_PREFIX__}/img/favicon-16x16.png`
+        }
       ]}
     />
     <Header />
     <nav className={classnames('downloadBtns', { hidden: !showDownloads })}>
       <DownloadButton className="downloadButton" browser="chrome" />
       <DownloadButton className="downloadButton" browser="firefox" />
+      <DownloadButton className="downloadButton" browser="edge" />
       <DownloadButton className="downloadButton" browser="opera" />
       <DownloadButton className="downloadButton showMobile" browser="btd" text="Download now" />
     </nav>
@@ -142,10 +143,10 @@ export const TemplateWrapper = ({ children, showDownloads, title }) => (
 
 TemplateWrapper.propTypes = {
   showDownloads: PropTypes.bool,
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 TemplateWrapper.defaultProps = {
   showDownloads: true,
-  title: '',
+  title: ''
 };
