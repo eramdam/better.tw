@@ -26,7 +26,7 @@ function addBrowserStyles({ browser }) {
         background-image: ${whiteOverlayBtn}, url(${edgeLogo});
 
         & > span {
-          background-image: -webkit-linear-gradient(top, #4285f4, #2962bd);
+          background-image: -webkit-linear-gradient(top, #42c45f, #33c1ef);
         }
       `;
 
