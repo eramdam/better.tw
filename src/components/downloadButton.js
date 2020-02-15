@@ -96,14 +96,14 @@ const EXTENSION_URLS = {
   opera: '/opera',
   firefox: '/firefox',
   btd: '#download-btns',
-  edge: '/edge'
+  edge: '/edge',
 };
 
 export const DownloadButton = props => {
   const anchorProps = {
     href: props.url ? props.url : EXTENSION_URLS[props.browser],
     target: props.browser !== 'btd' ? '_blank' : undefined,
-    browser: props.browser
+    browser: props.browser,
   };
 
   return (
@@ -117,11 +117,11 @@ DownloadButton.propTypes = {
   browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd']).isRequired,
   url: PropTypes.string,
   text: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 DownloadButton.defaultProps = {
   url: '',
   text: '',
-  className: ''
+  className: '',
 };

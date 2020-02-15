@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 import { DownloadButton } from '../components/downloadButton';
@@ -16,37 +17,19 @@ const IndexPage = () => (
             One of the focuses of Better TweetDeck is customization:
             <br />
             <br />
-            Want to see
-            {' '}
-            <strong>only @usernames</strong>
-            {' '}
-on tweets? No problem.
+            Want to see <strong>only @usernames</strong> on tweets? No problem.
             <br />
-            Want an
-            {' '}
-            <strong>absolute time format</strong>
-            {' '}
-for tweets? Sure.
+            Want an <strong>absolute time format</strong> for tweets? Sure.
             <br />
-            Missing the
-            {' '}
-            <strong>square avatars</strong>
-            {' '}
-? We got you.
+            Missing the <strong>square avatars</strong> ? We got you.
             <br />
-            Wish TweetDeck's UI was a bit more
-            {' '}
-            <strong>minimal</strong>
+            Wish TweetDeck's UI was a bit more <strong>minimal</strong>
             ? Check this out!
             <br />
-            Miss the
-            {' '}
-            <strong>old dark theme</strong>
+            Miss the <strong>old dark theme</strong>
             ? You're in luck!
             <br />
-            Preferred when characters were counted with
-            {' '}
-            <strong>actual numbers</strong>
+            Preferred when characters were counted with <strong>actual numbers</strong>
             ? We hear you.
             <br />
             <br />
@@ -63,32 +46,12 @@ for tweets? Sure.
         title="Now you're playing with power!"
         paragraph={() => (
           <span>
-            Better TweetDeck gives you access to powerful advanced features.
-            {' '}
+            Better TweetDeck gives you access to powerful advanced features. <br /> <br />
+            Quickly fix your typos with the <strong>edit feature</strong>. <br />
+            Easily <strong>paste images</strong> to tweet them. <br />
+            <strong>Share any link</strong> on TweetDeck with a single click.
             <br />
-            {' '}
-            <br />
-            Quickly fix your typos with the
-            {' '}
-            <strong>edit feature</strong>
-.
-            {' '}
-            <br />
-            Easily
-            {' '}
-            <strong>paste images</strong>
-            {' '}
-to tweet them.
-            {' '}
-            <br />
-            <strong>Share any link</strong>
-            {' '}
-on TweetDeck with a single click.
-            <br />
-            Make your life easier with
-            {' '}
-            <strong>GIF preview and download</strong>
-.
+            Make your life easier with <strong>GIF preview and download</strong>.
           </span>
         )}
         image="poster.jpg"
@@ -102,10 +65,7 @@ on TweetDeck with a single click.
         paragraph={() => (
           <span>
             Thumbnails are a huge part of TweetDeck&apos;s experience. Better TweetDeck goes beyond
-            the YouTube/Vine/Twitter limitation and adds support for more than 30 websites.
-            {' '}
-            <br />
-            {' '}
+            the YouTube/Vine/Twitter limitation and adds support for more than 30 websites. <br />{' '}
             <br />
             Ever wanted to preview content from Instagram, Vimeo, SoundCloud, Bandcamp, Spotify,
             Twitch or Imgur? Say no more!
@@ -120,14 +80,9 @@ on TweetDeck with a single click.
         title="Emoji & GIFs, at your fingertips"
         paragraph={() => (
           <span>
-            Better TweetDeck lets you add emoji through an integrated picker or by using
-            {' '}
-            <code>:shortcodes:</code>
-            {' '}
-😎 🔥 👍
-            <br />
-            {' '}
-            <br />
+            Better TweetDeck lets you add emoji through an integrated picker or by using{' '}
+            <code>:shortcodes:</code> 😎 🔥 👍
+            <br /> <br />
             Find the perfect GIF for any occasion thanks to the Giphy/Tenor integration!
           </span>
         )}
@@ -141,17 +96,13 @@ on TweetDeck with a single click.
         title="Advanced Muting capabilities"
         paragraph={() => (
           <span>
-            TweetDeck features already useful filters to mute users, hashtags and tweet sources.
-            {' '}
-            <br />
-            {' '}
-            <br />
+            TweetDeck features already useful filters to mute users, hashtags and tweet sources.{' '}
+            <br /> <br />
             Better TweetDeck goes the extra mile and lets you:
             <ul>
               <li>Mute tweets from a specific user if they contain specific keywords.</li>
               <li>
-                Mute tweets by using
-                {' '}
+                Mute tweets by using{' '}
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">
                   JavaScript Regular Expressions
                 </a>
@@ -175,11 +126,7 @@ on TweetDeck with a single click.
           <div>
             <h2>Get today for your favorite browser</h2>
             <p>
-              You're one click away from a super-charged TweetDeck experience.
-              {' '}
-              <br />
-              {' '}
-Get Better
+              You're one click away from a super-charged TweetDeck experience. <br /> Get Better
               TweetDeck for Chrome, Firefox or Opera.
             </p>
           </div>

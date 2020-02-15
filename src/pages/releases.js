@@ -83,14 +83,14 @@ const ChangelogPage = () => (
         }
       }
     `}
-    render={(data) => {
+    render={data => {
       const releases = data.allGithubRelease.edges.map(e => e.node);
       return (
         <TemplateWrapper>
           <StyledReleasesDiv>
             <Helmet title="Better TweetDeck | Release notes" />
             <h1>Release notes</h1>
-            {releases.map((release) => {
+            {releases.map(release => {
               const formattedDate = format(release.date, 'MM/DD/YYYY');
 
               return (
@@ -107,9 +107,7 @@ const ChangelogPage = () => (
                   <hr />
                   <footer className="releaseFooter">
                     <small className="releaseDate">
-                      Released on
-                      {' '}
-                      <time dateTime={release.date}>{formattedDate}</time>
+                      Released on <time dateTime={release.date}>{formattedDate}</time>
                     </small>
                     <small>
                       <a href={release.url} className="releaseExternalLink">

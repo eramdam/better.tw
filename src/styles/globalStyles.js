@@ -9,7 +9,6 @@ import {
   textColor,
 } from './styleVariables';
 
-
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;

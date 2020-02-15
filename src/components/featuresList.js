@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -54,9 +55,7 @@ export const FeaturesList = () => (
         <li>Add GIFs from Giphy & Tenor</li>
         <li>
           {' '}
-          Add emoji using
-          {' '}
-          <code>:shortcodes:</code>
+          Add emoji using <code>:shortcodes:</code>
         </li>
         <li>Mute source from tweets' menu</li>
         <li>Mute #hashtags from tweets' menu</li>

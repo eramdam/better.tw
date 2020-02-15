@@ -133,8 +133,7 @@ export const Header = () => (
       style={{
         textDecoration: 'none',
       }}
-      className="content"
-    >
+      className="content">
       <span className="img">
         <svg viewBox="0 0 256 256" width={96}>
           <path

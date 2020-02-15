@@ -6,7 +6,7 @@ import React from 'react';
 
 import { attrsToProps, iconsList } from '../utils';
 
-export const Icon = (props) => {
+export const Icon = props => {
   const { name, size, ...more } = props;
   return (
     <span
@@ -14,8 +14,7 @@ export const Icon = (props) => {
         display: 'inline-block',
         fontSize: 0,
       }}
-      {...more}
-    >
+      {...more}>
       <svg
         {...attrsToProps(icons[name].attrs)}
         {...{

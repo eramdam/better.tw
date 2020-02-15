@@ -1,12 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "prettier.eslintIntegration": true,
   "movets.skipWarning": true,
-  "typescriptHero.imports.organizeOnSave": true,
-  "typescriptHero.imports.multiLineTrailingComma": true,
-  "typescriptHero.imports.insertSpaceBeforeAndAfterImportBraces": true,
-  "typescriptHero.imports.multiLineWrapThreshold": 100,
-  "xmlTools.splitXmlnsOnFormat": false,
   "files.eol": "\n",
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "html"],
   "files.exclude": {
@@ -24,7 +18,6 @@
     "**/bower_components": true,
     "**/coverage": true
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
@@ -40,5 +33,7 @@
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false
   },
-  "editor.formatOnSaveTimeout": 3000
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

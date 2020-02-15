@@ -65,13 +65,15 @@ exports.sourceNodes = async ({ actions }) => {
 
   const releases = await githubApolloFetch({
     query: GITHUB_RELEASES_QUERY,
-  }).then(({ data }) => data.viewer.repository.releases.edges
-    .filter(r => !r.node.isDraft)
-    .map(r => ({
-      ...r.node,
-      name: r.node.name || r.node.tag.name,
-      tag: undefined,
-    })));
+  }).then(({ data }) =>
+    data.viewer.repository.releases.edges
+      .filter(r => !r.node.isDraft)
+      .map(r => ({
+        ...r.node,
+        name: r.node.name || r.node.tag.name,
+        tag: undefined,
+      }))
+  );
 
   releases.forEach(release => createNode(processRelease(release)));
 };
@@ -93,7 +95,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then((result) => {
+  `).then(result => {
     if (result.errors) {
       Promise.reject(result.errors);
       return;

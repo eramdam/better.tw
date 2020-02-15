@@ -79,9 +79,7 @@ export class Video extends React.Component {
   };
 
   render() {
-    const {
-      src, className, poster, wrapperClassName, ...more
-    } = this.props;
+    const { src, className, poster, wrapperClassName, ...more } = this.props;
 
     return (
       <StyledVideoWrapperDiv
@@ -94,14 +92,13 @@ export class Video extends React.Component {
         onClick={this.playPause}
         onKeyDown={this.playPause}
         role="button"
-        tabIndex="0"
-      >
+        tabIndex="0">
         <span className="videoOverlay">
           <Icon name="play-circle" size={80} />
         </span>
         <video
           src={src}
-          ref={(el) => {
+          ref={el => {
             this.videoNode = el;
           }}
           className={className}
