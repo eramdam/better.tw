@@ -115,9 +115,7 @@ const StyledTextSection = styled.section`
   }
 `;
 
-export const TextSection = ({
-  title, paragraph, image, video, vertical, ...more
-}) => (
+export const TextSection = ({ title, paragraph, image, video, vertical, ...more }) => (
   <StyledTextSection>
     <GridBlock className={vertical}>
       <div className="sectionCopy">

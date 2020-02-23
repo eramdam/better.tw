@@ -4,7 +4,8 @@ import React from 'react';
 
 import { TemplateWrapper } from '../components/templateWrapper';
 
-const msgToParent = msg => window.parent && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
+const msgToParent = msg =>
+  window.parent && window.parent.postMessage(msg, 'https://tweetdeck.twitter.com/');
 
 class GifPage extends React.Component {
   componentDidMount() {
@@ -29,7 +30,7 @@ class GifPage extends React.Component {
     gifshot.createGIF(
       {
         ...parsed,
-        progressCallback: (progress) => {
+        progressCallback: progress => {
           if (window.parent) {
             // Report progress to the parent (Better TweetDeck)
             msgToParent({
@@ -40,14 +41,14 @@ class GifPage extends React.Component {
           }
         },
       },
-      (obj) => {
+      obj => {
         // Pass final image to BTD
         msgToParent({
           message: 'complete_gif',
           img: obj.image,
           name: parsed.name,
         });
-      },
+      }
     );
   }
 
@@ -59,8 +60,7 @@ class GifPage extends React.Component {
             padding: 40,
             margin: '0 auto',
             textAlign: 'center',
-          }}
-        >
+          }}>
           👀
         </div>
       </TemplateWrapper>

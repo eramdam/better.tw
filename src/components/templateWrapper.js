@@ -132,6 +132,7 @@ export const TemplateWrapper = ({ children, showDownloads, title }) => (
     <nav className={classnames('downloadBtns', { hidden: !showDownloads })}>
       <DownloadButton className="downloadButton" browser="chrome" />
       <DownloadButton className="downloadButton" browser="firefox" />
+      <DownloadButton className="downloadButton" browser="edge" />
       <DownloadButton className="downloadButton" browser="opera" />
       <DownloadButton className="downloadButton showMobile" browser="btd" text="Download now" />
     </nav>

@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 const chromeLogo = require('../img/chrome-icon.png');
 const firefoxLogo = require('../img/firefox-icon.png');
 const operaLogo = require('../img/opera-icon.png');
+const edgeLogo = require('../img/edge-icon.png');
 const btdLogo = require('../img/btd-icon.png');
 
 const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75))';
@@ -17,6 +18,15 @@ function addBrowserStyles({ browser }) {
 
         & > span {
           background-image: -webkit-linear-gradient(top, #4285f4, #2962bd);
+        }
+      `;
+
+    case 'edge':
+      return css`
+        background-image: ${whiteOverlayBtn}, url(${edgeLogo});
+
+        & > span {
+          background-image: -webkit-linear-gradient(top, #42c45f, #33c1ef);
         }
       `;
 
@@ -86,9 +96,10 @@ const EXTENSION_URLS = {
   opera: '/opera',
   firefox: '/firefox',
   btd: '#download-btns',
+  edge: '/edge',
 };
 
-export const DownloadButton = (props) => {
+export const DownloadButton = props => {
   const anchorProps = {
     href: props.url ? props.url : EXTENSION_URLS[props.browser],
     target: props.browser !== 'btd' ? '_blank' : undefined,

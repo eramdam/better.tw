@@ -55,7 +55,7 @@ const StyledBlock = styled(GridBlock)`
   }
 `;
 
-export const PageTemplate = (props) => {
+export const PageTemplate = props => {
   const { data } = props;
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
