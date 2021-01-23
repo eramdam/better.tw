@@ -36,7 +36,7 @@ const StyledVideoWrapperDiv = styled.div`
     color: ${rgba('white', 0.8)};
   }
 
-  .videoWrapper.playing .videoOverlay {
+  &.playing .videoOverlay {
     opacity: 0;
   }
 `;
