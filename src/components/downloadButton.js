@@ -6,6 +6,7 @@ const chromeLogo = require('../img/chrome-icon.png');
 const firefoxLogo = require('../img/firefox-icon.png');
 const operaLogo = require('../img/opera-icon.png');
 const edgeLogo = require('../img/edge-icon.png');
+const safariLogo = require('../img/safari-icon.png');
 const btdLogo = require('../img/btd-icon.png');
 
 const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75))';
@@ -48,12 +49,22 @@ function addBrowserStyles({ browser }) {
         }
       `;
 
+    case 'safari':
+      return css`
+        background-image: ${whiteOverlayBtn}, url(${safariLogo});
+        background-position: -30% 18%;
+
+        & > span {
+          background-image: -webkit-linear-gradient(top, #1fa5f0, #1d77e6);
+        }
+      `;
+
     case 'btd':
       return css`
         background-image: ${whiteOverlayBtn}, url(${btdLogo});
 
         & > span {
-          background-image: -webkit-linear-gradient(-45deg, #00a0fb 47%, #00cbfc 100%);
+          background-image: -webkit-linear-gradient(-45deg, #1fa5f0 47%, #00cbfc 100%);
         }
       `;
 
@@ -64,8 +75,9 @@ function addBrowserStyles({ browser }) {
 
 const StyledDownloadButton = styled.a`
   background-color: white;
-  padding: 0.9em 0.8em;
-  padding-left: calc(0.8em + 48px);
+  /* padding: 0.9em 0.8em; */
+  padding: 12px 14px;
+  padding-left: 40px;
   border-radius: 4px;
   font-size: 16px;
   box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -73,19 +85,21 @@ const StyledDownloadButton = styled.a`
   text-decoration: none;
   display: inline-block;
   color: #6a6a6a;
-  background-size: auto, 96px;
+  background-size: auto, 90px;
   background-position: -10% 10%;
   background-repeat: no-repeat;
-  transition: all 300ms ease;
+  /* transition: all 300ms ease; */
 
   &:hover {
-    transform: translateY(-6px);
+    /* transform: translateY(-6px); */
     background-color: #c0c0c0;
   }
 
   ${p => addBrowserStyles(p)};
 
   > span {
+    overflow: hidden;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -97,6 +111,7 @@ const EXTENSION_URLS = {
   firefox: '/firefox',
   btd: '#download-btns',
   edge: '/edge',
+  safari: '/safari',
 };
 
 export const DownloadButton = props => {
@@ -108,7 +123,7 @@ export const DownloadButton = props => {
 
   return (
     <StyledDownloadButton {...anchorProps} className={props.className}>
-      <span>{props.text ? props.text : `Get for ${props.browser}`}</span>
+      <span>{props.text ? props.text : `For ${props.browser}`}</span>
     </StyledDownloadButton>
   );
 };
