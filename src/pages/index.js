@@ -132,7 +132,7 @@ const IndexPage = () => (
           </div>
           <div className="downloadZoneBtns">
             <DownloadButton className="downloadZoneButton" browser="chrome" />
-            <DownloadButton className="downloadButton" browser="safari" />
+            <DownloadButton className="downloadZoneButton" browser="safari" />
             <DownloadButton className="downloadZoneButton" browser="firefox" />
             <DownloadButton className="downloadZoneButton" browser="edge" />
             <DownloadButton className="downloadZoneButton" browser="opera" />

@@ -129,7 +129,7 @@ export const DownloadButton = props => {
 };
 
 DownloadButton.propTypes = {
-  browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd']).isRequired,
+  browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd', 'safari']).isRequired,
   url: PropTypes.string,
   text: PropTypes.string,
   className: PropTypes.string,
