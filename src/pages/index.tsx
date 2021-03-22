@@ -22,11 +22,11 @@ const IndexPage = () => (
             <br />
             Missing the <strong>square avatars</strong> ? We got you.
             <br />
-            Wish TweetDeck's UI was a bit more <strong>minimal</strong>
+            Wish TweetDeck&apos;s UI was a bit more <strong>minimal</strong>
             ? Check this out!
             <br />
             Miss the <strong>old dark theme</strong>
-            ? You're in luck!
+            ? You&apos;re in luck!
             <br />
             Preferred when characters were counted with <strong>actual numbers</strong>
             ? We hear you.
@@ -124,8 +124,8 @@ const IndexPage = () => (
           <div>
             <h2>Get today for your favorite browser</h2>
             <p>
-              You're one click away from a super-charged TweetDeck experience. <br /> Get Better
-              TweetDeck for Chrome, Firefox or Opera.
+              You&apos;re one click away from a super-charged TweetDeck experience. <br /> Get
+              Better TweetDeck for Chrome, Firefox or Opera.
             </p>
           </div>
           <div className="downloadZoneBtns">
