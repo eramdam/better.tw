@@ -6,7 +6,7 @@ import React from 'react';
 
 import { attrsToProps, iconsList } from '../utils';
 
-export const Icon = props => {
+export const Icon = (props: { className?: string; size: number; name: string }) => {
   const { name, size, ...more } = props;
   return (
     <span

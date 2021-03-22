@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import { PageTemplateQuery } from '../../graphql-types';
 import { GridBlock } from '../styles/globalStyles';
 import { TemplateWrapper } from './templateWrapper';
 
@@ -55,15 +56,16 @@ const StyledBlock = styled(GridBlock)`
   }
 `;
 
-const PageTemplate = props => {
+const PageTemplate = (props: { data: PageTemplateQuery }) => {
   const { data } = props;
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const html = markdownRemark?.html || '';
+  const frontmatter = markdownRemark?.frontmatter;
 
   return (
-    <TemplateWrapper title={frontmatter.title} showDownloads={!frontmatter.hideDownloads}>
+    <TemplateWrapper title={frontmatter?.title || ''} showDownloads={!frontmatter?.hideDownloads}>
       <StyledBlock>
-        <h1>{frontmatter.title}</h1>
+        <h1>{frontmatter?.title}</h1>
 
         <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
       </StyledBlock>
@@ -72,7 +74,7 @@ const PageTemplate = props => {
 };
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query pageTemplate($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {

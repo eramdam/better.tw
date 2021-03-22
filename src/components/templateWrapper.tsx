@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
@@ -92,7 +92,11 @@ const StyledTemplateWrapperDiv = styled.div`
   }
 `;
 
-export const TemplateWrapper = ({ children, showDownloads, title }) => (
+type TemplateWrapperProps = PropsWithChildren<{
+  showDownloads: boolean;
+  title: string;
+}>;
+export const TemplateWrapper = ({ children, showDownloads, title }: TemplateWrapperProps) => (
   <StyledTemplateWrapperDiv>
     <GlobalStyles />
     <Helmet

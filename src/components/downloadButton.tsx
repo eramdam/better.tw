@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 import btdLogo from '../img/btd-icon.png';
@@ -11,7 +11,7 @@ import safariLogo from '../img/safari-icon.png';
 
 const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75))';
 
-function addBrowserStyles({ browser }) {
+function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
   switch (browser) {
     case 'chrome':
       return css`
@@ -73,7 +73,7 @@ function addBrowserStyles({ browser }) {
   }
 }
 
-const StyledDownloadButton = styled.a`
+const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   background-color: white;
   /* padding: 0.9em 0.8em; */
   padding: 12px 14px;
@@ -95,7 +95,7 @@ const StyledDownloadButton = styled.a`
     background-color: #c0c0c0;
   }
 
-  ${p => addBrowserStyles(p)};
+  ${(p) => addBrowserStyles(p)};
 
   > span {
     overflow: hidden;
@@ -114,7 +114,14 @@ const EXTENSION_URLS = {
   safari: '/safari',
 };
 
-export const DownloadButton = props => {
+interface DownloadButtonProps {
+  url: string;
+  browser: keyof typeof EXTENSION_URLS;
+  text: ReactNode;
+  className?: string;
+}
+
+export const DownloadButton = (props: DownloadButtonProps) => {
   const anchorProps = {
     href: props.url ? props.url : EXTENSION_URLS[props.browser],
     target: props.browser !== 'btd' ? '_blank' : undefined,

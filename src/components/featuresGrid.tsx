@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { GridBlock } from '../styles/globalStyles';
@@ -40,7 +40,15 @@ const StyledIcon = styled(Icon)`
   }
 `;
 
-const FeatureBlock = ({ name, paragraph, icon }) => (
+const FeatureBlock = ({
+  name,
+  paragraph,
+  icon,
+}: {
+  name: ReactNode;
+  paragraph: ReactNode;
+  icon: string;
+}) => (
   <StyledFeatureBlock>
     <StyledIcon name={icon} />
     <div className="blockCopy">

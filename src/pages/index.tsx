@@ -35,7 +35,6 @@ const IndexPage = () => (
             All of this and a lot more is possible with Better TweetDeck!
           </span>
         )}
-        vertical
         image="before-after.png"
         style={{
           maxHeight: 450,

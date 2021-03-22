@@ -1,17 +1,14 @@
 import { camelCase } from 'change-case';
-import feather from 'feather-icons';
+import feather, { FeatherAttributes } from 'feather-icons';
 
-export const attrsToProps = obj =>
+export const attrsToProps = (obj: FeatherAttributes) =>
   Object.keys(obj)
-    .filter(i => i !== 'class')
+    .filter((i) => i !== 'class')
     .reduce((final, key) => {
-      const tempResult = {
+      return {
         ...final,
+        [camelCase(key)]: obj[key],
       };
-
-      tempResult[camelCase(key)] = obj[key];
-
-      return tempResult;
     }, {});
 
 export const iconsList = Object.keys(feather.icons);

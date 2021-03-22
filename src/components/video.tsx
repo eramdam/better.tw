@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import { rgba } from 'polished';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { createRef } from 'react';
 import styled from 'styled-components';
 
 import { Icon } from './icon';
@@ -41,13 +41,27 @@ const StyledVideoWrapperDiv = styled.div`
   }
 `;
 
-export class Video extends React.Component {
+interface VideoProps {
+  src: string;
+  className: string;
+  wrapperClassName: string;
+  poster: string;
+}
+
+export class Video extends React.Component<
+  VideoProps,
+  {
+    videoPaused: boolean;
+  }
+> {
   static propTypes = {
     src: PropTypes.string,
     className: PropTypes.string,
     wrapperClassName: PropTypes.string,
     poster: PropTypes.string,
   };
+
+  private videoNode = createRef<HTMLVideoElement>();
 
   static defaultProps = {
     src: '',
@@ -56,7 +70,7 @@ export class Video extends React.Component {
     poster: '',
   };
 
-  constructor(props) {
+  constructor(props: VideoProps) {
     super(props);
 
     this.state = {
@@ -65,7 +79,11 @@ export class Video extends React.Component {
   }
 
   playPause = () => {
-    const video = this.videoNode;
+    const video = this.videoNode.current;
+
+    if (!video) {
+      return;
+    }
 
     if (video.paused) {
       video.play();
@@ -92,15 +110,13 @@ export class Video extends React.Component {
         onClick={this.playPause}
         onKeyDown={this.playPause}
         role="button"
-        tabIndex="0">
+        tabIndex={0}>
         <span className="videoOverlay">
           <Icon name="play-circle" size={80} />
         </span>
         <video
           src={src}
-          ref={el => {
-            this.videoNode = el;
-          }}
+          ref={this.videoNode}
           className={className}
           poster={poster}
           muted

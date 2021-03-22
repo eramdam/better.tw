@@ -1,14 +1,13 @@
 import { isFunction } from 'lodash';
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { GridBlock } from '../styles/globalStyles';
 import { fontBody, smallerThanGridQuery } from '../styles/styleVariables';
 import { Video } from './video';
 
-const imgPath = url => `${__PATH_PREFIX__}/img/${url}`;
-const renderTextProp = prop => (isFunction(prop) ? prop() : prop);
+const imgPath = (url: string) => `${__PATH_PREFIX__}/img/${url}`;
+const renderTextProp = (prop: string | (() => ReactNode)) => (isFunction(prop) ? prop() : prop);
 
 const StyledTextSection = styled.section`
   width: 100%;
@@ -115,9 +114,18 @@ const StyledTextSection = styled.section`
   }
 `;
 
-export const TextSection = ({ title, paragraph, image, video, vertical, ...more }) => (
+type TextSectionProps = {
+  title: ReactNode;
+  paragraph: string | (() => ReactNode);
+  image: string;
+  video?: string;
+  vertical?: boolean;
+  style?: React.CSSProperties;
+};
+
+export const TextSection = ({ title, paragraph, image, video, ...more }: TextSectionProps) => (
   <StyledTextSection>
-    <GridBlock className={vertical}>
+    <GridBlock>
       <div className="sectionCopy">
         <h4>{title}</h4>
         <p className="sectionParagraph">{renderTextProp(paragraph)}</p>
@@ -128,7 +136,6 @@ export const TextSection = ({ title, paragraph, image, video, vertical, ...more 
           className="sectionVideo"
           wrapperClassName="sectionVideoWrapper"
           poster={imgPath(image)}
-          {...more}
         />
       ) : (
         <img className="sectionImage" src={imgPath(image)} alt="" {...more} />
@@ -136,14 +143,6 @@ export const TextSection = ({ title, paragraph, image, video, vertical, ...more 
     </GridBlock>
   </StyledTextSection>
 );
-
-TextSection.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  paragraph: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  image: PropTypes.string,
-  video: PropTypes.string,
-  vertical: PropTypes.bool,
-};
 
 TextSection.defaultProps = {
   title: 'Lorem Ipsum',
