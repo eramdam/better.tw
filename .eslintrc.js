@@ -14,6 +14,6 @@ module.exports = {
   rules: {
     'simple-import-sort/imports': 2,
     'unused-imports/no-unused-imports': 2,
-    'react/prop-types': [2, { ignore: ['children'] }],
+    'react/prop-types': 0,
   },
 };

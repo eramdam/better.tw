@@ -1,6 +1,5 @@
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React, { PropsWithChildren } from 'react';
+import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
@@ -92,11 +91,11 @@ const StyledTemplateWrapperDiv = styled.div`
   }
 `;
 
-type TemplateWrapperProps = PropsWithChildren<{
-  showDownloads: boolean;
-  title: string;
-}>;
-export const TemplateWrapper = ({ children, showDownloads, title }: TemplateWrapperProps) => (
+interface TemplateWrapperProps {
+  showDownloads?: boolean;
+  title?: string;
+}
+export const TemplateWrapper: FC<TemplateWrapperProps> = ({ children, showDownloads, title }) => (
   <StyledTemplateWrapperDiv>
     <GlobalStyles />
     <Helmet
@@ -144,13 +143,3 @@ export const TemplateWrapper = ({ children, showDownloads, title }: TemplateWrap
     <Footer />
   </StyledTemplateWrapperDiv>
 );
-
-TemplateWrapper.propTypes = {
-  showDownloads: PropTypes.bool,
-  title: PropTypes.string,
-};
-
-TemplateWrapper.defaultProps = {
-  showDownloads: true,
-  title: '',
-};

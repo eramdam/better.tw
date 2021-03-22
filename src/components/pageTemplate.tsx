@@ -1,5 +1,4 @@
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -84,10 +83,5 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-PageTemplate.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.any.isRequired,
-};
 
 export default PageTemplate;

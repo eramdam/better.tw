@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
@@ -50,26 +49,13 @@ const FeatureBlock = ({
   icon: string;
 }) => (
   <StyledFeatureBlock>
-    <StyledIcon name={icon} />
+    <StyledIcon name={icon} size={36} />
     <div className="blockCopy">
       <h5>{name}</h5>
       <p className="blockParagraph">{paragraph}</p>
     </div>
   </StyledFeatureBlock>
 );
-
-FeatureBlock.propTypes = {
-  name: PropTypes.string,
-  paragraph: PropTypes.string,
-  icon: PropTypes.string,
-};
-
-FeatureBlock.defaultProps = {
-  name: 'Lorem ipsum',
-  paragraph:
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, magni assumenda delectus eos cumque quaerat sequi consectetur molestias nesciunt voluptate veritatis aliquam quos. Repellat quae non sit quod tenetur ipsam?',
-  icon: 'activity',
-};
 
 const StyledFeaturesGridDiv = styled.div`
   padding: 50px 0;

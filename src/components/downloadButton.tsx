@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
@@ -115,9 +114,9 @@ const EXTENSION_URLS = {
 };
 
 interface DownloadButtonProps {
-  url: string;
+  url?: string;
   browser: keyof typeof EXTENSION_URLS;
-  text: ReactNode;
+  text?: ReactNode;
   className?: string;
 }
 
@@ -133,17 +132,4 @@ export const DownloadButton = (props: DownloadButtonProps) => {
       <span>{props.text ? props.text : `For ${props.browser}`}</span>
     </StyledDownloadButton>
   );
-};
-
-DownloadButton.propTypes = {
-  browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd', 'safari', 'edge']).isRequired,
-  url: PropTypes.string,
-  text: PropTypes.string,
-  className: PropTypes.string,
-};
-
-DownloadButton.defaultProps = {
-  url: '',
-  text: '',
-  className: '',
 };
