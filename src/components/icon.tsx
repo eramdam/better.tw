@@ -1,4 +1,3 @@
-/* eslint react/no-danger: 0 */
 import classnames from 'classnames';
 import { icons } from 'feather-icons';
 import PropTypes from 'prop-types';

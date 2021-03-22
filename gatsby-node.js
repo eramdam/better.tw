@@ -1,4 +1,3 @@
-/* eslint no-param-reassign:0 */
 const { createApolloFetch } = require('apollo-fetch');
 const path = require('path');
 const config = require('config');

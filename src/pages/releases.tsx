@@ -1,4 +1,3 @@
-/* eslint react/no-danger: 0 */
 import { format, parseISO } from 'date-fns';
 import { graphql, StaticQuery } from 'gatsby';
 import { rgba } from 'polished';
