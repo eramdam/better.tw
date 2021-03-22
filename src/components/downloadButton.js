@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-const chromeLogo = require('../img/chrome-icon.png');
-const firefoxLogo = require('../img/firefox-icon.png');
-const operaLogo = require('../img/opera-icon.png');
-const edgeLogo = require('../img/edge-icon.png');
-const safariLogo = require('../img/safari-icon.png');
-const btdLogo = require('../img/btd-icon.png');
+import btdLogo from '../img/btd-icon.png';
+import chromeLogo from '../img/chrome-icon.png';
+import edgeLogo from '../img/edge-icon.png';
+import firefoxLogo from '../img/firefox-icon.png';
+import operaLogo from '../img/opera-icon.png';
+import safariLogo from '../img/safari-icon.png';
 
 const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75))';
 
@@ -129,7 +129,7 @@ export const DownloadButton = props => {
 };
 
 DownloadButton.propTypes = {
-  browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd', 'safari']).isRequired,
+  browser: PropTypes.oneOf(['opera', 'chrome', 'firefox', 'btd', 'safari', 'edge']).isRequired,
   url: PropTypes.string,
   text: PropTypes.string,
   className: PropTypes.string,

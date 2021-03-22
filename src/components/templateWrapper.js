@@ -4,13 +4,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
+import downloadBg from '../img/download-bg.png';
 import { GlobalStyles } from '../styles/globalStyles';
 import { mobileQuery } from '../styles/styleVariables';
 import { DownloadButton } from './downloadButton';
 import { Footer } from './footer';
 import { Header } from './header';
-
-const downloadBg = require('../img/download-bg.png');
 
 const StyledTemplateWrapperDiv = styled.div`
   .downloadBtns {
