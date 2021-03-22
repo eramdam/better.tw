@@ -1,12 +1,12 @@
 /* eslint react/no-danger: 0 */
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { graphql, StaticQuery } from 'gatsby';
 import { rgba } from 'polished';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { BtdMarkdownQuery } from '../../graphql-types';
 
+import { BtdMarkdownQuery } from '../../graphql-types';
 import { TemplateWrapper } from '../components/templateWrapper';
 import { GridBlock } from '../styles/globalStyles';
 
@@ -92,7 +92,7 @@ const ChangelogPage = () => (
             <Helmet title="Better TweetDeck | Release notes" />
             <h1>Release notes</h1>
             {releases.map((release) => {
-              const formattedDate = format(release.date, 'MM/DD/YYYY');
+              const formattedDate = format(parseISO(release.date), 'MM/dd/yyyy');
 
               return (
                 <div key={release.id} className="singleRelease">
