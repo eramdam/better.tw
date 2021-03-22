@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { graphql, StaticQuery } from 'gatsby';
 import { rgba } from 'polished';
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import { TemplateWrapper } from '../components/templateWrapper';

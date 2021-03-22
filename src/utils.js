@@ -1,4 +1,4 @@
-import { camel } from 'change-case';
+import { camelCase } from 'change-case';
 import feather from 'feather-icons';
 
 export const attrsToProps = obj =>
@@ -9,7 +9,7 @@ export const attrsToProps = obj =>
         ...final,
       };
 
-      tempResult[camel(key)] = obj[key];
+      tempResult[camelCase(key)] = obj[key];
 
       return tempResult;
     }, {});
