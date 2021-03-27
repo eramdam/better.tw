@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { attrsToProps } from '../utils';
 
 export const Icon: FC<{ className?: string; size: number; name: string }> = (props) => {
-  const { name, size } = props;
+  const { name, size, className } = props;
   return (
     <span
       style={{
@@ -15,7 +15,7 @@ export const Icon: FC<{ className?: string; size: number; name: string }> = (pro
       <svg
         {...attrsToProps(icons[name].attrs)}
         {...{
-          className: classnames(icons[name].attrs.class),
+          className: classnames(icons[name].attrs.class, className),
           width: size,
           height: size,
         }}

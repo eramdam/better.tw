@@ -1,9 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import BTDLogo from '../img/BTD.svg';
-import meshGradient2 from '../img/mesh-gradient-2.png';
+import meshGradient from '../img/mesh-gradient-1.png';
+import { Icon } from './icon';
 
 const animatedBackground = keyframes`
   0% {
@@ -38,7 +39,7 @@ const StyledHeader = styled.header`
   .bg,
   .bg::after,
   &::after {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${meshGradient2});
+    background-image: url(${meshGradient});
     background-size: cover;
     animation-direction: alternate;
     animation-duration: 15s;
@@ -102,9 +103,72 @@ const StyledLogoWrapper = styled.div`
   }
 `;
 
+const StyledMenu = styled.nav`
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  position: absolute;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 14px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+`;
+
+const menuItemStyles = css`
+  text-decoration: none;
+  color: currentColor;
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-column-gap: 5px;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 100ms linear;
+  padding: 5px 8px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+`;
+const StyledMenuItem = styled(Link)`
+  ${menuItemStyles}
+`;
+const StyledMenuItemAnchor = styled.a`
+  ${menuItemStyles}
+`;
+const StyledMenuItemIcon = styled(Icon)`
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.28));
+`;
+
 export const Header = () => {
   return (
     <StyledHeader>
+      <StyledMenu>
+        <StyledMenuItem to="/donate">
+          <StyledMenuItemIcon name="heart" size={16} />
+          Donate
+        </StyledMenuItem>
+        <StyledMenuItemAnchor href="https://github.com/eramdam/BetterTweetDeck">
+          <StyledMenuItemIcon name="github" size={16} />
+          GitHub
+        </StyledMenuItemAnchor>
+        <StyledMenuItemAnchor href="https://twitter.com/BetterTDeck">
+          <StyledMenuItemIcon name="twitter" size={16} />
+          Follow
+        </StyledMenuItemAnchor>
+      </StyledMenu>
       <div className="bg"></div>
       <StyledLink to="/">
         <StyledLogoWrapper>

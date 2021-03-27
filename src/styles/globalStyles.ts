@@ -5,6 +5,10 @@ import { gridWidth, smallerThanGridQuery, textColor } from './styleVariables';
 
 export const GlobalStyles = createGlobalStyle`
   ${normalize()};
+  
+  * {
+    box-sizing: border-box;
+  }
 
   html,body {
     background: white;
@@ -28,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
 
   span.token.-improvement {
     background-color: hsl(47, 99%, 60%);
-  } */
+  }
 `;
 
 export const GridBlock = styled.div`
