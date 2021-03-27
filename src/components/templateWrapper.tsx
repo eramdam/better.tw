@@ -3,9 +3,36 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
 import { GlobalStyles } from '../styles/globalStyles';
+import { DownloadButton } from './downloadButton';
 import { Header } from './header';
 
 const StyledTemplateWrapperDiv = styled.div``;
+
+const StyledNav = styled.nav`
+  z-index: 9;
+  position: relative;
+
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 20px;
+  transform: translateY(-80%);
+
+  .showMobile {
+    display: none;
+  }
+
+  @media (max-width: 660px) {
+    > a:not(.showMobile) {
+      display: none;
+    }
+
+    .showMobile {
+      display: block;
+    }
+  }
+`;
 
 interface TemplateWrapperProps {
   showDownloads?: boolean;
@@ -48,6 +75,16 @@ export const TemplateWrapper: FC<TemplateWrapperProps> = ({ children, showDownlo
       ]}
     />
     <Header />
+    <StyledNav>
+      <DownloadButton browser="chrome" />
+      <DownloadButton browser="safari" />
+      <DownloadButton browser="firefox" />
+      <DownloadButton browser="edge" />
+      <DownloadButton browser="opera" />
+      <DownloadButton className="showMobile" browser="btd">
+        Download now
+      </DownloadButton>
+    </StyledNav>
     {children}
   </StyledTemplateWrapperDiv>
 );

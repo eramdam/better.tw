@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { random, sample } from 'lodash';
+import { sample } from 'lodash';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
@@ -21,8 +21,10 @@ const animatedBackground = keyframes`
   }
 `;
 
-const StyledHeader = styled.header<{ gradient: string; duration: number }>`
-  min-height: 280px;
+const animationDuration = 20;
+const gradientPick = sample(gradients);
+const StyledHeader = styled.header`
+  min-height: 320px;
 
   display: flex;
   flex-direction: column;
@@ -30,11 +32,22 @@ const StyledHeader = styled.header<{ gradient: string; duration: number }>`
   align-items: center;
   position: relative;
 
+  &::after {
+    content: '';
+    filter: blur(20px) saturate(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+
   .bg {
-    background-image: url(${(p) => p.gradient});
+    background-image: url(${gradientPick});
     background-size: cover;
     animation-direction: alternate;
-    animation-duration: ${(p) => p.duration}s;
+    animation-duration: ${animationDuration}s;
     animation-fill-mode: none;
     animation-iteration-count: infinite;
     animation-name: ${animatedBackground};
@@ -42,7 +55,8 @@ const StyledHeader = styled.header<{ gradient: string; duration: number }>`
     animation-timing-function: linear;
   }
 
-  .bg {
+  .bg,
+  .bg::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,6 +66,15 @@ const StyledHeader = styled.header<{ gradient: string; duration: number }>`
 
   .bg {
     overflow: hidden;
+  }
+
+  &::after,
+  .bg::after {
+  }
+
+  .bg::after {
+    content: '';
+    z-index: 1;
   }
 `;
 
@@ -88,11 +111,8 @@ const StyledLogoWrapper = styled.div`
 `;
 
 export const Header = () => {
-  const animationDuration = random(20, 30);
-  const gradientPick = sample(gradients);
-
   return (
-    <StyledHeader gradient={gradientPick || gradients[0]} duration={animationDuration}>
+    <StyledHeader>
       <div className="bg"></div>
       <StyledLink to="/">
         <StyledLogoWrapper>

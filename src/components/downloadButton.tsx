@@ -75,8 +75,8 @@ function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
 const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   background-color: white;
   /* padding: 0.9em 0.8em; */
-  padding: 12px 14px;
-  padding-left: 40px;
+  padding: 10px 14px;
+  padding-left: 24px;
   border-radius: 4px;
   font-size: 16px;
   box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.2);
@@ -84,14 +84,13 @@ const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   text-decoration: none;
   display: inline-block;
   color: #6a6a6a;
-  background-size: auto, 90px;
+  background-size: auto, 44px;
   background-position: -10% 10%;
   background-repeat: no-repeat;
-  /* transition: all 300ms ease; */
+  transition: all 300ms ease;
 
-  &:hover {
-    /* transform: translateY(-6px); */
-    background-color: #c0c0c0;
+  nav &:hover {
+    transform: translateY(-6px);
   }
 
   ${(p) => addBrowserStyles(p)};
@@ -116,7 +115,7 @@ const EXTENSION_URLS = {
 interface DownloadButtonProps {
   url?: string;
   browser: keyof typeof EXTENSION_URLS;
-  text?: ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 
@@ -128,8 +127,12 @@ export const DownloadButton = (props: DownloadButtonProps) => {
   };
 
   return (
-    <StyledDownloadButton {...anchorProps} className={props.className}>
-      <span>{props.text ? props.text : `For ${props.browser}`}</span>
+    <StyledDownloadButton
+      href={anchorProps.href}
+      target={anchorProps.target}
+      browser={anchorProps.browser}
+      className={props.className}>
+      <span>{props.children ? props.children : `${props.browser}`}</span>
     </StyledDownloadButton>
   );
 };
