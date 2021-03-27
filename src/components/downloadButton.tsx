@@ -1,3 +1,4 @@
+import { capitalCase } from 'change-case';
 import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
@@ -8,7 +9,7 @@ import firefoxLogo from '../img/firefox-icon.png';
 import operaLogo from '../img/opera-icon.png';
 import safariLogo from '../img/safari-icon.png';
 
-const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .75))';
+const whiteOverlayBtn = 'linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .3))';
 
 function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
   switch (browser) {
@@ -51,7 +52,6 @@ function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
     case 'safari':
       return css`
         background-image: ${whiteOverlayBtn}, url(${safariLogo});
-        background-position: -30% 18%;
 
         & > span {
           background-image: -webkit-linear-gradient(top, #1fa5f0, #1d77e6);
@@ -74,13 +74,11 @@ function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
 
 const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   background-color: white;
-  /* padding: 0.9em 0.8em; */
   padding: 10px 14px;
-  padding-left: 24px;
+  padding-left: 38px;
   border-radius: 4px;
   font-size: 16px;
   box-shadow: inset 0 0 0 1px white, 0 0 1px 0px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   color: #6a6a6a;
@@ -132,7 +130,7 @@ export const DownloadButton = (props: DownloadButtonProps) => {
       target={anchorProps.target}
       browser={anchorProps.browser}
       className={props.className}>
-      <span>{props.children ? props.children : `${props.browser}`}</span>
+      <span>{props.children ? props.children : capitalCase(props.browser)}</span>
     </StyledDownloadButton>
   );
 };
