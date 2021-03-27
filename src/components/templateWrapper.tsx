@@ -17,7 +17,7 @@ const StyledNav = styled.nav`
   grid-auto-flow: column;
   grid-auto-columns: auto;
   grid-column-gap: 20px;
-  transform: translateY(-80%);
+  transform: translateY(-60%);
 
   .showMobile {
     display: none;

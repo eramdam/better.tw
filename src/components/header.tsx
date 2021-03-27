@@ -1,15 +1,9 @@
 import { Link } from 'gatsby';
-import { sample } from 'lodash';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import BTDLogo from '../img/BTD.svg';
-import meshGradient1 from '../img/mesh-gradient-1.png';
 import meshGradient2 from '../img/mesh-gradient-2.png';
-import meshGradient3 from '../img/mesh-gradient-3.png';
-import meshGradient4 from '../img/mesh-gradient-4.png';
-
-const gradients = [meshGradient1, meshGradient2, meshGradient3, meshGradient4];
 
 const animatedBackground = keyframes`
   0% {
@@ -21,8 +15,6 @@ const animatedBackground = keyframes`
   }
 `;
 
-const animationDuration = 20;
-const gradientPick = sample(gradients);
 const StyledHeader = styled.header`
   min-height: 320px;
 
@@ -43,15 +35,15 @@ const StyledHeader = styled.header`
     z-index: 0;
   }
 
-  .bg {
-    background-image: url(${gradientPick});
+  .bg,
+  .bg::after,
+  &::after {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${meshGradient2});
     background-size: cover;
     animation-direction: alternate;
-    animation-duration: ${animationDuration}s;
-    animation-fill-mode: none;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-name: ${animatedBackground};
-    animation-timing-function: linear;
     animation-timing-function: linear;
   }
 

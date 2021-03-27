@@ -84,10 +84,10 @@ const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   text-decoration: none;
   display: inline-block;
   color: #6a6a6a;
-  background-size: auto, 44px;
+  background-size: auto, 40px;
   background-position: -10% 10%;
   background-repeat: no-repeat;
-  transition: all 300ms ease;
+  transition: transform 300ms ease;
 
   nav &:hover {
     transform: translateY(-6px);
