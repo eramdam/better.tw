@@ -78,24 +78,45 @@ const StyledLink = styled(Link)`
   grid-template-areas: 'logo . copy';
   grid-template-columns: auto 20px 1fr;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   color: white;
   z-index: 1;
+`;
+
+const StyledLogoText = styled.div`
+  grid-area: copy;
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 6px;
+  grid-auto-rows: auto;
+
+  @media (min-width: 400px) {
+    margin-top: 10px;
+  }
 `;
 
 const StyledTitle = styled.div`
   font-size: 2rem;
   font-weight: 600;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 400px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const StyledSubtitle = styled.div`
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
 `;
 
 const StyledLogoWrapper = styled.div`
   grid-area: logo;
   width: 96px;
+
+  @media (max-width: 400px) {
+    width: 64px;
+  }
 
   > img {
     max-width: 100%;
@@ -174,13 +195,10 @@ export const Header = () => {
         <StyledLogoWrapper>
           <img src={BTDLogo} alt="" />
         </StyledLogoWrapper>
-        <div
-          style={{
-            gridArea: 'copy',
-          }}>
+        <StyledLogoText>
           <StyledTitle>Better TweetDeck</StyledTitle>
           <StyledSubtitle>Push TweetDeck beyond its limits.</StyledSubtitle>
-        </div>
+        </StyledLogoText>
       </StyledLink>
     </StyledHeader>
   );

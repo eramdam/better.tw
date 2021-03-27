@@ -58,6 +58,7 @@ function addBrowserStyles({ browser }: Partial<DownloadButtonProps>) {
     case 'btd':
       return css`
         background-image: url(${btdLogo});
+        background-position: -10% 10%;
 
         & > span {
           background-image: -webkit-linear-gradient(-45deg, #1fa5f0 47%, #00cbfc 100%);
