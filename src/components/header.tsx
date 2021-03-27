@@ -1,151 +1,111 @@
 import { Link } from 'gatsby';
+import { random, sample } from 'lodash';
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-import { btdGradient, gridWidth, smallerThanGridQuery } from '../styles/styleVariables';
-import { Icon } from './icon';
+import BTDLogo from '../img/BTD.svg';
+import meshGradient1 from '../img/mesh-gradient-1.png';
+import meshGradient2 from '../img/mesh-gradient-2.png';
+import meshGradient3 from '../img/mesh-gradient-3.png';
+import meshGradient4 from '../img/mesh-gradient-4.png';
 
-const StyledHeader = styled.header`
-  color: rgb(255, 255, 255);
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.28);
-  padding: 0 20px 80px 20px;
-  position: relative;
-  z-index: 0;
+const gradients = [meshGradient1, meshGradient2, meshGradient3, meshGradient4];
 
-  &,
-  &::after {
-    background-image: ${btdGradient};
+const animatedBackground = keyframes`
+  0% {
+    background-position-y: top;
   }
 
-  &::after {
-    content: '';
-    top: 0;
-    width: 100%;
-    left: 0;
-    height: 100%;
-    display: block;
-    position: absolute;
-    filter: blur(20px) saturate(100%);
-    z-index: 0;
-  }
-
-  & .menu,
-  .content {
-    max-width: 100%;
-    width: ${gridWidth};
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
-  }
-
-  .menu {
-    text-align: right;
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
-
-  .menuItem {
-    text-decoration: none;
-    color: currentColor;
-    margin-left: 20px;
-    display: inline-block;
-    color: white;
-  }
-
-  .menuItem:hover .menuItemIcon {
-    transform: translateY(-10%);
-  }
-
-  .menuItemIcon {
-    vertical-align: bottom;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.28));
-    margin-right: 5px;
-    transition: transform 300ms ease;
-  }
-
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .content > .img {
-    margin-right: 20px;
-    flex-shrink: 0;
-  }
-
-  .content > .img > svg {
-    width: 96px;
-    fill: currentColor;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.28));
-  }
-
-  .copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-bottom: 30px;
-  }
-
-  .copy > h1 {
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  .copy > p {
-    font-size: 1.2rem;
-  }
-
-  @media ${smallerThanGridQuery} {
-    .copy {
-      max-width: 450px;
-      width: 100%;
-      flex: 1;
-    }
-    .content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+  100% {
+    background-position-y: bottom;
   }
 `;
 
-export const Header = () => (
-  <StyledHeader>
-    <nav className="menu">
-      <Link to="/donate" className="menuItem">
-        <Icon name="heart" className="menuItemIcon" size={20} />
-        Donate
-      </Link>
-      <a className="menuItem" href="https://github.com/eramdam/BetterTweetDeck">
-        <Icon name="github" className="menuItemIcon" size={20} />
-        GitHub
-      </a>
-      <a className="menuItem" href="https://twitter.com/BetterTDeck">
-        <Icon name="twitter" className="menuItemIcon" size={20} />
-        Follow Us
-      </a>
-    </nav>
-    <Link
-      to="/"
-      style={{
-        textDecoration: 'none',
-      }}
-      className="content">
-      <span className="img">
-        <svg viewBox="0 0 256 256" width={96}>
-          <path
-            id="a"
-            d="M167.436757,215.316757 L128.275433,254.478081 L89.1141091,215.316757 L27.6778,215.316757 C12.3917732,215.316757 0,202.927798 0,187.642977 L0,27.6737801 C0,12.3899734 12.3906357,-5.68434189e-14 27.6778,-5.68434189e-14 L228.3222,-5.68434189e-14 C243.608227,-5.68434189e-14 256,12.3889588 256,27.6737801 L256,187.642977 C256,202.926783 243.609364,215.316757 228.3222,215.316757 L167.436757,215.316757 L167.436757,215.316757 Z M142.625275,124.070836 L180.116989,124.070836 L180.116989,95.9286773 L142.625275,95.9286773 L142.625275,58.8109463 L113.548161,58.8109463 L113.548161,95.9286773 L76.0564481,95.9286773 L76.0564481,124.070836 L113.548161,124.070836 L113.548161,161.469054 L142.625275,161.469054 L142.625275,124.070836 Z"
-          />
-        </svg>
-      </span>
-      <span className="copy">
-        <h1>Better TweetDeck</h1>
-        <p>Push TweetDeck beyond its limits.</p>
-      </span>
-    </Link>
-  </StyledHeader>
-);
+const StyledHeader = styled.header<{ gradient: string; duration: number }>`
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .bg {
+    background-image: url(${(p) => p.gradient});
+    background-size: cover;
+    animation-direction: alternate;
+    animation-duration: ${(p) => p.duration}s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-name: ${animatedBackground};
+    animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .bg {
+    overflow: hidden;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  display: grid;
+  grid-template-areas: 'logo . copy';
+  grid-template-columns: auto 20px 1fr;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+`;
+
+const StyledTitle = styled.div`
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+`;
+
+const StyledSubtitle = styled.div`
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+`;
+
+const StyledLogoWrapper = styled.div`
+  grid-area: logo;
+  width: 96px;
+
+  > img {
+    max-width: 100%;
+    filter: drop-shadow(0 0px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+  }
+`;
+
+export const Header = () => {
+  const animationDuration = random(20, 30);
+  const gradientPick = sample(gradients);
+
+  return (
+    <StyledHeader gradient={gradientPick || gradients[0]} duration={animationDuration}>
+      <div className="bg"></div>
+      <StyledLink to="/">
+        <StyledLogoWrapper>
+          <img src={BTDLogo} alt="" />
+        </StyledLogoWrapper>
+        <div
+          style={{
+            gridArea: 'copy',
+          }}>
+          <StyledTitle>Better TweetDeck</StyledTitle>
+          <StyledSubtitle>Push TweetDeck beyond its limits.</StyledSubtitle>
+        </div>
+      </StyledLink>
+    </StyledHeader>
+  );
+};
