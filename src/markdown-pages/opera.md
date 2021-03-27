@@ -13,7 +13,7 @@ Fortunately, there's a "better" way. It's a workaround, it's not ideal, but at l
 
 Follow those steps:
 
-- Open Opera (🤯)
+- Open Opera
 - Install the ["Install Chrome Extensions"](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/?display=en) add-on
 - Go find [Better TweetDeck on the Chrome Web Store](https://better.tw/chrome)
 - Install Better TweetDeck by clicking "Add to Chrome"
