@@ -7,6 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   ${normalize()};
   
   * {
+    margin: 0;
     box-sizing: border-box;
   }
 
