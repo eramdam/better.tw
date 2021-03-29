@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
     body {
       background: white;
       color: #4a4a4a;
-      font-size: 16px;
+      font-size: 18px;
       font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -33,6 +33,12 @@ export const GlobalStyles = createGlobalStyle`
       margin-top: 1em;
       margin-bottom: 0.4em;
       line-height: 1.8;
+    }
+
+    p,
+    ul {
+      line-height: 1.6;
+      font-size: 18px;
     }
 
     p,

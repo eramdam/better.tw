@@ -3,13 +3,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { TemplateWrapper } from '../components/templateWrapper';
+import { TextSection } from '../components/textSection';
 import { GridBlock } from '../styles/globalStyles';
 import { customGridWidth } from '../styles/styleVariables';
 
-const StyledParagraph = styled.p`
-  line-height: 1.6;
-  font-size: 18px;
-`;
+const StyledParagraph = styled.p``;
 
 const StyledHeroBlock = styled(GridBlock)`
   ${customGridWidth(1600, 30)};
@@ -135,6 +133,29 @@ const IndexPage = () => {
           })}
         </StyledHeroImage>
       </StyledHeroBlock>
+      <TextSection
+        title="Advanced Muting capabilities"
+        imageUrl={`${__PATH_PREFIX__}/img/advanced-muting.png`}
+        maxImageHeight={390}>
+        <p>
+          TweetDeck features already useful filters to mute users, hashtags and tweet sources.{' '}
+          <br /> <br />
+          Better TweetDeck goes the extra mile and lets you:
+        </p>
+        <ul>
+          <li>Mute tweets from a specific user if they contain specific keywords.</li>
+          <li>
+            Mute tweets using{' '}
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">
+              JavaScript Regular Expressions
+            </a>
+            .
+          </li>
+          <li>Mute users if their biography contains a specific keyword.</li>
+          <li>Mute users with the default avatar.</li>
+          <li>Mute users with less than a given number of followers.</li>
+        </ul>
+      </TextSection>
     </TemplateWrapper>
   );
 };
