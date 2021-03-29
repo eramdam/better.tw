@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import { TemplateWrapper } from '../components/templateWrapper';
 import { GridBlock } from '../styles/globalStyles';
@@ -14,28 +14,11 @@ const StyledParagraph = styled.p`
 const StyledHeroBlock = styled(GridBlock)`
   ${customGridWidth(1600, 30)};
   width: 100%;
+  height: calc(100vh - 374px);
   margin-top: 20px;
   display: grid;
   grid-template-columns: minmax(350px, 30%) 1fr;
   grid-column-gap: 50px;
-`;
-
-const heroImageAnimation = keyframes`
-  0% {
-    background-position: top left;
-  }
-  25% {
-    background-position: bottom left;
-  }
-  50% {
-    background-position: bottom right;
-  }
-  75% {
-    background-position: top right;
-  }
-  100% {
-    background-position: top left;
-  }
 `;
 
 const StyledHeroImage = styled.div`
@@ -43,7 +26,7 @@ const StyledHeroImage = styled.div`
   height: 600px;
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   position: relative;
 
@@ -79,9 +62,9 @@ const StyledThemeBlock = styled.div<{ className?: string }>`
   border: 2px solid;
   border-color: #ccd6dd;
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     border-color: black;
-  }
+  } */
 
   &.selected {
     border-color: #1da1f2;
@@ -103,12 +86,7 @@ const themes = [
 ];
 
 const IndexPage = () => {
-  const [displayedTheme, setDisplayedTheme] = useState(() => {
-    if (typeof window === 'undefined') {
-      return 0;
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 0 : 1;
-  });
+  const [displayedTheme, setDisplayedTheme] = useState(0);
 
   return (
     <TemplateWrapper>
@@ -117,10 +95,11 @@ const IndexPage = () => {
           <h3>Make TweetDeck your own!</h3>
 
           <StyledParagraph>
-            Like its name implies, Better TweetDeck has everything you'd want to make your TweetDeck
-            experience even better. <br />
-            From accent colors, alternative themes, to advanced muting, to powerful customization,
-            (almost) everything is possible with Better TweetDeck!
+            Like its name implies, Better TweetDeck has everything you&apos;d want to make your
+            TweetDeck experience even better. <br />
+            <br />
+            Accent colors, alternative themes, advanced muting, and powerful customization, (almost)
+            everything is possible!
             <br />
             <br />
             Want a quick look? Click the buttons below!

@@ -75,7 +75,7 @@ const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   padding: 8px 12px;
   padding-left: 42px;
   border-radius: 4px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 16px;
   box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.8), 0 2px 20px rgba(0, 0, 0, 0.2);
   text-decoration: none;
@@ -99,9 +99,9 @@ const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
     -webkit-text-fill-color: transparent;
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     background-color: #2b2b2b;
-  }
+  } */
 `;
 
 const EXTENSION_URLS = {

@@ -35,9 +35,9 @@ const StyledHeader = styled.header`
     right: 0;
     z-index: 0;
 
-    @media (prefers-color-scheme: dark) {
+    /* @media (prefers-color-scheme: dark) {
       display: none;
-    }
+    } */
   }
 
   .bg,

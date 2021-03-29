@@ -73,13 +73,13 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
 
-    @media (prefers-color-scheme: dark) {
+    /* @media (prefers-color-scheme: dark) {
       html,
       body {
         background: #2b2b2b;
         color: white;
       }
-    }
+    } */
 
     span.token.-meta {
       background-color: hsl(196, 99%, 60%);

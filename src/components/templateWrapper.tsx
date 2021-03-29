@@ -38,49 +38,56 @@ interface TemplateWrapperProps {
   showDownloads?: boolean;
   title?: string;
 }
-export const TemplateWrapper: FC<TemplateWrapperProps> = ({ children, showDownloads, title }) => (
-  <StyledTemplateWrapperDiv>
-    <GlobalStyles></GlobalStyles>
-    <Helmet
-      title={title || 'Better TweetDeck, take TweetDeck to the next level'}
-      meta={[
-        {
-          name: 'description',
-          content: 'Take TweetDeck to the next level',
-        },
-        {
-          name: 'keywords',
-          content:
-            'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge',
-        },
-      ]}
-      link={[
-        { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
-        {
-          rel: 'icon',
-          sizes: '32x32',
-          type: 'image/png',
-          href: `${__PATH_PREFIX__}/img/favicon-32x32.png`,
-        },
-        {
-          rel: 'icon',
-          sizes: '16x16',
-          type: 'image/png',
-          href: `${__PATH_PREFIX__}/img/favicon-16x16.png`,
-        },
-      ]}
-    />
-    <Header />
-    <StyledNav>
-      <DownloadButton browser="chrome" />
-      <DownloadButton browser="safari" />
-      <DownloadButton browser="firefox" />
-      <DownloadButton browser="edge" />
-      <DownloadButton browser="opera" />
-      <DownloadButton className="showMobile" browser="btd">
-        Download now
-      </DownloadButton>
-    </StyledNav>
-    {children}
-  </StyledTemplateWrapperDiv>
-);
+export const TemplateWrapper: FC<TemplateWrapperProps> = (props) => {
+  const { children, title } = props;
+  const showDownloads = props.showDownloads ?? true;
+
+  return (
+    <StyledTemplateWrapperDiv>
+      <GlobalStyles></GlobalStyles>
+      <Helmet
+        title={title || 'Better TweetDeck, take TweetDeck to the next level'}
+        meta={[
+          {
+            name: 'description',
+            content: 'Take TweetDeck to the next level',
+          },
+          {
+            name: 'keywords',
+            content:
+              'tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge',
+          },
+        ]}
+        link={[
+          { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
+          {
+            rel: 'icon',
+            sizes: '32x32',
+            type: 'image/png',
+            href: `${__PATH_PREFIX__}/img/favicon-32x32.png`,
+          },
+          {
+            rel: 'icon',
+            sizes: '16x16',
+            type: 'image/png',
+            href: `${__PATH_PREFIX__}/img/favicon-16x16.png`,
+          },
+        ]}
+      />
+      <Header />
+      {showDownloads && (
+        <StyledNav>
+          <DownloadButton browser="chrome" />
+          <DownloadButton browser="safari" />
+          <DownloadButton browser="firefox" />
+          <DownloadButton browser="edge" />
+          <DownloadButton browser="opera" />
+          <DownloadButton className="showMobile" browser="btd">
+            Download now
+          </DownloadButton>
+        </StyledNav>
+      )}
+      {children}
+    </StyledTemplateWrapperDiv>
+  );
+};
