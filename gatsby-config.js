@@ -4,6 +4,21 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `PT Sans`,
+            variants: [`400`, `400i`, `700`, `700i`],
+          },
+          {
+            family: `Lato`,
+            variants: [`400`, `400i`, `700`, `700i`],
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-graphql-codegen',
     },
     'gatsby-plugin-styled-components',

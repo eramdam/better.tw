@@ -40,6 +40,7 @@
     "gatsby": "^3.1.1",
     "gatsby-cli": "^3.1.0",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^4.1.0",
     "gatsby-plugin-styled-components": "^4.1.0",
     "gatsby-remark-autolink-headers": "^3.1.0",

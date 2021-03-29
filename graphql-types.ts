@@ -421,6 +421,7 @@ export type SitePlugin = Node & {
 
 export type SitePluginPluginOptions = {
   plugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPlugins>>>;
+  fonts?: Maybe<Array<Maybe<SitePluginPluginOptionsFonts>>>;
   displayName?: Maybe<Scalars['Boolean']>;
   fileName?: Maybe<Scalars['Boolean']>;
   minify?: Maybe<Scalars['Boolean']>;
@@ -454,6 +455,11 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   offsetY?: Maybe<Scalars['Int']>;
   className?: Maybe<Scalars['String']>;
   target?: Maybe<Scalars['String']>;
+};
+
+export type SitePluginPluginOptionsFonts = {
+  family?: Maybe<Scalars['String']>;
+  variants?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPackageJson = {
@@ -1568,6 +1574,7 @@ export type SitePluginFilterInput = {
 
 export type SitePluginPluginOptionsFilterInput = {
   plugins?: Maybe<SitePluginPluginOptionsPluginsFilterListInput>;
+  fonts?: Maybe<SitePluginPluginOptionsFontsFilterListInput>;
   displayName?: Maybe<BooleanQueryOperatorInput>;
   fileName?: Maybe<BooleanQueryOperatorInput>;
   minify?: Maybe<BooleanQueryOperatorInput>;
@@ -1605,6 +1612,15 @@ export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   offsetY?: Maybe<IntQueryOperatorInput>;
   className?: Maybe<StringQueryOperatorInput>;
   target?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePluginPluginOptionsFontsFilterListInput = {
+  elemMatch?: Maybe<SitePluginPluginOptionsFontsFilterInput>;
+};
+
+export type SitePluginPluginOptionsFontsFilterInput = {
+  family?: Maybe<StringQueryOperatorInput>;
+  variants?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPackageJsonFilterInput = {
@@ -1817,6 +1833,9 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___plugins___browserAPIs'
   | 'pluginCreator___pluginOptions___plugins___ssrAPIs'
   | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
+  | 'pluginCreator___pluginOptions___fonts'
+  | 'pluginCreator___pluginOptions___fonts___family'
+  | 'pluginCreator___pluginOptions___fonts___variants'
   | 'pluginCreator___pluginOptions___displayName'
   | 'pluginCreator___pluginOptions___fileName'
   | 'pluginCreator___pluginOptions___minify'
@@ -2442,6 +2461,9 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___ssrAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
+  | 'pluginOptions___fonts'
+  | 'pluginOptions___fonts___family'
+  | 'pluginOptions___fonts___variants'
   | 'pluginOptions___displayName'
   | 'pluginOptions___fileName'
   | 'pluginOptions___minify'

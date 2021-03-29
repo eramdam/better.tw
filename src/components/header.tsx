@@ -34,6 +34,10 @@ const StyledHeader = styled.header`
     bottom: 0;
     right: 0;
     z-index: 0;
+
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    }
   }
 
   .bg,
@@ -197,7 +201,7 @@ export const Header = () => {
         </StyledLogoWrapper>
         <StyledLogoText>
           <StyledTitle>Better TweetDeck</StyledTitle>
-          <StyledSubtitle>Push TweetDeck beyond its limits.</StyledSubtitle>
+          <StyledSubtitle>Take TweetDeck to the next level</StyledSubtitle>
         </StyledLogoText>
       </StyledLink>
     </StyledHeader>

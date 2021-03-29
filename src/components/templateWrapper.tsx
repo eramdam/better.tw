@@ -42,7 +42,7 @@ export const TemplateWrapper: FC<TemplateWrapperProps> = ({ children, showDownlo
   <StyledTemplateWrapperDiv>
     <GlobalStyles></GlobalStyles>
     <Helmet
-      title={title || 'Better TweetDeck, supercharge your TweetDeck experience'}
+      title={title || 'Better TweetDeck, take TweetDeck to the next level'}
       meta={[
         {
           name: 'description',
@@ -55,10 +55,6 @@ export const TemplateWrapper: FC<TemplateWrapperProps> = ({ children, showDownlo
         },
       ]}
       link={[
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i',
-        },
         { rel: 'shortcut icon', href: `${__PATH_PREFIX__}/img/favicon.ico` },
         {
           rel: 'icon',
