@@ -35,13 +35,16 @@ export const GlobalStyles = createGlobalStyle`
       line-height: 1.8;
     }
 
-    a {
-      color: #00cbfc;
-      color: #00a0fb;
-      text-decoration: none;
+    p,
+    li {
+      a {
+        color: #00cbfc;
+        color: #00a0fb;
+        text-decoration: none;
 
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
