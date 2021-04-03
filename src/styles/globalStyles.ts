@@ -1,8 +1,6 @@
 import { normalize } from 'polished';
 import styled, { createGlobalStyle, css } from 'styled-components';
 
-import { gridWidth, smallerThanGridQuery } from './styleVariables';
-
 export const GlobalStyles = createGlobalStyle`
   /* Dumb hack so Prettier can touch the css here... */
   ${css`
@@ -14,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html,
     body {
-      background: white;
+      background: #f8f8f8;
       color: #4a4a4a;
       font-size: 18px;
       font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -110,10 +108,10 @@ export const GridBlock = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  max-width: ${gridWidth};
+  max-width: 1600px;
   margin: 0 auto;
 
-  @media ${smallerThanGridQuery} {
+  @media (max-width: 1540px) {
     max-width: 100%;
     width: 100%;
     padding: 20px;

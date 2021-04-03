@@ -4,9 +4,12 @@ import styled from 'styled-components';
 
 import { GlobalStyles } from '../styles/globalStyles';
 import { DownloadButton } from './downloadButton';
+import { Footer } from './footer';
 import { Header } from './header';
 
-const StyledTemplateWrapperDiv = styled.div``;
+const StyledTemplateWrapperDiv = styled.div`
+  background: white;
+`;
 
 const StyledNav = styled.nav`
   z-index: 9;
@@ -88,6 +91,7 @@ export const TemplateWrapper: FC<TemplateWrapperProps> = (props) => {
         </StyledNav>
       )}
       {children}
+      <Footer />
     </StyledTemplateWrapperDiv>
   );
 };

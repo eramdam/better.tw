@@ -29,7 +29,7 @@ Bugs happen, and reports are appreciated, feel free to open a [Github issue][git
 
 ## Will there ever be a desktop app?
 
-I don't want to say never, but it's unlikely. Maintaining a browser extension alredy takes a lot of time. Besides, I feel like Twitter might start to be annoyed if I distribute an application who's named after one of their products 😬
+I don't want to say never, but it's unlikely. Maintaining a browser extension already takes a lot of time. Besides, I feel like Twitter might start to be annoyed if I distribute an application who's named after one of their products 😬
 
 ## Can you make a mobile app?
 

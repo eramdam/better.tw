@@ -13,7 +13,10 @@ const PageTemplate = (props: { data: PageTemplateQuery }) => {
 
   return (
     <TemplateWrapper title={frontmatter?.title || ''}>
-      <GridBlock>
+      <GridBlock
+        style={{
+          background: 'white',
+        }}>
         <h1>{frontmatter?.title}</h1>
 
         <div className="content" dangerouslySetInnerHTML={{ __html: html }} />

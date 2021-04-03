@@ -86,7 +86,7 @@ const StyledDownloadButton = styled.a<Partial<DownloadButtonProps>>`
   background-repeat: no-repeat;
   transition: transform 300ms ease;
 
-  nav &:hover {
+  * > &:hover {
     transform: translateY(-6px);
   }
 

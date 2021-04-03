@@ -46,6 +46,7 @@ const StyledReleasesDiv = styled(GridBlock)`
   }
 
   .releaseExternalLink {
+    color: white;
     text-decoration: none;
 
     &:hover {
