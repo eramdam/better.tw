@@ -1,5 +1,10 @@
+import '@fontsource/lato';
+import '@fontsource/pt-sans';
+
 import { normalize } from 'polished';
 import styled, { createGlobalStyle, css } from 'styled-components';
+
+import { fontBody, fontTitle } from './styleVariables';
 
 export const GlobalStyles = createGlobalStyle`
   /* Dumb hack so Prettier can touch the css here... */
@@ -15,8 +20,7 @@ export const GlobalStyles = createGlobalStyle`
       background: #f8f8f8;
       color: #4a4a4a;
       font-size: 18px;
-      font-family: 'Lato', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: ${fontBody};
       -webkit-font-smoothing: antialiased;
     }
 
@@ -26,8 +30,7 @@ export const GlobalStyles = createGlobalStyle`
     h4,
     h5,
     h6 {
-      font-family: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: ${fontTitle};
       margin-top: 1em;
       margin-bottom: 0.4em;
       line-height: 1.8;
