@@ -1,4 +1,3 @@
-/* eslint no-param-reassign:0 */
 const { createApolloFetch } = require('apollo-fetch');
 const path = require('path');
 const config = require('config');
@@ -43,7 +42,7 @@ githubApolloFetch.use(({ options }, next) => {
   next();
 });
 
-const processRelease = release => ({
+const processRelease = (release) => ({
   id: release.id,
   parent: null,
   title: release.name,
@@ -53,10 +52,7 @@ const processRelease = release => ({
   date: release.createdAt,
   internal: {
     type: 'GithubRelease',
-    contentDigest: crypto
-      .createHash('md5')
-      .update(release.description)
-      .digest('hex'),
+    contentDigest: crypto.createHash('md5').update(release.description).digest('hex'),
   },
 });
 
@@ -67,21 +63,21 @@ exports.sourceNodes = async ({ actions }) => {
     query: GITHUB_RELEASES_QUERY,
   }).then(({ data }) =>
     data.viewer.repository.releases.edges
-      .filter(r => !r.node.isDraft)
-      .map(r => ({
+      .filter((r) => !r.node.isDraft)
+      .map((r) => ({
         ...r.node,
         name: r.node.name || r.node.tag.name,
         tag: undefined,
       }))
   );
 
-  releases.forEach(release => createNode(processRelease(release)));
+  releases.forEach((release) => createNode(processRelease(release)));
 };
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve('src/components/pageTemplate.js');
+  const blogPostTemplate = path.resolve('src/components/pageTemplate.tsx');
 
   return graphql(`
     {
@@ -95,7 +91,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       Promise.reject(result.errors);
       return;

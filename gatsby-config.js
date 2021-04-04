@@ -3,6 +3,9 @@ module.exports = {
     title: 'Better TweetDeck',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-graphql-codegen',
+    },
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
