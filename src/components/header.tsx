@@ -102,7 +102,7 @@ const StyledLogoText = styled.div`
 const StyledTitle = styled.div`
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
 
   @media (max-width: 400px) {
     font-size: 1.5rem;
