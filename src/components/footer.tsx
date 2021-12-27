@@ -57,9 +57,10 @@ export const Footer = () => (
       <nav className="menu">
         <Link to="/faq">FAQ</Link>
         <Link to="/donate">Donate</Link>
-        <Link to="/releases">Release notes</Link>
+        <a href="https://better.tw/discord">Discord</a>
+        <a href="https://github.com/eramdam/BetterTweetDeck/releases">Releases</a>
         <a href="https://github.com/eramdam/BetterTweetDeck">GitHub</a>
-        <a href="https://twitter.com/BetterTDeck">Follow Us</a>
+        <a href="https://twitter.com/BetterTDeck">Twitter</a>
       </nav>
     </StyledFooter>
   </StyledFooterWrapper>
