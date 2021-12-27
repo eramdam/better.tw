@@ -1,9 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
+import { PropsWithChildren } from "react";
+import { Header } from "./header";
 
-const Home: NextPage = () => {
+export const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
-    <div>
+    <>
       <Head>
         <title>Better TweetDeck</title>
         <link rel="shortcut icon" href="/img/favicon.ico" />
@@ -24,8 +25,8 @@ const Home: NextPage = () => {
           content="tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge"
         />
       </Head>
-    </div>
+      <Header></Header>
+      {children}
+    </>
   );
 };
-
-export default Home;
