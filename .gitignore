@@ -58,8 +58,4 @@ typings/
 .env
 
 dist/*
-.cache/
-public/*
-config/*.js
-config/*.json
-!config/default.js
+.next
