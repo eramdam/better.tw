@@ -29,11 +29,13 @@ export const Header = () => {
           )}
         ></div>
         <Link href="/" passHref>
-          <a href="/" className={styles.logoLink}>
+          <a className={styles.logoLink}>
             <div className="[grid-area:logo] xs:w-[96px] w-[60px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/img/BTD.svg"
                 className="max-w-full filter drop-shadow-logo"
+                alt=""
               />
             </div>
             <div className="[grid-area:copy] grid auto-rows-auto grid-flow-row gap-[6px] mt-3 xs:mt-0">
