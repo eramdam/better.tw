@@ -6,7 +6,7 @@ export const cx = clsx;
 
 export const attrsToProps = (obj: FeatherAttributes) =>
   Object.keys(obj)
-    .filter((i) => i !== "class")
+    .filter(i => i !== "class")
     .reduce((final, key) => {
       return {
         ...final,

@@ -13,7 +13,7 @@ export const HeaderButton = (props: HeaderButtonProps) => {
     <a
       className="text-white text-sm font-medium grid grid-flow-col auto-cols-auto gap-2 items-center bg-opacity-20 bg-black rounded-md py-[5px] px-2 hover:bg-opacity-30 transition-colors"
       style={{
-        textShadow: "0 2px 2px rgba(0, 0, 0, 0.28)"
+        textShadow: "0 2px 2px rgba(0, 0, 0, 0.28)",
       }}
       href={props.href}
     >

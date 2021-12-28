@@ -26,13 +26,13 @@ export default function Post(
 export const getStaticProps: GetStaticProps<
   {
     post?: {
-      content: string,
-      title: string,
-      slug: string,
-    },
+      content: string;
+      title: string;
+      slug: string;
+    };
   },
   ParsedUrlQuery & {
-    slug: string,
+    slug: string;
   }
 > = async ({ params }) => {
   if (!params?.slug) {

@@ -1,6 +1,6 @@
 ---
-path: '/donate'
-title: 'Donate to Better TweetDeck'
+path: "/donate"
+title: "Donate to Better TweetDeck"
 ---
 
 Better TweetDeck is and always will be free, without any ads. But that doesn't mean it's free to develop!
@@ -22,4 +22,3 @@ If you still want to support me directly, you can:
 
 - [Donate to me on PayPal](https://paypal.me/Eramdam)
 - [Follow me on Twitter](https://twitter.com/Eramdam)
-  
