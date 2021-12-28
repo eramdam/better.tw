@@ -1,5 +1,4 @@
 import "@fontsource/lato";
-import "@fontsource/pt-sans";
 import type { AppProps } from "next/app";
 import { Layout } from "../components/layout";
 import "../styles/globals.css";

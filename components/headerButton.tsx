@@ -15,6 +15,7 @@ export const HeaderButton = (props: HeaderButtonProps) => {
       style={{
         textShadow: "0 2px 2px rgba(0, 0, 0, 0.28)",
       }}
+      href={props.href}
     >
       <Icon
         size={16}
