@@ -5,3 +5,9 @@ publish = ".next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+force = true
+from = "/_next/static/*"
+status = 301
+to = "/static/:splat"
