@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactNode } from "react";
 import { cx } from "../helpers/helpers";
 
@@ -61,7 +62,7 @@ export const DownloadButton = (props: DownloadButtonProps) => {
     browser: props.browser,
   };
 
-  return (
+  const content = (
     <a
       href={anchorProps.href}
       className={cx(
@@ -80,4 +81,14 @@ export const DownloadButton = (props: DownloadButtonProps) => {
       </span>
     </a>
   );
+
+  if (anchorProps.href.startsWith("/")) {
+    return (
+      <Link href={anchorProps.href} passHref>
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 };
