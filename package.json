@@ -10,15 +10,19 @@
   "dependencies": {
     "@fontsource/lato": "^4.5.0",
     "@fontsource/pt-sans": "^4.5.0",
+    "@tailwindcss/typography": "^0.5.0",
     "@types/change-case": "^2.3.1",
     "@types/lodash": "^4.14.178",
     "change-case": "^4.1.2",
     "clsx": "^1.1.1",
     "feather-icons": "^4.28.0",
+    "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next": "12.0.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.7.0",

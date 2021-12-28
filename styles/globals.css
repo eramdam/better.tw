@@ -43,6 +43,6 @@
 
   p a,
   li a {
-    @apply text-sky-500 hover:underline;
+    @apply text-sky-500 hover:underline no-underline;
   }
 }

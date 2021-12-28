@@ -8,24 +8,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Better TweetDeck</title>
-        <link rel="shortcut icon" href="/img/favicon.ico" />
-        <link
-          rel="icon"
-          sizes="32x32"
-          type="image/png"
-          href="/img/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          sizes="16x16"
-          type="image/png"
-          href="/img/favicon-16x16.png"
-        />
-        <meta
-          name="keywords"
-          content="tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge"
-        />
+        <title>Better TweetDeck, take TweetDeck to the next level</title>
       </Head>
       <div className="w-full py-12 mt-5 grid grid-cols-[minmax(350px,30%)_1fr] gap-x-12 max-w-6xl my-0 mx-auto">
         <div>

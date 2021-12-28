@@ -3,11 +3,15 @@ import { PropsWithChildren } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
-export const Layout = ({ children }: PropsWithChildren<{}>) => {
+export const Layout = (
+  props: PropsWithChildren<{
+    title?: string;
+  }>
+) => {
   return (
     <>
       <Head>
-        <title>Better TweetDeck</title>
+        <title>{props.title || "Better TweetDeck"}</title>
         <link rel="shortcut icon" href="/img/favicon.ico" />
         <link
           rel="icon"
@@ -27,7 +31,7 @@ export const Layout = ({ children }: PropsWithChildren<{}>) => {
         />
       </Head>
       <Header></Header>
-      {children}
+      {props.children}
       <Footer></Footer>
     </>
   );
