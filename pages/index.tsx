@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { DownloadButton } from "../components/downloadButton";
 import { FeatureBlock } from "../components/featureBlock";
 import { TextSection } from "../components/textSection";
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Better TweetDeck, take TweetDeck to the next level</title>
       </Head>
-      <div className="w-full py-12 mt-5 grid grid-cols-[minmax(350px,30%)_1fr] gap-x-12 max-w-6xl my-0 mx-auto">
+      <div className="py-12 mt-5 grid grid-flow-row auto-rows-auto lg:grid-cols-[minmax(350px,30%)_1fr] gap-12 my-0 mx-auto max-w-full w-full p-5 md:max-w-6xl">
         <div>
           <h2>Make TweetDeck your own!</h2>
 
@@ -22,8 +23,14 @@ const Home: NextPage = () => {
             customization, (almost) everything is possible!
           </p>
         </div>
-        <div className="h-[600px] relative w-full rounded-xl drop-shadow-heroImages overflow-hidden">
-          <div className="bg-hero-b-dark absolute top-0 h-full w-full"></div>
+        <div className="rounded-xl [line-height:0] drop-shadow-heroImages relative w-full sm:max-w-full mx-auto sm:m-0 overflow-hidden">
+          <Image
+            src="/img/themes/big/dark.png"
+            height={486}
+            width={715}
+            alt=""
+            className=""
+          ></Image>
         </div>
       </div>
       <TextSection
@@ -78,7 +85,7 @@ const Home: NextPage = () => {
         </ul>
       </TextSection>
       <div className="py-5 bg-sky-500 text-white">
-        <div className="grid auto-rows-auto grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid auto-rows-auto grid-cols-1 sm:grid-cols-2 p-2 md:grid-cols-3 max-w-6xl mx-auto">
           <FeatureBlock icon="at-sign" name="It was the style at the time...">
             Don&apos;t like Twitter&apos;s new reply display? Better TweetDeck
             got you covered!
@@ -119,9 +126,9 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="py-5 bg-sky-600 text-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto p-5">
           <h2 id="features-list">Complete list of features</h2>
-          <ul className="columns-3 text-sm leading-6 gap-x-[2em]">
+          <ul className="columns-1 sm:columns-2 md:columns-3 text-sm leading-6 gap-x-[2em]">
             <li>
               Add emoji using <code>:shortcodes:</code>
             </li>
@@ -175,7 +182,7 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </div>
-      <div className="py-10 overflow-hidden z-0 relative after:bg-blur-hero after:-z-10 after:absolute after:inset-[-30px] after:filter after:blur-[20px] after:saturate-50 after:bg-center after:bg-cover">
+      <div className="p-5 py-10 overflow-hidden z-0 relative after:bg-blur-hero after:-z-10 after:absolute after:inset-[-30px] after:filter after:blur-[20px] after:saturate-50 after:bg-center after:bg-cover">
         <div
           className="z-10 text-white grid grid-flow-row auto-rows-auto gap-5 justify-center pb-10"
           style={{
@@ -189,15 +196,20 @@ const Home: NextPage = () => {
             Opera or Safari.
           </p>
         </div>
-        <div className="grid justify-center grid-flow-col auto-cols-auto gap-5">
+        <div
+          id="download-btns"
+          className="grid justify-center grid-flow-row auto-rows-auto gap-5 sm:grid-flow-col sm:auto-cols-auto"
+        >
           <DownloadButton browser="chrome" />
           <DownloadButton browser="safari" />
           <DownloadButton browser="firefox" />
           <DownloadButton browser="edge" />
           <DownloadButton browser="opera" />
-          <DownloadButton showMobile browser="btd">
-            Download now
-          </DownloadButton>
+          <DownloadButton showMobile browser="chrome" />
+          <DownloadButton showMobile browser="safari" />
+          <DownloadButton showMobile browser="firefox" />
+          <DownloadButton showMobile browser="edge" />
+          <DownloadButton showMobile browser="opera" />
         </div>
       </div>
     </div>

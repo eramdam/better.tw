@@ -18,30 +18,19 @@ export const TextSection = (props: TextSectionProps) => {
       <img
         src={props.imageUrl}
         alt=""
-        style={{ maxHeight: props.maxImageHeight }}
-        className="max-h-[390px] rounded-xl drop-shadow-heroImages"
+        className="rounded-xl drop-shadow-heroImages max-w-[80%] max-h-min mx-auto my-0 "
       />
     );
   };
 
   return (
-    <div className="group bg-white py-16 px-0 odd:bg-neutral-50 box-border">
-      <div className="w-full max-w-6xl my-0 mx-auto grid auto-cols-fr gap-x-8 [grid-template-areas:'text_image'] group-odd:[grid-template-areas:'image_text']">
-        <div
-          style={{
-            gridArea: "text",
-          }}
-        >
+    <div className="group bg-white py-16 px-0 odd:bg-neutral-50">
+      <div className="max-w-full w-full p-5 sm:max-w-6xl my-0 mx-auto grid grid-flow-row auto-rows-auto justify-center gap-y-8 sm:auto-cols-fr sm:gap-x-8 sm:[grid-template-areas:'text_image'] sm:group-odd:[grid-template-areas:'image_text']">
+        <div className="sm:[grid-area:text]">
           <h2>{props.title}</h2>
           {props.children}
         </div>
-        <div
-          style={{
-            gridArea: "image",
-          }}
-        >
-          {renderImagePart()}
-        </div>
+        <div className="sm:[grid-area:image]">{renderImagePart()}</div>
       </div>
     </div>
   );
