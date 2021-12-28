@@ -27,7 +27,7 @@ export const Footer = () => {
   );
 };
 
-const FooterLink = (props: { href: string; children: ReactNode }) => {
+const FooterLink = (props: { href: string, children: ReactNode }) => {
   const content = (
     <a
       href={props.href}

@@ -26,13 +26,13 @@ export default function Post(
 export const getStaticProps: GetStaticProps<
   {
     post?: {
-      content: string;
-      title: string;
-      slug: string;
-    };
+      content: string,
+      title: string,
+      slug: string,
+    },
   },
   ParsedUrlQuery & {
-    slug: string;
+    slug: string,
   }
 > = async ({ params }) => {
   if (!params?.slug) {
@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps<
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts(["slug"]);
   return {
-    paths: posts.map((post) => {
+    paths: posts.map(post => {
       return {
         params: {
           slug: post.slug,
