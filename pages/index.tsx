@@ -30,6 +30,7 @@ const Home: NextPage = () => {
             width={715}
             alt=""
             className=""
+            priority
           ></Image>
         </div>
       </div>

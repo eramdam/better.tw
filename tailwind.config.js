@@ -12,7 +12,7 @@ module.exports = {
         title: ["Lato", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "mesh-gradient": "url('/img/mesh-gradient-1.png')",
+        "mesh-gradient": "url('/img/mesh-gradient-1-small.png')",
         "icon-firefox": "url('/img/icons/firefox-icon.png')",
         "icon-chrome": "url('/img/icons/chrome-icon.png')",
         "icon-edge": "url('/img/icons/edge-icon.png')",
