@@ -85,7 +85,7 @@ const Home: NextPage = () => {
           <li>And a lot more</li>
         </ul>
       </TextSection>
-      <div className="py-5 bg-sky-500 text-white">
+      <div className="py-5 bg-sky-500 text-white dark:bg-slate-700">
         <div className="grid auto-rows-auto grid-cols-1 sm:grid-cols-2 p-2 md:grid-cols-3 max-w-6xl mx-auto">
           <FeatureBlock icon="at-sign" name="It was the style at the time...">
             Don&apos;t like Twitter&apos;s new reply display? Better TweetDeck
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           </FeatureBlock>
         </div>
       </div>
-      <div className="py-5 bg-sky-600 text-white">
+      <div className="py-5 bg-sky-600 dark:bg-slate-800 text-white">
         <div className="max-w-6xl mx-auto p-5">
           <h2 id="features-list">Complete list of features</h2>
           <ul className="columns-1 sm:columns-2 md:columns-3 text-sm leading-6 gap-x-[2em]">

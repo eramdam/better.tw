@@ -15,7 +15,7 @@ export default function Post(
   }
 
   return (
-    <div className="w-full py-12 mt-5 my-0 mx-auto prose prose-lg prose-gray prose-a:text-sky-500 prose-a:no-underline hover:prose-a:underline">
+    <div className="w-full py-12 mt-5 my-0 mx-auto prose prose-lg prose-gray prose-a:text-sky-500 prose-a:no-underline hover:prose-a:underline dark:prose-invert">
       <h2>{props.post.title}</h2>
 
       <div dangerouslySetInnerHTML={{ __html: props.post.content }}></div>

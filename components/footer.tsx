@@ -3,9 +3,9 @@ import { ReactNode } from "react";
 
 export const Footer = () => {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white dark:bg-neutral-900 ">
       <div className="max-w-5xl my-0 mx-auto flex flex-col md:flex-row gap-4 items-center justify-between p-5">
-        <small className="text-sm text-left flex-1 text-neutral-800">
+        <small className="text-sm text-left flex-1 text-neutral-800 dark:text-neutral-50">
           Better TweetDeck is not affiliated with Twitter or TweetDeck.
         </small>
         <nav className="uppercase text-sm grid grid-flow-row auto-rows-auto sm:grid-flow-col sm:auto-cols-auto gap-5 sm:justify-end w-full md:w-auto justify-center">
@@ -31,7 +31,7 @@ const FooterLink = (props: { href: string; children: ReactNode }) => {
   const content = (
     <a
       href={props.href}
-      className="text-neutral-800 hover:underline transition-colors no-underline"
+      className="text-neutral-800 hover:underline transition-colors no-underline dark:text-neutral-300"
     >
       {props.children}
     </a>

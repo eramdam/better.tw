@@ -9,7 +9,7 @@
 }
 
 .header {
-  @apply min-h-[320px] bg-[#008cff] flex flex-col items-center justify-center relative after:bg-mesh-gradient after:bg-cover;
+  @apply min-h-[320px] bg-[#008cff] flex flex-col items-center justify-center relative after:bg-mesh-gradient dark:after:bg-mesh-gradient-dark after:bg-cover;
 }
 
 .header::after {
@@ -23,7 +23,7 @@
 }
 
 .bg {
-  @apply absolute top-0 left-0 right-0 bottom-0 after:top-0 after:left-0 after:right-0 after:bottom-0 after:absolute after:z-10 bg-mesh-gradient bg-cover after:bg-mesh-gradient after:bg-cover overflow-hidden;
+  @apply absolute top-0 left-0 right-0 bottom-0 after:top-0 after:left-0 after:right-0 after:bottom-0 after:absolute after:z-10 bg-mesh-gradient dark:bg-mesh-gradient-dark bg-cover after:bg-mesh-gradient dark:after:bg-mesh-gradient-dark after:bg-cover overflow-hidden;
 }
 
 .bg,

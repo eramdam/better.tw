@@ -24,7 +24,7 @@ export const TextSection = (props: TextSectionProps) => {
   };
 
   return (
-    <div className="group bg-white py-16 px-0 odd:bg-neutral-50">
+    <div className="group py-16 px-0 light:bg-white light:odd:bg-neutral-50 dark:even:bg-neutral-800">
       <div className="max-w-full w-full p-5 sm:max-w-6xl my-0 mx-auto grid grid-flow-row auto-rows-auto justify-center gap-y-8 sm:auto-cols-fr sm:gap-x-8 sm:[grid-template-areas:'text_image'] sm:group-odd:[grid-template-areas:'image_text']">
         <div className="sm:[grid-area:text]">
           <h2>{props.title}</h2>

@@ -66,7 +66,7 @@ export const DownloadButton = (props: DownloadButtonProps) => {
     <a
       href={anchorProps.href}
       className={cx(
-        "bg-white uppercase text-gray-600 bg-[length:45px] bg-no-repeat bg-downloadButton shadow-downloadButton rounded-[6px] pl-11 py-1.5 px-2.5 text-base hover:-translate-y-2 transition-transform duration-300",
+        "bg-white uppercase text-gray-600 bg-[length:45px] bg-no-repeat bg-downloadButton shadow-downloadButton rounded-[6px] pl-11 py-1.5 px-2.5 text-base hover:-translate-y-2 transition-transform duration-300 dark:bg-neutral-900",
         browserProps[props.browser].anchorStyles,
         (props.showMobile && "block sm:hidden") || "hidden sm:block"
       )}

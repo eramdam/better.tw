@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply font-sans bg-white text-neutral-700 text-lg;
+    @apply font-sans bg-white text-neutral-700 text-lg dark:bg-neutral-900 dark:text-neutral-50;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
