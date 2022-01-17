@@ -56,12 +56,13 @@ export const getStaticProps: GetStaticProps<
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getAllPosts(["slug"]);
+  const posts = await getAllPosts(["slug"]);
+
   return {
     paths: posts.map(post => {
       return {
         params: {
-          slug: post.slug,
+          slug: String(post.slug).split("/"),
         },
       };
     }),

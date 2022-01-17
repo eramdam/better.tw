@@ -1,16 +1,24 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { isArray } from "lodash";
 import { join } from "path";
 import { remark } from "remark";
 import html from "remark-html";
+import glob from "tiny-glob";
 
 const postsDirectory = join(process.cwd(), "pages/markdown");
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+async function getPostSlugs() {
+  return glob("**/*.md", {
+    cwd: postsDirectory,
+  });
 }
 
-export function getPostBySlug(slug: string, fields: readonly string[] = []) {
+export function getPostBySlug(
+  rawSlug: string | string[],
+  fields: readonly string[] = []
+) {
+  const slug = isArray(rawSlug) ? rawSlug.join("/") : rawSlug;
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -35,8 +43,8 @@ export function getPostBySlug(slug: string, fields: readonly string[] = []) {
   return items;
 }
 
-export function getAllPosts(fields: readonly string[] = []) {
-  const slugs = getPostSlugs();
+export async function getAllPosts(fields: readonly string[] = []) {
+  const slugs = await getPostSlugs();
   const posts = slugs
     .map(slug => getPostBySlug(slug, fields))
     // sort posts by date in descending order
