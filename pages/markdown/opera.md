@@ -1,5 +1,4 @@
 ---
-path: "/opera"
 title: "Installing Better TweetDeck on Opera"
 ---
 
@@ -15,7 +14,5 @@ Follow those steps:
 - Install Better TweetDeck by clicking "Add to Chrome"
 - Confirm the install when Opera asks you to
 - You're all set! Enjoy 🎊
-
-<br/>
 
 Feek free to reach out on Twitter [@BetterTDeck](https://twitter.com/BetterTDeck) if you run into any issues.

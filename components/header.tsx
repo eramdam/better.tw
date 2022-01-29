@@ -9,6 +9,9 @@ export const Header = () => {
     <>
       <div className={cx(styles.header, "motion-reduce:animate-none")}>
         <div className="z-20 w-full top-0 my-0 mx-auto max-w-5xl absolute grid grid-flow-col auto-cols-auto gap-[14px] items-center justify-end p-5">
+          <HeaderButton icon="book-open" href="/guide">
+            Guide
+          </HeaderButton>
           <HeaderButton icon="heart" href="/donate">
             Donate
           </HeaderButton>

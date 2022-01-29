@@ -1,10 +1,39 @@
+import GithubSlugger from "github-slugger";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
-import markdownToHtml, {
-  getAllPosts,
-  getPostBySlug,
-} from "../helpers/postHelpers";
+import React, { ComponentProps } from "react";
+import ReactMarkdown from "react-markdown";
+import {
+  HeadingComponent,
+  ReactMarkdownNames,
+} from "react-markdown/lib/ast-to-react";
+import { getAllPosts, getPostBySlug } from "../helpers/postHelpers";
+const slugger = new GithubSlugger();
+
+const headingComponent: HeadingComponent | ReactMarkdownNames = props => {
+  return React.createElement(
+    props.node.tagName,
+    {
+      id: slugger.slug(String(props.children)),
+    },
+    props.children
+  );
+};
+
+const components: ComponentProps<typeof ReactMarkdown>["components"] = {
+  img: props => {
+    return <Image src={props.src || ""} alt={props.alt || ""} layout="fill" />;
+  },
+  h1: headingComponent,
+  h2: headingComponent,
+  h3: headingComponent,
+  h4: headingComponent,
+  h5: headingComponent,
+  h6: headingComponent,
+};
 
 export default function Post(
   props: InferGetStaticPropsType<typeof getStaticProps>
@@ -15,11 +44,18 @@ export default function Post(
   }
 
   return (
-    <div className="w-full py-12 mt-5 my-0 mx-auto prose prose-lg prose-gray prose-a:text-sky-500 prose-a:no-underline hover:prose-a:underline dark:prose-invert">
-      <h2>{props.post.title}</h2>
+    <>
+      <Head>
+        <title>Better TweetDeck - {props.post.title}</title>
+      </Head>
+      <div className="w-full py-12 mt-5 my-0 mx-auto prose prose-lg prose-gray prose-a:text-sky-500 prose-a:no-underline hover:prose-a:underline dark:prose-invert">
+        <h1>{props.post.title}</h1>
 
-      <div dangerouslySetInnerHTML={{ __html: props.post.content }}></div>
-    </div>
+        <ReactMarkdown components={components}>
+          {props.post.content}
+        </ReactMarkdown>
+      </div>
+    </>
   );
 }
 
@@ -42,14 +78,13 @@ export const getStaticProps: GetStaticProps<
   }
 
   const post = getPostBySlug(params.slug, ["title", "slug", "content"]);
-  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
       post: {
         title: post.title || "",
         slug: post.slug || "",
-        content: content || "",
+        content: post.content || "",
       },
     },
   };

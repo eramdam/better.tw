@@ -1,5 +1,4 @@
 ---
-path: /faq
 title: "Frequently Asked Questions"
 ---
 
@@ -9,7 +8,7 @@ Better TweetDeck is a browser extension created back in 2014 made to improve, cu
 
 ## Are you working with or affiliated with Twitter?
 
-<u>**_No._**</u> I know the name is confusing because the extension is literally named "Better **TweetDeck**" but no, the extension is nor made by nor affiliated with Twitter and the TweetDeck team.
+**_No._** I know the name is confusing because the extension is literally named "Better **TweetDeck**" but no, the extension is nor made by nor affiliated with Twitter and the TweetDeck team.
 
 ## Will Better TweetDeck stay free?
 
