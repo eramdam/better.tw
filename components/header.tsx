@@ -3,6 +3,7 @@ import { cx } from "../helpers/helpers";
 import { DownloadButton } from "./downloadButton";
 import styles from "./header.module.css";
 import { HeaderButton } from "./headerButton";
+import { Icon } from "./icon";
 
 export const Header = () => {
   return (
@@ -54,6 +55,7 @@ export const Header = () => {
           </a>
         </Link>
       </div>
+
       <nav className="z-30 relative grid justify-center grid-flow-col auto-cols-auto gap-4 translate-y-[-20px]">
         <DownloadButton browser="chrome" />
         <DownloadButton browser="safari" />
@@ -64,6 +66,25 @@ export const Header = () => {
           Download
         </DownloadButton>
       </nav>
+      <div className="mx-5 flex items-center justify-center">
+        <div className="block lg:max-w-4xl">
+          <h2 className="uppercase text-red-600 flex items-center gap-2">
+            <Icon size={24} name={"alert-triangle"} className="align-middle" />{" "}
+            Disclaimer
+          </h2>
+
+          <p>
+            Better TweetDeck is provided &apos;as-is&apos;,{" "}
+            <strong>will not</strong> work on the new TweetDeck UI and will{" "}
+            <strong>not</strong> receive any new updates as of February 2023.{" "}
+            You can see the full context about that decision in this{" "}
+            <a href="https://github.com/eramdam/BetterTweetDeck/issues/848">
+              GitHub
+            </a>{" "}
+            issue
+          </p>
+        </div>
+      </div>
     </>
   );
 };
