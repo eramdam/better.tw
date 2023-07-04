@@ -64,9 +64,9 @@ export const Header = () => {
             Thank you to everyone who used it, contributed to it, and supported
             the project over the years, whether it was by reporting bugs,
             suggesting features, or donating to the project. It truly has been a
-            wild 9 years and I'm glad I could help so many people with my
-            "little" project. I wish it didn't end so suddenly but it is what it
-            is.
+            wild 9 years and I&apos;m glad I could help so many people with my
+            &quot;little&quot; project. I wish it didn&apos;t end so suddenly
+            but it is what it is.
           </p>
 
           <p>So long and thanks for all the fish!</p>
