@@ -2,31 +2,5 @@
   "github": {
     "silent": true
   },
-  "redirects": [
-    {
-      "destination": "https://chrome.google.com/webstore/detail/bettertweetdeck/micblkellenpbfapmcpcfhcoeohhnpob",
-      "permanent": true,
-      "source": "/chrome"
-    },
-    {
-      "destination": "https://addons.mozilla.org/en-US/firefox/addon/better-tweetdeck-17/",
-      "permanent": true,
-      "source": "/firefox"
-    },
-    {
-      "destination": "https://microsoftedge.microsoft.com/addons/detail/cpahogfkcecoeidfaemlcojbcbhaojcj",
-      "permanent": true,
-      "source": "/edge"
-    },
-    {
-      "destination": "https://github.com/eramdam/BetterTweetDeck/releases",
-      "permanent": true,
-      "source": "/releases"
-    },
-    {
-      "destination": "https://discord.gg/bQ5Mnf4zFd",
-      "permanent": true,
-      "source": "/discord"
-    }
-  ]
+  "redirects": []
 }
