@@ -1,28 +1,12 @@
 import Link from "next/link";
 import { cx } from "../helpers/helpers";
-import { DownloadButton } from "./downloadButton";
 import styles from "./header.module.css";
-import { HeaderButton } from "./headerButton";
 import { Icon } from "./icon";
 
 export const Header = () => {
   return (
     <>
       <div className={cx(styles.header, "motion-reduce:animate-none")}>
-        <div className="z-20 w-full top-0 my-0 mx-auto max-w-5xl absolute grid grid-flow-col auto-cols-auto gap-[14px] items-center justify-end p-5">
-          <HeaderButton icon="heart" href="/donate">
-            Donate
-          </HeaderButton>
-          <HeaderButton
-            icon="github"
-            href="https://github.com/eramdam/BetterTweetDeck"
-          >
-            GitHub
-          </HeaderButton>
-          <HeaderButton icon="twitter" href="https://twitter.com/BetterTDeck">
-            Follow
-          </HeaderButton>
-        </div>
         <div
           className={cx(
             styles.bg,
@@ -49,39 +33,45 @@ export const Header = () => {
                 Better TweetDeck
               </div>
               <div className={cx("text-base", styles.textShadowSubtitle)}>
-                Take TweetDeck to the next level
+                2014 - 2023
               </div>
             </div>
           </a>
         </Link>
       </div>
 
-      <nav className="z-30 relative grid justify-center grid-flow-col auto-cols-auto gap-4 translate-y-[-20px]">
-        <DownloadButton browser="chrome" />
-        <DownloadButton browser="safari" />
-        <DownloadButton browser="firefox" />
-        <DownloadButton browser="edge" />
-        <DownloadButton browser="opera" />
-        <DownloadButton showMobile browser="btd">
-          Download
-        </DownloadButton>
-      </nav>
       <div className="mx-5 flex items-center justify-center">
-        <div className="block lg:max-w-4xl">
+        <div className="block lg:max-w-4xl prose dark:prose-invert pt-10">
           <h2 className="uppercase text-red-600 flex items-center gap-2">
             <Icon size={24} name={"alert-triangle"} className="align-middle" />{" "}
             Disclaimer
           </h2>
 
           <p>
-            Better TweetDeck is provided &apos;as-is&apos;,{" "}
-            <strong>will not</strong> work on the new TweetDeck UI and will{" "}
-            <strong>not</strong> receive any new updates as of February 2023.{" "}
-            You can see the full context about that decision in this{" "}
-            <a href="https://github.com/eramdam/BetterTweetDeck/issues/848">
-              GitHub
-            </a>{" "}
-            issue
+            As of July 4th 2023,{" "}
+            <a
+              href="https://twitter.com/TwitterSupport/status/1675990712297443330"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Old TweetDeck has been unplugged, Preview is the way and will
+              require a Verification
+            </a>
+            . Meaning Better TweetDeck is obsolete and will not work anymore.
+          </p>
+
+          <p>
+            Thank you to everyone who used it, contributed to it, and supported
+            the project over the years, whether it was by reporting bugs,
+            suggesting features, or donating to the project. It truly has been a
+            wild 9 years and I'm glad I could help so many people with my
+            "little" project. I wish it didn't end so suddenly but it is what it
+            is.
+          </p>
+
+          <p>So long and thanks for all the fish!</p>
+          <p>
+            — Damien (<a href="https://erambert.me/">@Eramdam</a>)
           </p>
         </div>
       </div>
