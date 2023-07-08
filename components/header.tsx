@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cx } from "../helpers/helpers";
+import { DownloadButton } from "./downloadButton";
 import styles from "./header.module.css";
 import { Icon } from "./icon";
 
@@ -40,6 +41,16 @@ export const Header = () => {
         </Link>
       </div>
 
+      <nav className="z-30 relative grid justify-center grid-flow-col auto-cols-auto gap-4 translate-y-[-20px]">
+        <DownloadButton browser="chrome" />
+        <DownloadButton browser="safari" />
+        <DownloadButton browser="firefox" />
+        <DownloadButton browser="edge" />
+        <DownloadButton browser="opera" />
+        <DownloadButton showMobile browser="btd">
+          Download
+        </DownloadButton>
+      </nav>
       <div className="mx-5 flex items-center justify-center">
         <div className="block lg:max-w-4xl prose dark:prose-invert pt-10">
           <h2 className="uppercase text-red-600 flex items-center gap-2">
