@@ -81,6 +81,12 @@ export const Header = () => {
           </p>
 
           <p>So long and thanks for all the fish!</p>
+
+          <p>
+            EDIT, July 8th 2023: it seems Old TweetDeck is accessible again? I
+            fully expect it to be an accident, I re-enabled the extensions on
+            their respective stores but don&apos;t get your hopes up
+          </p>
           <p>
             — Damien (<a href="https://erambert.me/">@Eramdam</a>)
           </p>
