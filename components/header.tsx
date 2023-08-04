@@ -61,7 +61,7 @@ export const Header = () => {
           <p>
             As of July 4th 2023,{" "}
             <a
-              href="https://twitter.com/TwitterSupport/status/1675990712297443330"
+              href="https://twitter.com/Support/status/1675990712297443330"
               target="_blank"
               rel="noreferrer noopener"
             >
