@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { cx } from "../helpers/helpers";
-import { DownloadButton } from "./downloadButton";
 import styles from "./header.module.css";
-import { Icon } from "./icon";
 
 export const Header = () => {
   return (
@@ -41,23 +39,8 @@ export const Header = () => {
         </Link>
       </div>
 
-      <nav className="z-30 relative grid justify-center grid-flow-col auto-cols-auto gap-4 translate-y-[-20px]">
-        <DownloadButton browser="chrome" />
-        <DownloadButton browser="safari" />
-        <DownloadButton browser="firefox" />
-        <DownloadButton browser="edge" />
-        <DownloadButton browser="opera" />
-        <DownloadButton showMobile browser="btd">
-          Download
-        </DownloadButton>
-      </nav>
       <div className="mx-5 flex items-center justify-center">
         <div className="block lg:max-w-4xl prose dark:prose-invert pt-10">
-          <h2 className="uppercase text-red-600 flex items-center gap-2">
-            <Icon size={24} name={"alert-triangle"} className="align-middle" />{" "}
-            Disclaimer
-          </h2>
-
           <p>
             As of July 4th 2023,{" "}
             <a
@@ -83,9 +66,22 @@ export const Header = () => {
           <p>So long and thanks for all the fish!</p>
 
           <p>
-            EDIT, July 8th 2023: it seems Old TweetDeck is accessible again? I
-            fully expect it to be an accident, I re-enabled the extensions on
-            their respective stores but don&apos;t get your hopes up.
+            If you&apos;re interested, you can read my post-mortem in two parts
+            about Better TweetDeck
+            <ul>
+              <li>
+                <a href="https://erambert.me/blog/bettertweetdeck-post-mortem-part-1-faq/">
+                  Better TweetDeck, A Post-Mortem, Part 1: frequently asked
+                  questions
+                </a>
+              </li>
+              <li>
+                <a href="https://erambert.me/blog/bettertweetdeck-post-mortem-part-2/">
+                  Better TweetDeck, a Post-Mortem, Part 2: A written history and
+                  credits
+                </a>
+              </li>
+            </ul>
           </p>
           <p>
             — Damien (<a href="https://erambert.me/">@Eramdam</a>)

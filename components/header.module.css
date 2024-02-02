@@ -9,7 +9,7 @@
 }
 
 .header {
-  @apply min-h-[320px] bg-[#008cff] flex flex-col items-center justify-center relative after:bg-mesh-gradient dark:after:bg-mesh-gradient-dark after:bg-cover;
+  @apply min-h-[200px] bg-[#008cff] flex flex-col items-center justify-center relative after:bg-mesh-gradient dark:after:bg-mesh-gradient-dark after:bg-cover;
 }
 
 .header::after {
