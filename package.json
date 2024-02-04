@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/lato": "^4.5.0",
     "@fontsource/pt-sans": "^4.5.0",
-    "@netlify/plugin-nextjs": "^4.1.1",
+    "@netlify/plugin-nextjs": "^4.30.3",
     "@tailwindcss/typography": "^0.5.0",
     "@types/feather-icons": "^4.7.0",
     "@types/lodash": "^4.14.178",
