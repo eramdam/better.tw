@@ -29,6 +29,11 @@ export const Layout = (
           name="keywords"
           content="tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge"
         />
+        <script
+          defer
+          data-domain="better.tw"
+          src="https://plausible.erambert.dev/js/script.js"
+        ></script>
       </Head>
       <Header></Header>
       {props.children}
