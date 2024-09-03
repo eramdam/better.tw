@@ -32,7 +32,7 @@ export const Layout = (
         <script
           defer
           data-domain="better.tw"
-          src="https://plausible.erambert.dev/js/script.js"
+          src="https://plausible.io/js/script.js"
         ></script>
       </Head>
       <Header></Header>
