@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import { PropsWithChildren } from "react";
 import { Footer } from "./footer";
 import { Header } from "./header";
@@ -29,12 +30,12 @@ export const Layout = (
           name="keywords"
           content="tweetdeck, better, chrome, opera, firefox, extension, browser, plugin, emoji, safari, edge"
         />
-        <script
-          defer
-          data-domain="better.tw"
-          src="https://plausible.io/js/script.js"
-        ></script>
       </Head>
+      <Script
+        defer
+        src="https://umami.erambert.me/script.js"
+        data-website-id="f525f89b-4931-4adc-8f94-9094d45b1244"
+      ></Script>
       <Header></Header>
       {props.children}
       <Footer></Footer>
