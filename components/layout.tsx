@@ -33,8 +33,8 @@ export const Layout = (
       </Head>
       <Script
         defer
-        src="https://umami.erambert.me/script.js"
-        data-website-id="f525f89b-4931-4adc-8f94-9094d45b1244"
+        data-domain="better.tw"
+        src="https://plausible.erambert.me/js/script.js"
       ></Script>
       <Header></Header>
       {props.children}
