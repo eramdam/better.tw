@@ -34,7 +34,7 @@ export const Layout = (
       <Script
         defer
         data-domain="better.tw"
-        src="https://plausible.erambert.me/js/script.js"
+        src="https://p.erambert.me/js/script.js"
       ></Script>
       <Header></Header>
       {props.children}
